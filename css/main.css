@@ -699,7 +699,7 @@ body
 /* Footer */
 .footer 
 {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('/images/equipment-background.png');
+    background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('../images/equipment-background.png');
     background-size: cover;
     background-position: 50% 70%;
     color: white;
