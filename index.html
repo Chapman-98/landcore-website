@@ -288,27 +288,34 @@
         // Start at first real slide (after last clone)
         currentIndex = 1;
 
-        function updateCarousel(transition = true) {
-            const slideWidth = 700;
-            const gap = 32;
+        function updateCarousel(transition = true) 
+        {
+            const windowWidth = window.innerWidth;
+            let slideWidth, gap, offset;
             
-            // Check screen size
-            const isMobile = window.innerWidth <= 768;
-            const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+            const gap32 = 32; // 2rem
             
-            let offset;
-            
-            if (isMobile) {
-                // Mobile: no padding, slides fill width
-                const mobileSlideWidth = window.innerWidth - 80;
-                offset = currentIndex * (mobileSlideWidth + gap);
-            } else if (isTablet) {
-                // Tablet: smaller padding
-                const tabletSlideWidth = 600;
-                offset = currentIndex * (tabletSlideWidth + gap);
+            // Determine slide width based on screen size
+            if (windowWidth <= 768) {
+                // Mobile
+                slideWidth = windowWidth - 80;
+                offset = currentIndex * (slideWidth + gap32);
+            } else if (windowWidth <= 1024) {
+                // Tablet
+                slideWidth = 600;
+                offset = currentIndex * (slideWidth + gap32);
+            } else if (windowWidth >= 1920) {
+                // Extra large screens
+                slideWidth = 1100;
+                offset = currentIndex * (slideWidth + gap32);
+            } else if (windowWidth >= 1400) {
+                // Large screens
+                slideWidth = 900;
+                offset = currentIndex * (slideWidth + gap32);
             } else {
-                // Desktop: standard calculation
-                offset = currentIndex * (slideWidth + gap);
+                // Standard desktop
+                slideWidth = 700;
+                offset = currentIndex * (slideWidth + gap32);
             }
             
             if (transition) {

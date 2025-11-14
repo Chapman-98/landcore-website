@@ -101,7 +101,7 @@ body
 /* Hero Section */
 .hero 
 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Landcore-Hero-Background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -514,7 +514,8 @@ body
     color: white;
 }
 
-.projects-header {
+.projects-header 
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -523,12 +524,14 @@ body
     padding: 0 4rem;
 }
 
-.projects-header h2 {
+.projects-header h2 
+{
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-.see-more-projects {
+.see-more-projects 
+{
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -538,7 +541,8 @@ body
     transition: all 0.3s;
 }
 
-.see-more-projects:hover {
+.see-more-projects:hover 
+{
     opacity: 0.8;
     transform: translateX(5px);
 }
@@ -551,6 +555,9 @@ body
     margin: 0 auto;
     padding: 0 80px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Carousel Track - Holds all slides */
@@ -559,7 +566,6 @@ body
     display: flex;
     gap: 2rem;
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding-left: 165px;
 }
 
 /* Individual Project Slide - Smaller for peek effect */
@@ -578,7 +584,8 @@ body
 }
 
 /* Highlight the center slide */
-.project-slide.active {
+.project-slide.active 
+{
     opacity: 1;
     transform: scale(1);
 }
@@ -1301,4 +1308,172 @@ body
     .footer-bottom p {
         font-size: 0.85rem;
     }
+}
+
+/* LARGE SCREENS: 1400px and up */
+@media (min-width: 1400px) {
+    /* Hero */
+    .hero {
+        padding: 10rem 10rem;
+    }
+    
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.4rem;
+        max-width: 700px;
+    }
+    
+    /* Services */
+    .services-intro {
+        max-width: 1400px;
+    }
+    
+    .intro-main {
+        font-size: 1.8rem;
+        max-width: 800px;
+    }
+    
+    .intro-sub {
+        font-size: 1.8rem;
+        max-width: 900px;
+    }
+    
+    .services-logo {
+        max-width: 300px;
+    }
+    
+    /* Service Cards */
+    .service-card {
+        height: 500px;
+    }
+    
+    .service-title h3 {
+        font-size: 2rem;
+    }
+    
+    .service-overlay h3 {
+        font-size: 2rem;
+    }
+    
+    .service-overlay p {
+        font-size: 1.2rem;
+        max-width: 500px;
+    }
+    
+    /* Team Section */
+    .team-content {
+        padding: 7rem 6rem;
+    }
+    
+    .team-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .team-content p {
+        font-size: 1.3rem;
+    }
+    
+    .team-btn {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+    
+    /* Projects Carousel */
+    .projects-header h2 {
+        font-size: 3rem;
+    }
+    
+    .projects-carousel {
+        max-width: 1400px;
+    }
+    
+    .project-slide {
+        min-width: 900px;
+        max-width: 900px;
+    }
+    
+    .project-image {
+        height: 500px;
+    }
+    
+    .project-info h3 {
+        font-size: 2.25rem;
+    }
+    
+    .project-info p {
+        font-size: 1.25rem;
+        max-width: 800px;
+    }
+    
+    .carousel-track {
+        padding-left: 250px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 5rem 4rem 2rem 4rem;
+    }
+    
+    .footer-content {
+        max-width: 1600px;
+    }
+    
+    .footer-logo {
+        max-width: 150px;
+    }
+    
+    .footer-brand h3 {
+        font-size: 1.75rem;
+    }
+    
+    .footer-nav h4 {
+        font-size: 1.25rem;
+    }
+    
+    .footer-nav a {
+        font-size: 1.1rem;
+    }
+    
+    .footer-cta-btn {
+        font-size: 1.2rem;
+        padding: 1.25rem 2rem;
+    }
+}
+
+/* EXTRA LARGE SCREENS: 1920px and up (for really big monitors) */
+@media (min-width: 1920px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+    
+    .hero p {
+        font-size: 1.6rem;
+    }
+    
+    .intro-main,
+    .intro-sub {
+        font-size: 2rem;
+    }
+    
+    .team-content h2 {
+        font-size: 4rem;
+    }
+    
+    .team-content p {
+        font-size: 1.5rem;
+    }
+    
+    .projects-carousel { max-width: 1600px; }
+
+    .project-slide {
+        min-width: 1100px;
+        max-width: 1100px;
+    }
+    
+    .project-image { height: 600px; }
+
+    .carousel-track { padding-left: 200px; }
 }
