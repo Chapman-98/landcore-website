@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Landcore</title>
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="images/LC-logo-no-logo.tiff" alt="Landcore">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li class="mobile-only"><a href="contact.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-right">
+            <a href="tel:+13043904077" class="phone-number">(304) 390 4077</a>
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </div>
+    </nav>
+
+    <section class="culture-collage">
+        <div class="collage-container">
+            
+            <div class="collage-center">
+                <span class="collage-label">OUR MISSION</span>
+                <h1>"We don't just move dirt; we build the foundation for West Virginia's future."</h1>
+                <p class="president-name">- Scott, President</p>
+            </div>
+
+            <div class="floating-card pos-top-left slide-in-left">
+                <img src="images/team_carrying_water.jpg" alt="Team working">
+            </div>
+
+            <div class="floating-card pos-top-right slide-in-right">
+                <div class="collage-quote-box">
+                    <p>"It's more than a job; it's a family that pushes you to be your best every day."</p>
+                    <span>- Mark, Foreman</span>
+                </div>
+            </div>
+
+            <div class="floating-card pos-bottom-left slide-in-left">
+                <div class="collage-quote-box">
+                    <p>"The company invests in us. Best equipment I've ever run."</p>
+                    <span>- Jessica, Operator</span>
+                </div>
+            </div>
+
+            <div class="floating-card pos-bottom-right slide-in-right">
+                <img src="images/team_working_photo_bridge.png" alt="Site work">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="leadership-section" id="leadership">
+        <div class="leadership-container">
+            <div class="leadership-header">
+                <span class="team-label">MANAGEMENT</span>
+                <h2>Meet The Leadership</h2>
+                <p>Decades of combined experience guiding your project from the initial bid to final grade.</p>
+            </div>
+
+            <div class="leader-grid">
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/Scott_Headshot.png" alt="Scott - President">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Scott Wheeler</h3>
+                        <span class="leader-title">President</span>
+                        <p>Founded Landcore with a vision to build a company that puts people first. Scott oversees the strategic direction and culture of the entire operation.</p>
+                        <a href="mailto:scott@landcore.com" class="leader-contact">Email Scott &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/Dru_Headshot.png" alt="VP of Operations">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Dru Wheeler</h3>
+                        <span class="leader-title">VP of Operations / PM</span>
+                        <p>The engine behind our execution. He manages project schedules, coordinates the fleet, and ensures every job site runs safely and on time.</p>
+                        <a href="mailto:vp@landcore.com" class="leader-contact">Email [Name] &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/headshot-estimator.jpg" alt="Head Estimator">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Michael Snyder</h3>
+                        <span class="leader-title">Senior Estimator</span>
+                        <p>Your first point of contact. He specializes in accurate takeoffs and value engineering to help you get the most out of your budget.</p>
+                        <a href="mailto:estimating@landcore.com" class="leader-contact">Request a Bid &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
