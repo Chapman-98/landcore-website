@@ -295,11 +295,30 @@ body
     transition: transform 0.3s ease;
 }
 
-.service-card:hover
+/* NEW CSS - Separates Mouse Hover from Touch Taps */
+
+/* 1. Mouse Users (Computers) - Use Hover */
+@media (hover: hover) 
+{
+    .service-card:hover 
+    {
+        transform: scale(1.02);
+        z-index: 10;
+    }
+    .service-card:hover .service-image img { transform: scale(1.1); }
+    .service-card:hover .service-title { opacity: 0; }
+    .service-card:hover .service-overlay { opacity: 1; visibility: visible; }
+}
+
+/* 2. Touch Users (Phones/Tablets) - Use .active class */
+.service-card.active 
 {
     transform: scale(1.02);
     z-index: 10;
 }
+.service-card.active .service-image img { transform: scale(1.1); }
+.service-card.active .service-title { opacity: 0; }
+.service-card.active .service-overlay { opacity: 1; visibility: visible; }
 
 /* Service Image */
 .service-image
@@ -318,8 +337,6 @@ body
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
-.service-card:hover .service-image img { transform: scale(1.1); }
 
 /* Always-Visible Title at Bottom */
 .service-title
@@ -343,8 +360,6 @@ body
     text-align: center;
 }
 
-/* Hide title on hover */
-.service-card:hover .service-title { opacity: 0; }
 
 /* Service Overlay - Hidden by default */
 .service-overlay
@@ -365,12 +380,6 @@ body
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     z-index: 3;
-}
-
-.service-card:hover .service-overlay
-{
-    opacity: 1;
-    visibility: visible;
 }
 
 /* Overlay Title (centered) */
@@ -980,14 +989,8 @@ body
     .hero 
     {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg') !important;
-        
-        /* 2. Important: This centers the image so the "zoom" focuses on the middle */
         background-position: center 60% !important;
-        
-        /* 3. Ensure the background doesn't move (fixes the "shaking") */
         background-attachment: scroll !important;
-        
-        /* 4. Standard sizing */
         background-size: cover !important;
         background-repeat: no-repeat;
         padding: 3rem 1.5rem;

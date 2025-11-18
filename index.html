@@ -461,6 +461,35 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', () => 
+        {
+            const cards = document.querySelectorAll('.service-card');
+
+            // 1. Handle tapping ON a card
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    // Check if we are on a touch device (optional, but good safety)
+                    // Toggle the active class
+                    const isActive = card.classList.contains('active');
+                    
+                    // First, close all other open cards
+                    cards.forEach(c => c.classList.remove('active'));
+
+                    // If it wasn't active before, make it active now
+                    if (!isActive) {
+                        card.classList.add('active');
+                    }
+                    
+                    // Stop the click from bubbling up to the document (prevents immediate closing)
+                    e.stopPropagation();
+                });
+            });
+
+            // 2. Handle tapping OUTSIDE a card (The "Flip Back" logic)
+            document.addEventListener('click', () => {
+                cards.forEach(card => card.classList.remove('active'));
+            });
+        });
     </script>
 </body>
 </html>
