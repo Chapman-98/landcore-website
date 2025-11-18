@@ -1174,8 +1174,11 @@ body
     /* ===== HERO ===== */
     .hero 
     {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg');
+        background-size: cover;
+        background-position: center;
         padding: 3rem 1.5rem;
-        min-height: 80vh;
+        min-height: 60vh;
     }
     
     .hero h1 
