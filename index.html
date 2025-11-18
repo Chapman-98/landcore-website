@@ -147,42 +147,44 @@
                 <span>‹</span>
             </button>
             
-            <!-- Project Cards -->
-            <div class="carousel-track">
-                <!-- Featured Project 1 -->
-                <div class="project-slide active">
-                    <div class="project-image">
-                        <img src="images/milton_elementary.jpg" alt="Milton Elementary">
+            <div class="carousel-viewport">
+                <!-- Project Cards -->
+                <div class="carousel-track">
+                    <!-- Featured Project 1 -->
+                    <div class="project-slide active">
+                        <div class="project-image">
+                            <img src="images/milton_elementary.jpg" alt="Milton Elementary">
+                        </div>
+                        <div class="project-info">
+                            <h3>Milton Elementary School</h3>
+                            <p>Complete site development and infrastructure for new educational facility including utilities, grading, and foundation preparation.</p>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Milton Elementary School</h3>
-                        <p>Complete site development and infrastructure for new educational facility including utilities, grading, and foundation preparation.</p>
+                    
+                    <!-- Featured Project 2 -->
+                    <div class="project-slide">
+                        <div class="project-image">
+                            <img src="images/metal_building.png" alt="Industrial Facility">
+                        </div>
+                        <div class="project-info">
+                            <h3>Industrial Metal Building</h3>
+                            <p>Full construction of 50,000 sq ft manufacturing facility as authorized Nucor Building Systems builder.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Featured Project 2 -->
-                <div class="project-slide">
-                    <div class="project-image">
-                        <img src="images/metal_building.png" alt="Industrial Facility">
-                    </div>
-                    <div class="project-info">
-                        <h3>Industrial Metal Building</h3>
-                        <p>Full construction of 50,000 sq ft manufacturing facility as authorized Nucor Building Systems builder.</p>
-                    </div>
-                </div>
-                
-                <!-- Featured Project 3 -->
-                <div class="project-slide">
-                    <div class="project-image">
-                        <img src="images/Land-Development.jpg" alt="Residential Development">
-                    </div>
-                    <div class="project-info">
-                        <h3>Residential Development</h3>
-                        <p>Land acquisition through build-ready status for 200+ unit residential community with complete infrastructure.</p>
+                    
+                    <!-- Featured Project 3 -->
+                    <div class="project-slide">
+                        <div class="project-image">
+                            <img src="images/Land-Development.jpg" alt="Residential Development">
+                        </div>
+                        <div class="project-info">
+                            <h3>Residential Development</h3>
+                            <p>Land acquisition through build-ready status for 200+ unit residential community with complete infrastructure.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Right Arrow -->
             <button class="carousel-arrow arrow-right">
                 <span>›</span>
@@ -261,158 +263,184 @@
         // INFINITE PROJECTS CAROUSEL WITH PEEK
         // ===================================
 
-        const carousel = document.querySelector('.projects-carousel');
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(document.querySelectorAll('.project-slide'));
-        const thumbnails = document.querySelectorAll('.thumbnail');
-        const prevBtn = document.querySelector('.arrow-left');
-        const nextBtn = document.querySelector('.arrow-right');
-
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-        let isTransitioning = false;
-
-        // Clone first and last slides for infinite effect
-        const firstClone = slides[0].cloneNode(true);
-        const lastClone = slides[totalSlides - 1].cloneNode(true);
-
-        firstClone.classList.add('clone');
-        lastClone.classList.add('clone');
-
-        track.appendChild(firstClone);
-        track.insertBefore(lastClone, slides[0]);
-
-        // Get all slides including clones
-        const allSlides = document.querySelectorAll('.project-slide');
-
-        // Start at first real slide (after last clone)
-        currentIndex = 1;
-
-        function updateCarousel(transition = true) 
+        document.addEventListener('DOMContentLoaded', function() 
         {
-            const windowWidth = window.innerWidth;
-            let slideWidth, gap, offset;
+            const track = document.querySelector('.carousel-track');
+            const viewport = document.querySelector('.carousel-viewport');
+            const originalSlides = Array.from(document.querySelectorAll('.project-slide'));
+            const leftArrow = document.querySelector('.arrow-left');
+            const rightArrow = document.querySelector('.arrow-right');
+            const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
             
-            const gap32 = 32; // 2rem
+            let currentIndex = 0;
+            const totalSlides = originalSlides.length;
+            let isTransitioning = false;
             
-            // Determine slide width based on screen size
-            if (windowWidth <= 768) {
-                // Mobile
-                slideWidth = windowWidth - 80;
-                offset = currentIndex * (slideWidth + gap32);
-            } else if (windowWidth <= 1024) {
-                // Tablet
-                slideWidth = 600;
-                offset = currentIndex * (slideWidth + gap32);
-            } else if (windowWidth >= 1920) {
-                // Extra large screens
-                slideWidth = 1100;
-                offset = currentIndex * (slideWidth + gap32);
-            } else if (windowWidth >= 1400) {
-                // Large screens
-                slideWidth = 900;
-                offset = currentIndex * (slideWidth + gap32);
-            } else {
-                // Standard desktop
-                slideWidth = 700;
-                offset = currentIndex * (slideWidth + gap32);
+            // Clone slides for infinite loop
+            function setupCarousel() 
+            {
+                // Clone to end
+                originalSlides.forEach(slide => 
+                {
+                    const clone = slide.cloneNode(true);
+                    clone.classList.remove('active');
+                    track.appendChild(clone);
+                });
+                
+                // Clone to beginning (reverse order)
+                for (let i = originalSlides.length - 1; i >= 0; i--) 
+                {
+                    const clone = originalSlides[i].cloneNode(true);
+                    clone.classList.remove('active');
+                    track.insertBefore(clone, track.firstChild);
+                }
             }
             
-            if (transition) {
-                track.style.transition = 'transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            } else {
-                track.style.transition = 'none';
+            // Calculate position WITH centering and debugging
+            function getPosition(index) 
+            {
+                const slide = track.querySelector('.project-slide');
+                const slideWidth = slide.offsetWidth;
+                const gap = parseFloat(window.getComputedStyle(track).gap) || 32;
+                const slideWithGap = slideWidth + gap;
+                const viewportWidth = viewport.offsetWidth;
+                
+                // Calculate how much to offset to center the slide
+                const centerOffset = (viewportWidth - slideWidth) / 2;
+                
+                // Index in DOM (accounting for leading clones)
+                const domIndex = index + totalSlides;
+                
+                // Position = center offset - (how far we've scrolled)
+                const position = centerOffset - (domIndex * slideWithGap);
+                
+                return position;
             }
             
-            track.style.transform = `translateX(-${offset}px)`;
+            // Update track position
+            function updatePosition(animate = true) 
+            {
+                const translateX = getPosition(currentIndex);
+                
+                if (!animate) 
+                {
+                    track.style.transition = 'none';
+                    track.style.transform = `translateX(${translateX}px)`;
+                    // Force reflow
+                    void track.offsetWidth;
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                } 
+                else 
+                {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                    track.style.transform = `translateX(${translateX}px)`;
+                }
+            }
             
-            // Update active state for center slide
-            allSlides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentIndex);
+            // Update active states
+            function updateActive() 
+            {
+                const allSlides = track.querySelectorAll('.project-slide');
+                allSlides.forEach((slide, idx) => 
+                {
+                    slide.classList.toggle('active', idx === currentIndex + totalSlides);
+                });
+                
+                thumbnails.forEach((thumb, idx) => 
+                {
+                    thumb.classList.toggle('active', idx === currentIndex);
+                });
+            }
+            
+            // Handle infinite loop reset
+            function handleLoop() 
+            {
+                setTimeout(() => 
+                {
+                    // At end clones? Jump to real start
+                    if (currentIndex >= totalSlides) 
+                    {
+                        console.log('LOOPING: Hit end clones, jumping to start');
+                        currentIndex = 0;
+                        updatePosition(false);
+                    }
+                    // At start clones? Jump to real end
+                    else if (currentIndex < 0) 
+                    {
+                        console.log('LOOPING: Hit start clones, jumping to end');
+                        currentIndex = totalSlides - 1;
+                        updatePosition(false);
+                    }
+                    isTransitioning = false;
+                }, 500);
+            }
+            
+            // Navigation functions
+            function next() 
+            {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                console.log('NEXT clicked');
+                currentIndex++;
+                updatePosition(true);
+                updateActive();
+                handleLoop();
+            }
+            
+            function prev() 
+            {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                console.log('PREV clicked');
+                currentIndex--;
+                updatePosition(true);
+                updateActive();
+                handleLoop();
+            }
+            
+            function goTo(index) 
+            {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                console.log('GO TO:', index);
+                currentIndex = index;
+                updatePosition(true);
+                updateActive();
+                setTimeout(() => isTransitioning = false, 500);
+            }
+            
+            // Event listeners
+            leftArrow.addEventListener('click', prev);
+            rightArrow.addEventListener('click', next);
+            
+            thumbnails.forEach((thumb, idx) => 
+            {
+                thumb.addEventListener('click', () => goTo(idx));
             });
             
-            // Update thumbnails
-            const actualIndex = ((currentIndex - 1) % totalSlides + totalSlides) % totalSlides;
-            thumbnails.forEach((thumb, index) => {
-                thumb.classList.toggle('active', index === actualIndex);
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => 
+            {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
             });
-        }
-
-        function nextSlide() {
-            if (isTransitioning) return;
-            isTransitioning = true;
             
-            currentIndex++;
-            updateCarousel(true);
+            // Handle resize
+            let resizeTimer;
+            window.addEventListener('resize', () => 
+            {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => 
+                {
+                    console.log('RESIZE detected');
+                    updatePosition(false);
+                }, 100);
+            });
             
-            if (currentIndex === totalSlides + 1) {
-                setTimeout(() => {
-                    currentIndex = 1;
-                    updateCarousel(false);
-                    isTransitioning = false;
-                }, 1000);
-            } else {
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 1000);
-            }
-        }
-
-        function prevSlide() {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            
-            currentIndex--;
-            updateCarousel(true);
-            
-            if (currentIndex === 0) {
-                setTimeout(() => {
-                    currentIndex = totalSlides;
-                    updateCarousel(false);
-                    isTransitioning = false;
-                }, 1000);
-            } else {
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 1000);
-            }
-        }
-
-        function goToSlide(index) {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            
-            currentIndex = index + 1;
-            updateCarousel(true);
-            
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 1000);
-        }
-
-        // Event Listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener('click', () => goToSlide(index));
+            setupCarousel();
+            updatePosition(false);
+            updateActive();
         });
-
-        // Handle window resize
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                updateCarousel(false);
-            }, 100);
-        });
-
-        // Initialize
-        updateCarousel(false);
-
-        // Optional: Auto-play (uncomment if you want)
-        // setInterval(nextSlide, 5000);
-
 
         // ===================================
         // HAMBURGER MENU

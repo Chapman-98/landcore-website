@@ -79,10 +79,7 @@ body
     transition: color 0.3s;
 }
 
-.phone-number:hover 
-{
-    color: #B3D9E8;
-}
+.phone-number:hover  { color: #B3D9E8; }
 
 .nav-links a.contact-btn,
 .contact-btn 
@@ -322,10 +319,7 @@ body
     transition: transform 0.5s ease;
 }
 
-.service-card:hover .service-image img
-{
-    transform: scale(1.1);
-}
+.service-card:hover .service-image img { transform: scale(1.1); }
 
 /* Always-Visible Title at Bottom */
 .service-title
@@ -350,10 +344,7 @@ body
 }
 
 /* Hide title on hover */
-.service-card:hover .service-title
-{
-    opacity: 0;
-}
+.service-card:hover .service-title { opacity: 0; }
 
 /* Service Overlay - Hidden by default */
 .service-overlay
@@ -423,21 +414,19 @@ body
     box-shadow: 0 4px 15px rgba(54, 123, 191, 0.4);
 }
 
-/* Team Section */
+/* ===== TEAM SECTION - BASE STYLES ===== */
 .team-section {
-    width: 100%;
+    padding: 0;
     background-color: #f8f9fa;
 }
 
 .team-split {
-    display: grid;
-    grid-template-columns: 1.85fr 1fr;  /* Changed from 1fr 1fr - image is now ~65% */
-    min-height: 500px;  /* Also made it shorter */
+    display: block; /* Stacked by default */
 }
 
-/* Left Image */
 .team-image {
-    position: relative;
+    width: 100%;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -445,75 +434,76 @@ body
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 10% center;  /* Shows more of the team, less sky */
+    object-position: center 20%;
 }
 
-/* Right Content */
 .team-content {
-    padding: 4rem 4rem;  /* Reduced padding since it's narrower now */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #f8f9fa;
+    background-color: white;
+    padding: 5rem 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .team-label {
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #367BBF;
-    margin-bottom: 1.5rem;
     display: block;
+    color: #367BBF;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
 }
 
 .team-content h2 {
-    font-size: 2.5rem;  /* Slightly smaller to fit better */
-    color: #2c3e50;
-    font-weight: 700;
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
-    margin-bottom: 2rem;
 }
 
 .team-content p {
-    font-size: 1.05rem;  /* Slightly smaller */
-    color: #555;
+    color: #5a6c7d;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-size: 1.05rem;
 }
 
-.team-content p:last-child {
-    margin-bottom: 0;
+.team-content p:last-of-type {
+    margin-bottom: 2.5rem;
 }
 
 .team-btn {
     display: inline-block;
     background-color: #367BBF;
     color: white;
-    padding: 0.75rem 1.75rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    padding: 1rem 2.5rem;
     text-decoration: none;
-    border-radius: 2rem;
+    border-radius: 4px;
+    font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: 1rem;
-    letter-spacing: 0.3px;
-    width: fit-content;
+    box-shadow: 0 4px 15px rgba(54, 123, 191, 0.3);
 }
 
 .team-btn:hover {
-    background-color: #2e6aa3;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(54, 123, 191, 0.4);
+    background-color: #2c5f99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(54, 123, 191, 0.4);
 }
 
-/* Projects Showcase Section */
-.projects-showcase {
+
+/* ====================================
+   CAROUSEL WITH VIEWPORT - STATIC CSS
+   ==================================== */
+
+/* Full-width section - RED OUTLINE */
+.projects-showcase 
+{
     padding: 6rem 0;
     background-color: #34495e;
     color: white;
 }
 
+/* Projects header - YELLOW OUTLINE */
 .projects-header 
 {
     display: flex;
@@ -547,56 +537,60 @@ body
     transform: translateX(5px);
 }
 
-/* Carousel Container */
+/* Main Carousel Container - BLUE OUTLINE */
+/* This holds arrows and viewport */
 .projects-carousel 
 {
     position: relative;
-    max-width: 1200px;  /* Wider container */
+    max-width: 1200px;  /* Container width */
     margin: 0 auto;
-    padding: 0 80px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 100px;  /* Space for arrows OUTSIDE viewport */
 }
 
-/* Carousel Track - Holds all slides */
+
+.carousel-viewport
+{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-viewport::-webkit-scrollbar { display: none; }
+
+/* Carousel Track - PURPLE OUTLINE */
+/* This holds all the slides and will move left/right */
 .carousel-track 
 {
     display: flex;
-    gap: 2rem;
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 2rem;  /* 32px gap between slides */
+    padding: 2rem 0;  /* Vertical padding */
+    transition: transform 0.5s ease-in-out; /* Add this for smooth sliding */
 }
 
-/* Individual Project Slide - Smaller for peek effect */
+/* Individual Project Slide - ORANGE OUTLINE */
 .project-slide 
 {
-    min-width: 700px;  /* Smaller than container */
+    min-width: 700px;  /* Fixed slide width */
     max-width: 700px;
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    opacity: 0.6;  /* Dim the side slides */
-    transform: scale(0.9);  /* Shrink the side slides slightly */
-    transition: opacity 0.3s, transform 0.3s;
 }
 
-/* Highlight the center slide */
+/* Active slide - Full opacity and size */
 .project-slide.active 
 {
     opacity: 1;
     transform: scale(1);
 }
 
+/* Project Image Container - CYAN OUTLINE */
 .project-image 
 {
     width: 100%;
-    height: 400px;  /* Slightly smaller */
+    height: 400px;
     border-radius: 0.5rem;
     overflow: hidden;
     margin-bottom: 2rem;
+    background-color: #2c3e50;  /* Fallback color */
 }
 
 .project-image img 
@@ -604,32 +598,41 @@ body
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
-.project-info {
+/* Project Info - PINK OUTLINE */
+.project-info 
+{
     max-width: 600px;
     padding: 0 2rem;
+    
+    margin: 0 auto;
+    text-align: center;
 }
 
-.project-info h3 {
+/* Add this AFTER your .project-info section */
+
+.project-info h3 
+{
     font-size: 1.75rem;
     margin-bottom: 1rem;
     color: white;
     font-weight: 700;
 }
 
-.project-info p {
+.project-info p 
+{
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
 }
 
 /* Carousel Arrows */
+/* Positioned relative to .projects-carousel */
 .carousel-arrow 
 {
     position: absolute;
-    top: 35%;
+    top: 38%;
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
@@ -646,37 +649,34 @@ body
     z-index: 10;
 }
 
-.carousel-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+.carousel-arrow span 
+{
+    display: block;
+    transform: translateY(-3px);
+    line-height: 1;
 }
+.carousel-arrow:hover { background-color: rgba(255, 255, 255, 0.35); }
 
-.carousel-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
+.arrow-left { left: 20px; }
 
-.arrow-left {
-    left: 0;
-}
+.arrow-right { right: 20px; }
 
-.arrow-right {
-    right: 0;
-}
-
-/* Thumbnail Navigation */
-.carousel-thumbnails {
+/* Thumbnail Navigation - WHITE OUTLINE */
+.carousel-thumbnails 
+{
     display: flex;
     justify-content: center;
-    align-items: center;  /* Add vertical alignment */
+    align-items: center;
     gap: 1rem;
     margin-top: 3rem;
-    padding: 0;  /* Remove padding */
-    max-width: 1200px;  /* Match carousel width */
-    margin-left: auto;  /* Center the container */
-    margin-right: auto;
+    
+    /* DEBUG */
+    outline: 3px solid white;
+    outline-offset: -3px;
 }
 
-.thumbnail {
+.thumbnail 
+{
     width: 140px;
     height: 90px;
     border-radius: 0.3rem;
@@ -687,16 +687,16 @@ body
     border: 3px solid transparent;
 }
 
-.thumbnail:hover {
-    opacity: 0.8;
-}
-
-.thumbnail.active {
+.thumbnail.active 
+{
     opacity: 1;
     border-color: #367BBF;
 }
 
-.thumbnail img {
+.thumbnail:hover { opacity: 0.8; }
+
+.thumbnail img 
+{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -760,10 +760,7 @@ body
     transition: color 0.3s;
 }
 
-.footer-phone a:hover
-{
-    color: #367BBF;
-}
+.footer-phone a:hover { color: #367BBF; }
 
 /* Navigation Links Column */
 .footer-nav
@@ -790,10 +787,7 @@ body
     margin: 0;
 }
 
-.footer-nav li
-{
-    margin-bottom: 0.75rem;
-}
+.footer-nav li { margin-bottom: 0.75rem; }
 
 .footer-nav a
 {
@@ -803,10 +797,7 @@ body
     font-size: 1rem;
 }
 
-.footer-nav a:hover
-{
-    color: #367BBF;
-}
+.footer-nav a:hover { color: #367BBF; }
 
 /* Right Column - CTA and Map */
 .footer-right
@@ -844,15 +835,9 @@ body
     box-shadow: 0 4px 15px rgba(54, 123, 191, 0.4);
 }
 
-.footer-cta-secondary
-{
-    border: 2px solid #367BBF;
-}
+.footer-cta-secondary { border: 2px solid #367BBF; }
 
-.footer-cta-secondary:hover
-{
-    background-color: #367BBF;
-}
+.footer-cta-secondary:hover { background-color: #367BBF; }
 
 .footer-map iframe
 {
@@ -882,7 +867,8 @@ body
    HAMBURGER MENU (Hidden on Desktop)
    =================================== */
 
-.hamburger {
+.hamburger 
+{
     display: none;
     flex-direction: column;
     background: none;
@@ -891,7 +877,8 @@ body
     padding: 0;
 }
 
-.hamburger span {
+.hamburger span 
+{
     width: 25px;
     height: 3px;
     background-color: white;
@@ -901,31 +888,231 @@ body
 }
 
 /* Hamburger animation when active */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
 
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
+.hamburger.active span:nth-child(2) { opacity: 0; }
 
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
 /*  ===================================
     RESPONSIVE BREAKPOINTS
     =================================== */
 
-/* TABLET: 769px to 1024px */
-@media (min-width: 769px) and (max-width: 1024px) 
+/* SMALL TABLET: 801px to 1000px - Keep hamburger, stack team */
+@media (min-width: 801px) and (max-width: 1000px) 
 {
-    /* Navbar adjustments */
+    /* Navbar - Keep hamburger */
+    .navbar 
+    {
+        padding: 1rem 1.5rem;
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo { z-index: 1001; }
+    
+    .hamburger 
+    {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .nav-links 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #34495e;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-links.active 
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li 
+    {
+        width: auto;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .nav-links.active li 
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.15s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
+    .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
+    
+    .nav-links a 
+    {
+        font-size: 1.3rem;
+        display: block;
+        padding: 0.75rem;
+        text-align: center;
+    }
+    
+    .nav-links a.contact-btn 
+    {
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+    }
+    
+    /* Hero */
+    .hero 
+    {
+        padding: 3rem 1.5rem;
+        min-height: 60vh;
+    }
+    
+    .hero h1 { font-size: 3rem; }
+    
+    .hero p { font-size: 1.1rem; }
+    
+    /* Services */
+    .services-intro 
+    {
+        gap: 3rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .services-logo { max-width: 180px; }
+    
+    .intro-main,
+    .intro-sub 
+    {
+        font-size: 1.2rem;
+    }
+    
+    .services-grid { grid-template-columns: 1fr; }
+    
+    .service-card { height: 400px; }
+    
+    /* Team Section - STACKED */
+    .team-section { padding: 3rem 0; }
+    
+    .team-split 
+    {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .team-image 
+    { 
+        height: 450px;
+        overflow: hidden;
+    }
+    
+    .team-image img 
+    { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 15%; 
+    }
+    
+    .team-content 
+    { 
+        padding: 3rem 2rem;
+    }
+    
+    .team-content h2 { font-size: 2rem; }
+    
+    .team-content p { font-size: 1rem; }
+    
+    /* Projects Carousel */
+    .projects-carousel 
+    {
+        max-width: 100%;
+        padding: 0 60px;
+    }
+    
+    .carousel-arrow 
+    {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .project-slide 
+    {
+        min-width: 600px;
+        max-width: 600px;
+    }
+    
+    .project-image { height: 350px; }
+    
+    /* Footer */
+    .footer-content 
+    {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-right { grid-column: 1 / -1; }
+}
+
+/* TABLET: 1001px to 1200px - Desktop nav, side-by-side team */
+@media (min-width: 1001px) and (max-width: 1200px) 
+{
+    /* Navbar - Desktop style */
     .navbar { padding: 0.5rem 2rem; }
     
-    .nav-links { gap: 1.5rem; }
+    .hamburger { display: none; }
     
-    .nav-links a { font-size: 1rem; }
+    .nav-links 
+    {
+        position: static;
+        flex-direction: row;
+        gap: 1.5rem;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    
+    .nav-links li 
+    {
+        transform: none;
+        opacity: 1;
+    }
+    
+    .nav-links a 
+    { 
+        font-size: 0.95rem;
+        padding: 0;
+    }
+    
+    .nav-links a.contact-btn 
+    {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
     
     /* Hero adjustments */
     .hero 
@@ -955,12 +1142,10 @@ body
     }
     
     /* Services grid */
-    .services-grid
-    {
-        grid-template-columns: 1fr;
-    }
+    .services-grid { grid-template-columns: 1fr; }
     
-    .service-card { height: 400px;}
+    .service-card { height: 400px; }
+    
     .service-image { height: 100%; }
     
     .service-image img
@@ -970,65 +1155,112 @@ body
         object-fit: cover;
     }
 
-    /* Team Section */
-    .team-split {
+    /* Team Section - SIDE BY SIDE with TALL container */
+    .team-split 
+    {
         grid-template-columns: 1.5fr 1fr;
-        min-height: 450px;
+        align-items: stretch;
+        min-height: 650px; /* TALL to accommodate landscape image */
     }
     
-    .team-content {
-        padding: 3rem 2.5rem;
+    .team-image 
+    {
+        height: 100%;
+        overflow: hidden;
     }
     
-    .team-content h2 {
-        font-size: 2rem;
+    .team-image img 
+    { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 25%; /* Show more of top */
     }
     
-    .team-content p {
-        font-size: 1rem;
+    .team-content 
+    { 
+        padding: 4rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+    
+    .team-content h2 { font-size: 2rem; }
+    
+    .team-content p { font-size: 1rem; }
     
     /* Projects Carousel */
-    .projects-carousel {
-        max-width: 900px;
+    .projects-carousel 
+    {
+        max-width: 1000px;
         padding: 0 60px;
     }
-    
-    .carousel-track {
-        padding-left: 100px;
-    }
-    
-    .carousel-arrow {
+        
+    .carousel-arrow 
+    {
         width: 50px;
         height: 50px;
         font-size: 2rem;
     }
     
-    .project-slide {
-        min-width: 600px;
-        max-width: 600px;
+    .project-slide 
+    {
+        min-width: 700px;
+        max-width: 700px;
     }
     
-    .project-image {
-        height: 350px;
-    }
+    .project-image { height: 350px; }
     
     /* Footer */
-    .footer-content {
+    .footer-content 
+    {
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
     
-    .footer-right {
-        grid-column: 1 / -1;
+    .footer-right { grid-column: 1 / -1; }
+}
+
+/* LARGER DESKTOP: 1201px to 1399px */
+@media (min-width: 1201px) and (max-width: 1399px) 
+{
+    /* Team Section */
+    .team-split 
+    {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: stretch;
+        min-height: 600px;
+    }
+    
+    .team-image 
+    {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .team-image img 
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+    }
+    
+    .team-content 
+    {
+        padding: 4rem 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
-/* MOBILE: Up to 768px */
-@media (max-width: 768px) 
+/* MOBILE: Up to 800px */
+@media (max-width: 800px) 
 {
     /* ===== NAVBAR ===== */
-    .navbar {
+    .navbar 
+    {
         padding: 1rem 1.5rem;
         position: sticky;
         display: flex;
@@ -1036,16 +1268,16 @@ body
         align-items: center;
     }
     
-    .logo {
-        z-index: 1001;
-    }
+    .logo { z-index: 1001; }
     
-    .hamburger {
+    .hamburger 
+    {
         display: flex;
         z-index: 1001;
     }
     
-    .nav-links {
+    .nav-links 
+    {
         position: fixed;
         top: 0;
         left: 0;
@@ -1065,19 +1297,22 @@ body
         z-index: 1000;
     }
     
-    .nav-links.active {
+    .nav-links.active 
+    {
         opacity: 1;
         visibility: visible;
     }
     
-    .nav-links li {
+    .nav-links li 
+    {
         width: auto;
         transform: translateY(20px);
         opacity: 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
     
-    .nav-links.active li {
+    .nav-links.active li 
+    {
         transform: translateY(0);
         opacity: 1;
     }
@@ -1088,392 +1323,389 @@ body
     .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
     .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
     
-    .nav-links a {
+    .nav-links a 
+    {
         font-size: 1.5rem;
         display: block;
         padding: 0.75rem;
         text-align: center;
     }
     
-    .nav-links a.contact-btn {
+    .nav-links a.contact-btn 
+    {
         padding: 1rem 2rem;
         font-size: 1.5rem;
     }
         
     /* ===== HERO ===== */
-    .hero {
+    .hero 
+    {
         padding: 3rem 1.5rem;
         min-height: 60vh;
     }
     
-    .hero h1 {
+    .hero h1 
+    {
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
     
-    .hero p {
+    .hero p 
+    {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
     
-    .consultation-btn {
+    .consultation-btn 
+    {
         padding: 1rem 2rem;
         font-size: 1rem;
     }
     
     /* ===== SERVICES ===== */
-    .services-preview {
-        padding: 3rem 0, 0, 0;
-    }
+    .services-preview { padding: 3rem 0, 0, 0; }
     
-    .services-intro {
+    .services-intro 
+    {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
         padding: 0 1rem;
     }
     
-    .services-logo {
-        max-width: 150px;
-    }
+    .services-logo { max-width: 150px; }
     
     .intro-main,
-    .intro-sub {
+    .intro-sub 
+    {
         font-size: 1.1rem;
         max-width: 100%;
     }
     
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+    .services-grid { grid-template-columns: 1fr; }
     
-    .service-card h3 {
-        font-size: 1.3rem;
-    }
+    .service-card h3 { font-size: 1.3rem; }
     
-    .service-card p {
-        font-size: 0.95rem;
-    }
+    .service-card p { font-size: 0.95rem; }
     
-    .service-image {
-        height: 100%;
-    }
+    .service-image { height: 100%; }
     
     /* ===== TEAM SECTION ===== */
-    .team-section {
-        padding: 3rem 0;
-    }
+    .team-section { padding: 3rem 0; }
     
-    .team-split {
+    .team-split 
+    {
         grid-template-columns: 1fr;
         min-height: auto;
     }
     
-    .team-image {
-        height: 350px;
+    .team-image 
+    { 
+        height: 400px;
+        overflow: hidden;
     }
     
-    .team-content {
-        padding: 3rem 2rem;
+    .team-image img 
+    { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 15%; 
     }
+
+    .team-content { padding: 3rem 2rem; }
     
-    .team-label {
+    .team-label 
+    {
         font-size: 0.75rem;
         margin-bottom: 1rem;
     }
     
-    .team-content h2 {
+    .team-content h2 
+    {
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
     
-    .team-content p {
-        font-size: 1rem;
-    }
+    .team-content p { font-size: 1rem; }
     
-    .team-btn {
+    .team-btn 
+    {
         width: 100%;
         text-align: center;
     }
     
-    .projects-showcase {
-        padding: 4rem 0;
-    }
+    .projects-showcase { padding: 4rem 0; }
     
-    .projects-header {
+    .projects-header 
+    {
         flex-direction: column;
         gap: 1rem;
         padding: 0 2rem;
         text-align: center;
     }
     
-    .projects-header h2 {
-        font-size: 2rem;
-    }
+    .projects-header h2 { font-size: 2rem; }
     
-    .projects-carousel {
+    .projects-carousel 
+    {
         max-width: 100%;
         padding: 0 40px;
         overflow: hidden;
     }
-    
-    .carousel-track {
-        padding-left: 0;
-    }
-    
-    .carousel-arrow {
+        
+    .carousel-arrow 
+    {
         width: 40px;
         height: 40px;
         font-size: 1.5rem;
     }
     
-    .project-slide {
+    .project-slide 
+    {
         min-width: calc(100vw - 80px);
         max-width: calc(100vw - 80px);
         opacity: 1;
         transform: scale(1);
     }
     
-    .project-image {
-        height: 300px;
-    }
+    .project-image { height: 300px; }
     
-    .project-info {
-        padding: 0 1rem;
-    }
+    .project-info { padding: 0 1rem; }
     
-    .project-info h3 {
-        font-size: 1.5rem;
-    }
+    .project-info h3 { font-size: 1.5rem; }
     
-    .project-info p {
-        font-size: 1rem;
-    }
+    .project-info p { font-size: 1rem; }
     
-    .carousel-thumbnails {
+    .carousel-thumbnails 
+    {
         gap: 0.75rem;
         padding: 0 2rem;
         margin-top: 2rem;
     }
     
-    .thumbnail {
+    .thumbnail 
+    {
         width: 100px;
         height: 65px;
     }
 
     /* ===== FOOTER ===== */
-    .footer {
-        padding: 3rem 1.5rem 1rem 1.5rem;
-    }
+    .footer { padding: 3rem 1.5rem 1rem 1.5rem; }
     
-    .footer-content {
+    .footer-content 
+    {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
     
-    .footer-brand {
+    .footer-brand 
+    {
         align-items: center;
         text-align: center;
     }
     
-    .footer-logo {
-        max-width: 100px;
-    }
+    .footer-logo { max-width: 100px; }
     
-    .footer-nav {
+    .footer-nav 
+    {
         align-items: center;
         text-align: center;
     }
     
-    .footer-buttons {
+    .footer-buttons 
+    {
         flex-direction: column;
         gap: 1rem;
     }
     
-    .footer-cta-btn {
+    .footer-cta-btn 
+    {
         width: 100%;
         padding: 1rem 2rem;
     }
     
-    .footer-map iframe {
+    .footer-map iframe 
+    {
         height: 250px;
         width: 100%;
     }
     
-    .footer-bottom {
+    .footer-bottom 
+    {
         padding-top: 2rem;
         text-align: center;
     }
     
-    .footer-bottom p {
-        font-size: 0.85rem;
+    .footer-bottom p { font-size: 0.85rem; }
+}
+
+/* SMALL MOBILE: Up to 600px */
+@media (max-width: 600px) 
+{
+    .team-image 
+    { 
+        height: 350px;
+    }
+    
+    .team-image img 
+    { 
+        object-position: center 20%; 
     }
 }
 
 /* LARGE SCREENS: 1400px and up */
-@media (min-width: 1400px) {
+@media (min-width: 1400px) 
+{
     /* Hero */
-    .hero {
-        padding: 10rem 10rem;
-    }
+    .hero { padding: 10rem 10rem; }
     
-    .hero h1 {
-        font-size: 4.5rem;
-    }
+    .hero h1 { font-size: 4.5rem; }
     
-    .hero p {
+    .hero p 
+    {
         font-size: 1.4rem;
         max-width: 700px;
     }
     
     /* Services */
-    .services-intro {
-        max-width: 1400px;
-    }
+    .services-intro { max-width: 1400px; }
     
-    .intro-main {
+    .intro-main 
+    {
         font-size: 1.8rem;
         max-width: 800px;
     }
     
-    .intro-sub {
+    .intro-sub 
+    {
         font-size: 1.8rem;
         max-width: 900px;
     }
     
-    .services-logo {
-        max-width: 300px;
-    }
+    .services-logo { max-width: 300px; }
     
     /* Service Cards */
-    .service-card {
-        height: 500px;
-    }
+    .service-card { height: 500px; }
     
-    .service-title h3 {
-        font-size: 2rem;
-    }
+    .service-title h3 { font-size: 2rem; }
     
-    .service-overlay h3 {
-        font-size: 2rem;
-    }
+    .service-overlay h3 { font-size: 2rem; }
     
-    .service-overlay p {
+    .service-overlay p 
+    {
         font-size: 1.2rem;
         max-width: 500px;
     }
     
     /* Team Section */
-    .team-content {
-        padding: 7rem 6rem;
+    .team-split 
+    {
+        align-items: stretch;
     }
     
-    .team-content h2 {
-        font-size: 3.5rem;
+    .team-image 
+    {
+        height: 100%;
+        overflow: hidden;
     }
     
-    .team-content p {
-        font-size: 1.3rem;
+    .team-image img 
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 10%;
     }
     
-    .team-btn {
+    .team-content 
+    { 
+        padding: 5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .team-content h2 { font-size: 3.5rem; }
+    
+    .team-content p { font-size: 1.3rem; }
+    
+    .team-btn 
+    {
         font-size: 1.1rem;
         padding: 1rem 2.5rem;
     }
     
     /* Projects Carousel */
-    .projects-header h2 {
-        font-size: 3rem;
-    }
+    .projects-header h2 { font-size: 3rem; }
     
-    .projects-carousel {
-        max-width: 1400px;
-    }
+    .projects-carousel { max-width: 1400px; }
     
-    .project-slide {
+    .project-slide 
+    {
         min-width: 900px;
         max-width: 900px;
     }
     
-    .project-image {
-        height: 500px;
-    }
+    .project-image { height: 500px; }
     
-    .project-info h3 {
-        font-size: 2.25rem;
-    }
+    .project-info h3 { font-size: 2.25rem; }
     
-    .project-info p {
+    .project-info p 
+    {
         font-size: 1.25rem;
         max-width: 800px;
     }
-    
-    .carousel-track {
-        padding-left: 250px;
-    }
-    
+        
     /* Footer */
-    .footer {
-        padding: 5rem 4rem 2rem 4rem;
-    }
+    .footer { padding: 5rem 4rem 2rem 4rem; }
     
-    .footer-content {
-        max-width: 1600px;
-    }
+    .footer-content { max-width: 1600px; }
     
-    .footer-logo {
-        max-width: 150px;
-    }
+    .footer-logo { max-width: 150px; }
     
-    .footer-brand h3 {
-        font-size: 1.75rem;
-    }
+    .footer-brand h3 { font-size: 1.75rem; }
     
-    .footer-nav h4 {
-        font-size: 1.25rem;
-    }
+    .footer-nav h4 { font-size: 1.25rem; }
     
-    .footer-nav a {
-        font-size: 1.1rem;
-    }
+    .footer-nav a { font-size: 1.1rem; }
     
-    .footer-cta-btn {
+    .footer-cta-btn 
+    {
         font-size: 1.2rem;
         padding: 1.25rem 2rem;
     }
 }
 
-/* EXTRA LARGE SCREENS: 1920px and up (for really big monitors) */
-@media (min-width: 1920px) {
-    .hero h1 {
-        font-size: 5rem;
-    }
+/* EXTRA LARGE SCREENS: 1920px and up */
+@media (min-width: 1920px) 
+{
+    .hero h1 { font-size: 5rem; }
     
-    .hero p {
-        font-size: 1.6rem;
-    }
+    .hero p { font-size: 1.6rem; }
     
     .intro-main,
-    .intro-sub {
+    .intro-sub
+    {
         font-size: 2rem;
     }
     
-    .team-content h2 {
-        font-size: 4rem;
+    .team-content 
+    {
+        padding: 5rem 5rem;
     }
     
-    .team-content p {
-        font-size: 1.5rem;
-    }
+    .team-content h2 { font-size: 4rem; }
+    
+    .team-content p { font-size: 1.5rem; }
     
     .projects-carousel { max-width: 1600px; }
 
-    .project-slide {
+    .project-slide 
+    {
         min-width: 1100px;
         max-width: 1100px;
     }
     
     .project-image { height: 600px; }
-
-    .carousel-track { padding-left: 200px; }
 }
