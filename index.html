@@ -465,29 +465,29 @@
         {
             const cards = document.querySelectorAll('.service-card');
 
-            // 1. Handle tapping ON a card
-            cards.forEach(card => {
-                card.addEventListener('click', (e) => {
-                    // Check if we are on a touch device (optional, but good safety)
-                    // Toggle the active class
-                    const isActive = card.classList.contains('active');
-                    
-                    // First, close all other open cards
-                    cards.forEach(c => c.classList.remove('active'));
+            // Listen for ANY click on the entire document
+            document.addEventListener('click', (e) => {
+                
+                // 1. Check if we clicked INSIDE a card
+                const clickedCard = e.target.closest('.service-card');
 
-                    // If it wasn't active before, make it active now
-                    if (!isActive) {
-                        card.classList.add('active');
+                // 2. If we clicked inside a card...
+                if (clickedCard) {
+                    // If it's already open, we might be clicking a link inside, so do nothing.
+                    // If it's closed, we need to open it.
+                    if (!clickedCard.classList.contains('active')) {
+                        // Close all other cards first (so only one is open at a time)
+                        cards.forEach(c => c.classList.remove('active'));
+                        // Open this one
+                        clickedCard.classList.add('active');
                     }
-                    
-                    // Stop the click from bubbling up to the document (prevents immediate closing)
-                    e.stopPropagation();
-                });
-            });
-
-            // 2. Handle tapping OUTSIDE a card (The "Flip Back" logic)
-            document.addEventListener('click', () => {
-                cards.forEach(card => card.classList.remove('active'));
+                    // (If it was already active, we let the click proceed normally)
+                } 
+                // 3. If we clicked OUTSIDE a card (the background)...
+                else {
+                    // Close ALL cards
+                    cards.forEach(c => c.classList.remove('active'));
+                }
             });
         });
     </script>

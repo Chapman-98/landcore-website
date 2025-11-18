@@ -10,6 +10,9 @@ body
 {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Navbar */
