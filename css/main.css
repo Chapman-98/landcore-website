@@ -895,7 +895,7 @@ body
     =================================== */
 
 /* SMALL TABLET: 801px to 1000px - Keep hamburger, stack team */
-@media (min-width: 801px) and (max-width: 1040px) 
+@media (min-width: 801px) and (max-width: 1399px) 
 {
     /* Navbar - Keep hamburger */
     .navbar 
@@ -979,14 +979,19 @@ body
     /* Hero */
     .hero 
     {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg');
-        background-size: cover;
-        background-position: center 40%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg') !important;
+        
+        /* 2. Important: This centers the image so the "zoom" focuses on the middle */
+        background-position: center 60% !important;
+        
+        /* 3. Ensure the background doesn't move (fixes the "shaking") */
+        background-attachment: scroll !important;
+        
+        /* 4. Standard sizing */
+        background-size: cover !important;
         background-repeat: no-repeat;
         padding: 3rem 1.5rem;
         min-height: 60vh;
-        background-attachment: scroll;
-
     }
     
     .hero h1 { font-size: 3rem; }
@@ -1598,8 +1603,10 @@ body
 /* SPECIAL FIX: Detects touch screens (Tablets & Phones) 
    regardless of how wide the screen is.
 */
-@media (hover: none) {
-    .hero {
+@media (hover: none)
+{
+    .hero 
+    {
         background-attachment: scroll !important;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg') !important;
         background-position: center center !important;
