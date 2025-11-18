@@ -399,7 +399,7 @@ body
     background-color: #367BBF;
     color: white;
     padding: 0.75rem 2rem;
-    border-radius: 0.3125rem;
+    border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -478,7 +478,7 @@ body
     color: white;
     padding: 1rem 2.5rem;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 2rem;
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(54, 123, 191, 0.3);
@@ -899,7 +899,7 @@ body
     =================================== */
 
 /* SMALL TABLET: 801px to 1000px - Keep hamburger, stack team */
-@media (min-width: 801px) and (max-width: 1000px) 
+@media (min-width: 801px) and (max-width: 1040px) 
 {
     /* Navbar - Keep hamburger */
     .navbar 
@@ -1012,17 +1012,14 @@ body
     .service-card { height: 400px; }
     
     /* Team Section - STACKED */
-    .team-section { padding: 3rem 0; }
+    .team-section { padding: 0; }
     
-    .team-split 
-    {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
+    .team-split { display: block; }
     
     .team-image 
     { 
-        height: 450px;
+        width: 100%;
+        height: 500px;
         overflow: hidden;
     }
     
@@ -1031,17 +1028,30 @@ body
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 15%; 
+        object-position: center 20%; 
     }
     
     .team-content 
     { 
-        padding: 3rem 2rem;
+        background-color: white;
+        padding: 4rem 3rem;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
-    .team-content h2 { font-size: 2rem; }
+    .team-content h2 { font-size: 2.25rem; }
     
-    .team-content p { font-size: 1rem; }
+    .team-content p { font-size: 1.05rem; }
+    
+    .team-btn 
+    {
+        width: auto;
+        display: inline-block;
+    }
     
     /* Projects Carousel */
     .projects-carousel 
@@ -1075,185 +1085,7 @@ body
     .footer-right { grid-column: 1 / -1; }
 }
 
-/* TABLET: 1001px to 1200px - Desktop nav, side-by-side team */
-@media (min-width: 1001px) and (max-width: 1200px) 
-{
-    /* Navbar - Desktop style */
-    .navbar { padding: 0.5rem 2rem; }
-    
-    .hamburger { display: none; }
-    
-    .nav-links 
-    {
-        position: static;
-        flex-direction: row;
-        gap: 1.5rem;
-        opacity: 1;
-        visibility: visible;
-        background-color: transparent;
-        width: auto;
-        height: auto;
-        padding: 0;
-    }
-    
-    .nav-links li 
-    {
-        transform: none;
-        opacity: 1;
-    }
-    
-    .nav-links a 
-    { 
-        font-size: 0.95rem;
-        padding: 0;
-    }
-    
-    .nav-links a.contact-btn 
-    {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-    }
-    
-    /* Hero adjustments */
-    .hero 
-    {
-        padding: 3rem 1.5rem;
-        min-height: 60vh;
-    }
-    
-    .hero h1 { font-size: 3rem; }
-    
-    .hero p { font-size: 1.1rem; }
-    
-    /* Services intro */
-    .services-intro 
-    {
-        gap: 3rem;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .services-logo { max-width: 180px; }
-    
-    .intro-main,
-    .intro-sub 
-    {
-        font-size: 1.2rem;
-    }
-    
-    /* Services grid */
-    .services-grid { grid-template-columns: 1fr; }
-    
-    .service-card { height: 400px; }
-    
-    .service-image { height: 100%; }
-    
-    .service-image img
-    {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
-    /* Team Section - SIDE BY SIDE with TALL container */
-    .team-split 
-    {
-        grid-template-columns: 1.5fr 1fr;
-        align-items: stretch;
-        min-height: 650px; /* TALL to accommodate landscape image */
-    }
-    
-    .team-image 
-    {
-        height: 100%;
-        overflow: hidden;
-    }
-    
-    .team-image img 
-    { 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 25%; /* Show more of top */
-    }
-    
-    .team-content 
-    { 
-        padding: 4rem 2.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .team-content h2 { font-size: 2rem; }
-    
-    .team-content p { font-size: 1rem; }
-    
-    /* Projects Carousel */
-    .projects-carousel 
-    {
-        max-width: 1000px;
-        padding: 0 60px;
-    }
-        
-    .carousel-arrow 
-    {
-        width: 50px;
-        height: 50px;
-        font-size: 2rem;
-    }
-    
-    .project-slide 
-    {
-        min-width: 700px;
-        max-width: 700px;
-    }
-    
-    .project-image { height: 350px; }
-    
-    /* Footer */
-    .footer-content 
-    {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-    
-    .footer-right { grid-column: 1 / -1; }
-}
-
-/* LARGER DESKTOP: 1201px to 1399px */
-@media (min-width: 1201px) and (max-width: 1399px) 
-{
-    /* Team Section */
-    .team-split 
-    {
-        grid-template-columns: 1.5fr 1fr;
-        align-items: stretch;
-        min-height: 600px;
-    }
-    
-    .team-image 
-    {
-        height: 100%;
-        overflow: hidden;
-    }
-    
-    .team-image img 
-    {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 20%;
-    }
-    
-    .team-content 
-    {
-        padding: 4rem 3.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
 
 /* MOBILE: Up to 800px */
 @media (max-width: 800px) 
@@ -1391,16 +1223,13 @@ body
     .service-image { height: 100%; }
     
     /* ===== TEAM SECTION ===== */
-    .team-section { padding: 3rem 0; }
+    .team-section { padding: 0; }
     
-    .team-split 
-    {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
+    .team-split { display: block; }
     
     .team-image 
     { 
+        width: 100%;
         height: 400px;
         overflow: hidden;
     }
@@ -1413,7 +1242,17 @@ body
         object-position: center 15%; 
     }
 
-    .team-content { padding: 3rem 2rem; }
+    .team-content 
+    { 
+        background-color: white;
+        padding: 3rem 2rem;
+        text-align: left;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Add this */
+    }
     
     .team-label 
     {
@@ -1431,8 +1270,9 @@ body
     
     .team-btn 
     {
-        width: 100%;
+        width: auto;
         text-align: center;
+        display: inline-block;
     }
     
     .projects-showcase { padding: 4rem 0; }
@@ -1598,14 +1438,18 @@ body
         max-width: 500px;
     }
     
-    /* Team Section */
+    /* Team Section - side by side, SMALLER and CENTERED */
     .team-split 
     {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
         align-items: stretch;
+        min-height: 700px;
     }
     
     .team-image 
     {
+        width: 100%;
         height: 100%;
         overflow: hidden;
     }
@@ -1615,25 +1459,32 @@ body
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 10%;
+        object-position: center 15%;
     }
     
     .team-content 
     { 
+        background-color: white;
         padding: 5rem 4rem;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     
-    .team-content h2 { font-size: 3.5rem; }
+    .team-content h2 { font-size: 2.5rem; }
     
-    .team-content p { font-size: 1.3rem; }
+    .team-content p { font-size: 1.05rem; }
     
     .team-btn 
     {
-        font-size: 1.1rem;
-        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        padding: 0.875rem 2rem;
+        width: auto;
+        display: inline-block;
     }
     
     /* Projects Carousel */
@@ -1690,14 +1541,39 @@ body
         font-size: 2rem;
     }
     
-    .team-content 
+    /* Team Section - Give image MORE space, keep content small and centered */
+    .team-split 
     {
-        padding: 5rem 5rem;
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        min-height: 800px;
     }
     
-    .team-content h2 { font-size: 4rem; }
+    .team-image img 
+    {
+        object-position: center 10%;
+    }
     
-    .team-content p { font-size: 1.5rem; }
+    .team-content 
+    {
+        padding: 6rem 4rem;
+        max-width: 650px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .team-content h2 { font-size: 2.75rem; }
+    
+    .team-content p { font-size: 1.1rem; }
+    
+    .team-btn 
+    {
+        width: auto;
+        display: inline-block;
+    }
     
     .projects-carousel { max-width: 1600px; }
 
