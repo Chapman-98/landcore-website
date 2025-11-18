@@ -1594,3 +1594,15 @@ body
     
     .project-image { height: 600px; }
 }
+
+/* SPECIAL FIX: Detects touch screens (Tablets & Phones) 
+   regardless of how wide the screen is.
+*/
+@media (hover: none) {
+    .hero {
+        background-attachment: scroll !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
