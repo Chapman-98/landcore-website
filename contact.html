@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Landcore</title>
+    <link rel="stylesheet" href="css/main.css"> 
+    </head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo"> 
+                <a href="index.html">
+                    <img src="images/LC-logo-no-logo.tiff" alt="Landcore">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li class="mobile-only"><a href="contact.html" class="contact-btn">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-right">
+            <a href="tel:+13043904077" class="phone-number">(304) 390 4077</a>
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </div>
+    </nav>
+
+    
+    
+    <main class="contact-page">
+        <section class="contact-hero">
+            <h1>Get Started on Your Project.</h1>
+            <p>Our estimating team will be in touch shortly to discuss your bid or consultation request.</p>
+        </section>
+
+        <div class="contact-split">
+            
+            <div class="contact-form-container">
+                <form action="submit_form.php" method="POST" class="contact-form">
+                    <h3>Request A Bid</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-type">Project Type (e.g., Commercial, Residential)</label>
+                        <select id="project-type" name="project-type">
+                            <option value="" disabled selected>Select a Project Type</option>
+                            <option value="commercial">Commercial Site Prep</option>
+                            <option value="residential">Residential Development</option>
+                            <option value="public">Municipal / Public Bid</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Project Details / Scope of Work</label>
+                        <textarea id="details" name="details" rows="6" required placeholder="Tell us about your project: required services, timeline, and location."></textarea>
+                    </div>
+
+                    <div class="form-submit-center">
+                        <button type="submit" class="consultation-btn">Submit Request</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Left: Logo and Company Info -->
+            <div class="footer-brand">
+                <img src="images/LC-logo-no-logo.tiff" alt="Landcore Builders" class="footer-logo">
+                <h3>Landcore Builders</h3>
+                <p class="footer-address">
+                    1027 Stewart St.<br>
+                    Milton, WV 25541
+                </p>
+                <p class="footer-phone">
+                    <a href="tel:+13043904077">(304) 390-4077</a>
+                </p>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">Our Team</a></li>
+                    <li><a href="projects.html">Our Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: Map and CTA Button -->
+            <div class="footer-right">
+                <div class="footer-buttons">
+                    <a href="contact.html" class="footer-cta-btn">Get In Touch</a>
+                    <a href="about.html#careers" class="footer-cta-btn">Careers</a>
+                </div>
+                
+                <div class="footer-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.3346245877256!2d-82.14886092408535!3d38.433739071826764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8848ab9e59333b1d%3A0x5ea69d5d91a4246c!2s1027%20Stewart%20St%2C%20Milton%2C%20WV%2025541!5e0!3m2!1sen!2sus!4v1762954528099!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Landcore Builders. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
