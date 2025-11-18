@@ -981,6 +981,8 @@ body
     {
         padding: 3rem 1.5rem;
         min-height: 60vh;
+        background-attachment: scroll;
+
     }
     
     .hero h1 { font-size: 3rem; }
