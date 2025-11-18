@@ -1108,6 +1108,8 @@ body
         z-index: 1001;
     }
     
+    .phone-number { display: none; }
+    
     .nav-links 
     {
         position: fixed;
@@ -1173,7 +1175,7 @@ body
     .hero 
     {
         padding: 3rem 1.5rem;
-        min-height: 60vh;
+        min-height: 80vh;
     }
     
     .hero h1 
