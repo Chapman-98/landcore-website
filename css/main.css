@@ -669,10 +669,6 @@ body
     align-items: center;
     gap: 1rem;
     margin-top: 3rem;
-    
-    /* DEBUG */
-    outline: 3px solid white;
-    outline-offset: -3px;
 }
 
 .thumbnail 
@@ -1180,6 +1176,7 @@ body
         background-repeat: no-repeat;
         padding: 3rem 1.5rem;
         min-height: 70vh;
+        background-attachment: scroll;
     }
     
     .hero h1 
