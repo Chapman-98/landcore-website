@@ -466,25 +466,38 @@
             const cards = document.querySelectorAll('.service-card');
 
             // Listen for ANY click on the entire document
-            document.addEventListener('click', (e) => {
+            document.addEventListener('click', (e) => 
+            {
                 
                 // 1. Check if we clicked INSIDE a card
                 const clickedCard = e.target.closest('.service-card');
 
                 // 2. If we clicked inside a card...
-                if (clickedCard) {
-                    // If it's already open, we might be clicking a link inside, so do nothing.
-                    // If it's closed, we need to open it.
-                    if (!clickedCard.classList.contains('active')) {
-                        // Close all other cards first (so only one is open at a time)
+                if (clickedCard) 
+                {
+                    // SAFETY CHECK: Did they click the "Learn More" button/link?
+                    // If yes, we stop here so the link actually works instead of just closing the box.
+                    if (e.target.closest('a') || e.target.tagName === 'A') 
+                    {
+                        return; 
+                    }
+
+                    // TOGGLE LOGIC:
+                    if (clickedCard.classList.contains('active')) 
+                    {
+                        // A: If it is ALREADY open, close it (flip back)
+                        clickedCard.classList.remove('active');
+                    } 
+                    else 
+                    {
+                        // B: If it is closed, close all others and open this one
                         cards.forEach(c => c.classList.remove('active'));
-                        // Open this one
                         clickedCard.classList.add('active');
                     }
-                    // (If it was already active, we let the click proceed normally)
-                } 
+                }
                 // 3. If we clicked OUTSIDE a card (the background)...
-                else {
+                else 
+                {
                     // Close ALL cards
                     cards.forEach(c => c.classList.remove('active'));
                 }
