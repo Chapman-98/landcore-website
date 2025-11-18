@@ -1175,8 +1175,8 @@ body
     .hero 
     {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Landcore-Hero-Background-mobile.jpg');
-        background-size: auto 100%;
-        background-position: center center;
+        background-size: cover;
+        background-position: center 40%;
         background-repeat: no-repeat;
         padding: 3rem 1.5rem;
         min-height: 70vh;
