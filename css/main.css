@@ -1093,6 +1093,10 @@ body
         font-size: 2rem;
     }
     
+    .arrow-left { left: 5px; }
+
+    .arrow-right { right: 5px; }
+
     .project-slide 
     {
         min-width: 600px;
@@ -1339,11 +1343,16 @@ body
         
     .carousel-arrow 
     {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+        top: 38%;
     }
     
+    .arrow-left { left: 1px; }
+
+    .arrow-right { right: 1px; }
+
     .project-slide 
     {
         min-width: calc(100vw - 80px);
@@ -1646,308 +1655,6 @@ body
 
 
 
-/**** TEAM CSS ****/
-
-/* =========================================
-   TEAM PAGE SPECIFIC STYLES
-   ========================================= */
-
-/* Dark Section Background */
-.culture-collage 
-{
-    background-color: #1a252f; /* Dark Slate Blue/Grey */
-    min-height: 800px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-}
-
-.collage-container 
-{
-    position: relative;
-    width: 100%;
-    max-width: 1400px;
-    height: 600px; /* Define height so absolute positioning works */
-}
-
-/* Center Text */
-.collage-center 
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10;
-    width: 90%;
-    max-width: 700px;
-}
-
-.collage-label 
-{
-    color: #367BBF;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.collage-center h1 
-{
-    color: white;
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
-}
-
-.president-name 
-{
-    color: #CED3DC;
-    font-size: 1.2rem;
-    font-style: italic;
-}
-
-/* Floating Card Base Style */
-.floating-card 
-{
-    position: absolute;
-    width: 280px;
-    height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-    z-index: 5;
-}
-
-.floating-card:hover 
-{
-    transform: scale(1.05);
-    z-index: 20;
-}
-
-.floating-card img 
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Quote Box Inside Card */
-.collage-quote-box 
-{
-    background-color: #367BBF;
-    color: white;
-    height: 100%;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.collage-quote-box p 
-{
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-
-.collage-quote-box span 
-{
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-/* Positions */
-.pos-top-left { top: 0; left: 5%; }
-.pos-top-right { top: 10%; right: 5%; }
-.pos-bottom-left { bottom: 10%; left: 10%; }
-.pos-bottom-right { bottom: 0; right: 5%; }
-
-/* Animations */
-.slide-in-left { animation: slideLeft 1.5s ease-out forwards; }
-.slide-in-right { animation: slideRight 1.5s ease-out forwards; }
-
-@keyframes slideLeft 
-{
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideRight 
-{
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-/* Responsive: Stack on Mobile/Tablet */
-@media (max-width: 1000px) 
-{
-    .culture-collage 
-    {
-        height: auto;
-        min-height: auto;
-        padding: 4rem 1.5rem;
-    }
-    
-    .collage-container 
-    {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .collage-center, .floating-card 
-    {
-        position: relative;
-        top: auto; left: auto; right: auto; bottom: auto;
-        transform: none;
-        width: 100%;
-        max-width: 400px;
-    }
-    
-    .collage-center { margin-bottom: 2rem; }
-    
-    /* Disable slide animation on mobile to prevent glitches */
-    .slide-in-left, .slide-in-right { animation: none; opacity: 1; }
-}
-
-/* =========================================
-   LEADERSHIP GRID STYLES
-   ========================================= */
-
-.leadership-section 
-{
-    background-color: #f4f6f7; /* Very light grey to separate from white footer */
-    padding: 6rem 2rem;
-}
-
-.leadership-container 
-{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styling */
-.leadership-header 
-{
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem auto;
-}
-
-.leadership-header h2 
-{
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.leadership-header p 
-{
-    font-size: 1.1rem;
-    color: #5a6c7d;
-    line-height: 1.6;
-}
-
-/* The Grid Layout */
-.leader-grid 
-{
-    display: grid;
-    /* Creates 3 columns that stack automatically on mobile */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-/* Individual Card Design */
-.leader-card 
-{
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden; /* Keeps image corners rounded */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.leader-card:hover 
-{
-    transform: translateY(-5px); /* Lifts up slightly */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-/* Headshot Image */
-.leader-image 
-{
-    width: 100%;
-    height: 350px; /* Fixed height for consistency */
-    background-color: #dbe4eb; /* Fallback color if image missing */
-}
-
-.leader-image img 
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures face isn't stretched */
-    object-position: 50% 20%; /* Focuses on face */
-}
-
-/* Text Content */
-.leader-info { padding: 2rem; }
-
-.leader-info h3 
-{
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.25rem;
-}
-
-.leader-title 
-{
-    display: block;
-    color: #367BBF; /* Brand Blue */
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-.leader-info p 
-{
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* Email Link Button */
-.leader-contact 
-{
-    text-decoration: none;
-    color: #367BBF;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-}
-
-.leader-contact:hover { color: #1a252f; }
-
-/* Responsive Fix */
-@media (max-width: 768px) 
-{
-    .leadership-header h2 { font-size: 2rem; }
-    .leader-image { height: 300px; }
-}
 
 
 #viewport-indicator 
