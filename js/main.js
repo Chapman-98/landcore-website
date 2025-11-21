@@ -271,3 +271,51 @@ document.addEventListener('DOMContentLoaded', function()
         if (linkPage === currentPage) { link.classList.add('active'); }
     });
 });
+
+// ===================================
+// PROJECT FILTER BUTTONS
+// ===================================
+document.addEventListener('DOMContentLoaded', function() 
+{
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Only run if filter buttons exist
+    if (!filterButtons.length) return;
+    
+    filterButtons.forEach(button => 
+    {
+        button.addEventListener('click', function() 
+        {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get the filter value
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter the project cards
+            projectCards.forEach(card => 
+            {
+                const cardService = card.getAttribute('data-service');
+                
+                if (filterValue === 'all' || cardService === filterValue) 
+                {
+                    card.style.display = 'block';
+                    // Optional: Add fade-in animation
+                    card.style.opacity = '0';
+                    setTimeout(() => 
+                    {
+                        card.style.opacity = '1';
+                    }, 50);
+                } 
+                else 
+                {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
