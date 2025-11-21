@@ -1656,6 +1656,7 @@ body
 
 
 
+.nav-links a.active { color: #367BBF; }
 
 #viewport-indicator 
 {
