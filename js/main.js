@@ -242,3 +242,15 @@ document.addEventListener('DOMContentLoaded', () =>
         }
     });
 });
+
+function updateViewportSize() 
+{
+    const indicator = document.getElementById('viewport-indicator');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    indicator.textContent = `Width: ${width}px | Height: ${height}px`;
+}
+
+// Update on load and resize
+window.addEventListener('load', updateViewportSize);
+window.addEventListener('resize', updateViewportSize);

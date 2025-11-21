@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Projects - Landcore</title>
     <link rel="stylesheet" href="css/main.css"> 
+    <link rel="stylesheet" href="css/projects.css"> 
 </head>
 <body>
 
@@ -39,12 +40,66 @@
             <a href="contact.html" class="contact-btn">Contact</a></li>
         </div>
     </nav>
-    <main class="coming-soon-content">
-        <section style="padding: 100px 20px; text-align: center;">
-            <h1 style="font-size: 2.5rem; color: #34495e; margin-bottom: 20px;">Our Projects</h1>
-            <p style="font-size: 1.2rem; color: #5a6c7d;">
-                This content is coming soon! We are gathering photos and details for our project case studies now.
-            </p>
+
+    <main class="projects-page">
+        <section class="projects-hero">
+            <h1>Proven Performance. Trusted Results.</h1>
+            <p>Our portfolio showcases the complexity and quality of our work across civil and site construction.</p>
+        </section>
+
+        <!-- PROJECT FILTERS -->
+        <section class="project-filters-section">
+            <div class="container">
+                <div class="filters-list">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="excavation">Mass Excavation</button>
+                    <button class="filter-btn" data-filter="utilities">Utility Installation</button>
+                    <button class="filter-btn" data-filter="demolition">Demolition</button>
+                    <button class="filter-btn" data-filter="paving">Paving & Concrete</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT GRID -->
+        <section class="project-grid-section">
+            <div class="container">
+                <div class="project-grid">
+                    
+                    <!-- CARD 1: EXCAVATION PROJECT -->
+                    <!-- The data-service attribute is crucial for filtering -->
+                    <a href="project-1.html" class="project-card" data-service="excavation">
+                        <div class="project-image-box">
+                            <img src="images/project-placeholder-1.jpg" alt="Mass Excavation Site">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Westover Hills Site Prep</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- CARD 2: UTILITIES PROJECT -->
+                    <a href="project-2.html" class="project-card" data-service="utilities">
+                        <div class="project-image-box">
+                            <img src="images/project-placeholder-2.jpg" alt="Utility Pipe Installation">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Downtown Utility Upgrade</h3>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- CARD 3: DEMOLITION PROJECT -->
+                    <a href="project-3.html" class="project-card" data-service="demolition">
+                        <div class="project-image-box">
+                            <img src="images/project-placeholder-3.jpg" alt="Building Demolition">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Old Mill Site Cleanup</h3>
+                            </div> 
+                        </div>
+                    </a>
+                    
+                    <!-- MORE CARDS TO ADD -->
+                    
+                </div>
+            </div>
         </section>
     </main>
 
@@ -100,6 +155,8 @@
             <p>&copy; 2025 Landcore Builders. All rights reserved.</p>
         </div>
     </footer>
+
+    <div id="viewport-indicator"></div>
 
 <script src="js/main.js"></script>
 </body>
