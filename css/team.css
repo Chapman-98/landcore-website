@@ -1,34 +1,52 @@
-
-/**** TEAM CSS ****/
-
 /* =========================================
-   TEAM PAGE SPECIFIC STYLES
+   TEAM PAGE STYLES - MODERN MINIMAL
+   Clean layout, generous white space, refined details
+   Brand Blue: #367BBF
    ========================================= */
 
-/* Dark Section Background */
-.culture-collage 
-{
-    background-color: #1a252f; /* Dark Slate Blue/Grey */
-    min-height: 800px;
+/* CSS Variables */
+:root {
+    --team-primary: #1a252f;
+    --team-accent: #367BBF;
+    --team-accent-hover: #2c6aa8;
+    --team-accent-light: #5a9bd4;
+    --team-text: #2c3e50;
+    --team-text-muted: #5a6c7d;
+    --team-text-light: #94a3b8;
+    --team-bg: #f8f9fa;
+    --team-white: #ffffff;
+    --team-border: #e2e8f0;
+    --team-shadow: 0 2px 40px rgba(0, 0, 0, 0.04);
+    --team-shadow-hover: 0 12px 60px rgba(54, 123, 191, 0.12);
+    --team-radius: 4px;
+    --team-transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================
+   CULTURE COLLAGE - MODERN HERO
+   ========================================= */
+
+.culture-collage {
+    background-color: var(--team-primary);
+    min-height: 700px;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 4vw, 4rem);
 }
 
 .collage-container 
 {
     position: relative;
     width: 100%;
-    max-width: 1400px;
-    height: 600px; /* Define height so absolute positioning works */
+    max-width: 1600px;
+    height: clamp(700px, 52vw, 900px);
 }
 
-/* Center Text */
-.collage-center 
-{
+/* Center Text - Clean Typography */
+.collage-center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,67 +54,67 @@
     text-align: center;
     z-index: 10;
     width: 90%;
-    max-width: 700px;
+    max-width: 680px;
 }
 
-.collage-label 
-{
-    color: #367BBF;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+.collage-label {
+    color: var(--team-accent-light);
+    font-weight: 600;
+    font-size: clamp(0.7rem, 0.85vw, 0.8rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
     display: block;
 }
 
-.collage-center h1 
-{
-    color: white;
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+.collage-center h1 {
+    color: var(--team-white);
+    font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
-.president-name 
-{
-    color: #CED3DC;
-    font-size: 1.2rem;
-    font-style: italic;
+.president-name {
+    color: var(--team-text-light);
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.02em;
 }
 
-/* Floating Card Base Style */
+/* Floating Cards - Minimal Style */
 .floating-card 
 {
     position: absolute;
-    width: 280px;
-    height: 200px;
-    border-radius: 8px;
+    width: clamp(320px, 24vw, 420px);
+    height: clamp(230px, 18vw, 300px);
+    border-radius: var(--team-radius);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: transform var(--team-transition), box-shadow var(--team-transition);
     z-index: 5;
 }
 
-.floating-card:hover 
-{
-    transform: scale(1.05);
+.floating-card:hover {
+    transform: scale(1.02) translateY(-4px);
     z-index: 20;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
-.floating-card img 
-{
+.floating-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Quote Box Inside Card */
-.collage-quote-box 
-{
-    background-color: #367BBF;
-    color: white;
+/* Quote Box - Clean Design */
+.collage-quote-box {
+    background-color: var(--team-accent);
+    color: var(--team-white);
     height: 100%;
-    padding: 1.5rem;
+    padding: clamp(1.25rem, 2vw, 1.75rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,242 +122,324 @@
     text-align: center;
 }
 
-.collage-quote-box p 
-{
-    font-size: 1rem;
+.collage-quote-box p {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: clamp(0.75rem, 1vw, 1rem);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
 }
 
-.collage-quote-box span 
-{
-    font-weight: 700;
-    font-size: 0.85rem;
+.collage-quote-box span {
+    font-weight: 600;
+    font-size: clamp(0.7rem, 0.8vw, 0.75rem);
     text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
 }
 
-/* Positions */
-.pos-top-left { top: 0; left: 5%; }
-.pos-top-right { top: 10%; right: 5%; }
-.pos-bottom-left { bottom: 10%; left: 10%; }
-.pos-bottom-right { bottom: 0; right: 5%; }
-
-/* Animations */
-.slide-in-left { animation: slideLeft 1.5s ease-out forwards; }
-.slide-in-right { animation: slideRight 1.5s ease-out forwards; }
-
-@keyframes slideLeft 
-{
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+/* Card Positions - Balanced Layout */
+.pos-top-left {
+    top: 0%;
+    left: 0%;
 }
 
-@keyframes slideRight 
-{
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+.pos-top-right {
+    top: 8%;
+    right: -2%;
 }
 
-/* Responsive: Stack on Mobile/Tablet */
-@media (max-width: 1000px) 
-{
-    .culture-collage 
-    {
+.pos-bottom-left {
+    bottom: 10%;
+    left: 0%;
+}
+
+.pos-bottom-right {
+    bottom: 0%;
+    right: 0%;
+}
+
+/* Subtle Animations */
+.slide-in-left {
+    animation: fadeSlideLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: fadeSlideRight 1s ease-out forwards;
+}
+
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================================
+   LEADERSHIP SECTION - CLEAN GRID
+   ========================================= */
+
+.leadership-section {
+    background-color: var(--team-white);
+    padding: clamp(6rem, 12vw, 12rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.leadership-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header - Minimal Typography */
+.leadership-header {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 0 clamp(4rem, 8vw, 6rem) 0;
+}
+
+.leadership-header h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--team-primary);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.1;
+}
+
+.leadership-header p {
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: var(--team-text-muted);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Leader Grid - Clean 3-Column */
+.leader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* Leader Card - Minimal Design */
+.leader-card {
+    background-color: var(--team-white);
+    border-radius: var(--team-radius);
+    overflow: hidden;
+    box-shadow: none;
+    border: 1px solid var(--team-border);
+    transition: all var(--team-transition);
+}
+
+.leader-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--team-shadow-hover);
+    border-color: transparent;
+}
+
+/* Leader Image - Clean Crop */
+.leader-image {
+    width: 100%;
+    height: clamp(320px, 35vw, 380px);
+    background-color: var(--team-bg);
+    overflow: hidden;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.03);
+}
+
+/* Leader Info - Clean Typography */
+.leader-info {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.leader-info h3 {
+    font-size: clamp(1.35rem, 1.6vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--team-primary);
+    margin-bottom: 0.5rem;
+}
+
+.leader-title {
+    display: block;
+    color: var(--team-accent);
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.85vw, 0.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.leader-info p {
+    color: var(--team-text-muted);
+    font-size: clamp(0.95rem, 1.05vw, 1rem);
+    line-height: 1.7;
+    margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 400;
+}
+
+/* Contact Link - Subtle Underline */
+.leader-contact {
+    text-decoration: none;
+    color: var(--team-text);
+    font-weight: 500;
+    font-size: clamp(0.85rem, 0.95vw, 0.9rem);
+    position: relative;
+    transition: color var(--team-transition);
+}
+
+.leader-contact::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--team-text);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--team-transition);
+}
+
+.leader-contact:hover {
+    color: var(--team-accent);
+}
+
+.leader-contact:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: var(--team-accent);
+}
+
+/* =========================================
+   RESPONSIVE - TEAM PAGE
+   ========================================= */
+
+@media (max-width: 1000px) {
+    .culture-collage {
         height: auto;
         min-height: auto;
-        padding: 4rem 1.5rem;
+        padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
     }
     
-    .collage-container 
-    {
+    .collage-container {
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: clamp(1.5rem, 3vw, 2rem);
     }
 
-    .collage-center, .floating-card 
-    {
+    .collage-center,
+    .floating-card {
         position: relative;
-        top: auto; left: auto; right: auto; bottom: auto;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
         transform: none;
         width: 100%;
         max-width: 400px;
     }
     
-    .collage-center { margin-bottom: 2rem; }
-    
-    /* Disable slide animation on mobile to prevent glitches */
-    .slide-in-left, .slide-in-right { animation: none; opacity: 1; }
-}
-
-/* =========================================
-   LEADERSHIP GRID STYLES
-   ========================================= */
-
-.leadership-section 
-{
-    background-color: #f4f6f7; /* Very light grey to separate from white footer */
-    padding: 6rem 2rem;
-}
-
-.leadership-container 
-{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styling */
-.leadership-header 
-{
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem auto;
-}
-
-.leadership-header h2 
-{
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.leadership-header p 
-{
-    font-size: 1.1rem;
-    color: #5a6c7d;
-    line-height: 1.6;
-}
-
-/* The Grid Layout */
-.leader-grid 
-{
-    display: grid;
-    /* Creates 3 columns that stack automatically on mobile */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-/* Individual Card Design */
-.leader-card 
-{
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden; /* Keeps image corners rounded */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.leader-card:hover 
-{
-    transform: translateY(-5px); /* Lifts up slightly */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-/* Headshot Image */
-.leader-image 
-{
-    width: 100%;
-    height: 350px; /* Fixed height for consistency */
-    background-color: #dbe4eb; /* Fallback color if image missing */
-}
-
-.leader-image img 
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures face isn't stretched */
-    object-position: 50% 20%; /* Focuses on face */
-}
-
-/* Text Content */
-.leader-info { padding: 2rem; }
-
-.leader-info h3 
-{
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.25rem;
-}
-
-.leader-title 
-{
-    display: block;
-    color: #367BBF; /* Brand Blue */
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-.leader-info p 
-{
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-/* Email Link Button */
-.leader-contact 
-{
-    text-decoration: none;
-    color: #367BBF;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-}
-
-.leader-contact:hover { color: #1a252f; }
-
-/* Responsive Fix */
-@media (max-width: 768px) 
-{
-    .leadership-header h2 { font-size: 2rem; }
-    .leader-image { height: 300px; }
-}
-
-/* Medium screens - subtle adjustments to prevent overlap while keeping stagger */
-@media (min-width: 1001px) and (max-width: 1400px) 
-{
-    .collage-container { height: 650px; }
-    
-    .floating-card 
-    {
-        width: 250px;
-        height: 180px;
+    .collage-center {
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+        max-width: none;
     }
     
-    /* Keep stagger, just push slightly more to edges */
-    .pos-top-left 
-    { 
-        top: 0; 
-        left: 8%; 
+    .floating-card {
+        height: 220px;
     }
     
-    .pos-top-right 
-    { 
-        top: 5%;  /* Reduced from 10% - still staggered but less overlap */
-        right: 8%; 
+    /* Disable animations on mobile */
+    .slide-in-left,
+    .slide-in-right {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-header h2 {
+        font-size: 2.25rem;
     }
     
-    .pos-bottom-left 
-    { 
-        bottom: 5%;  /* Keep some stagger */
-        left: 12%; 
+    .leader-image {
+        height: 280px;
     }
     
-    .pos-bottom-right 
-    { 
-        bottom: 0; 
-        right: 8%; 
+    .leadership-header {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1400px) {
+    .collage-container {
+        height: 720px;
     }
     
-    /* Slightly smaller center area */
-    .collage-center { max-width: 500px; }
+    .floating-card {
+        width: 290px;
+        height: 210px;
+    }
     
-    .collage-center h1 { font-size: 2.2rem; }
+    .pos-top-left {
+        top: 0%;
+        left: 2%;
+    }
+    
+    .pos-top-right {
+        top: 6%;
+        right: 2%;
+    }
+    
+    .pos-bottom-left {
+        bottom: 8%;
+        left: 2%;
+    }
+    
+    .pos-bottom-right {
+        bottom: 0%;
+        right: 2%;
+    }
+    
+    .collage-center {
+        max-width: 480px;
+    }
+    
+    .collage-center h1 {
+        font-size: 2.25rem;
+    }
+    
+    .collage-label {
+        font-size: 0.85rem;
+    }
+    
+    .president-name {
+        font-size: 1.05rem;
+    }
 }

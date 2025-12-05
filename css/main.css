@@ -44,6 +44,80 @@ body
     gap: 1.5rem;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 6px;
+    margin-bottom: 2px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #367BBF;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a 
+{
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.navbar .dropdown-menu a:hover 
+{
+    text-decoration: underline;
+    background: transparent;
+    color: #fff;
+    transform: none;
+}
+
+.dropdown > a {
+    cursor: pointer;
+}
+
+.dropdown > a:hover {
+    color: #fff;
+    transform: none;
+}
+
+.navbar .dropdown-menu a.active {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .logo img { height: 50px; }
 
 .mobile-only { display: none; }
@@ -62,7 +136,7 @@ body
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: clamp(0.75rem, 1vw, 0.95rem);
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
     letter-spacing: 0.3px;
     transition: all 0.2s ease;
     position: relative;
@@ -79,7 +153,7 @@ body
 {
     color: white;
     text-decoration: none;
-    font-size: clamp(0.85rem, 1vw, 1rem);
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
     transition: color 0.3s;
 }
 
@@ -108,7 +182,7 @@ body
     background-attachment: fixed;
     color: white;
     text-align: left;
-    padding: 8rem 7rem;
+    padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 7vw, 7rem);
     min-height: 95vh;
     display: flex;
     flex-direction: column;
@@ -119,21 +193,22 @@ body
 
 .hero h1 
 {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
     line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: -1px;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero p 
 {
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    font-weight: 400;
     max-width: 500px;
-    margin: 0 0 3rem 0;
-    line-height: 1.6;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
 }
 
 .hero-buttons 
@@ -165,8 +240,8 @@ body
 /* Trust Bar Section */
 .trust-bar 
 {
-    background-color: #CED3DC;
-    padding: 1.5rem 1.25rem;
+    background-color: #f8f9fa;
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 2vw, 1.25rem);
     text-align: center;
 }
 
@@ -188,17 +263,20 @@ body
 
 .stat h3
 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     color: #367BBF;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
 }
 
 .stat p
 {
-    font-size: 1rem;
-    color: #2c3e50;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    color: #5a6c7d;
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .stat img
@@ -218,11 +296,11 @@ body
 
 .intro-main
 {
-    font-size: 1.5rem;  /* Bigger, bolder statement */
-    color: #555;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    max-width: 600px;
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: #5a6c7d;
+    line-height: 1.8;
+    max-width: 700px;
+    font-weight: 400;
 }
 
 .intro-sub
@@ -358,8 +436,9 @@ body
 .service-title h3
 {
     color: white;
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
     margin: 0;
     text-align: center;
 }
@@ -389,20 +468,21 @@ body
 /* Overlay Title (centered) */
 .service-overlay h3
 {
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
     color: white;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
-/* Overlay Description */
 .service-overlay p
 {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.95);
-    line-height: 1.6;
+    font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
     margin-bottom: 1.5rem;
     max-width: 400px;
+    font-weight: 400;
 }
 
 /* Learn More Button */
@@ -460,18 +540,21 @@ body
 {
     display: block;
     color: #367BBF;
-    font-weight: 700;
-    font-size: 0.875rem;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 0.85vw, 0.8rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .team-content h2 
 {
-    font-size: 2.5rem;
-    color: #34495e;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.1;
 }
 
 .team-content p 
@@ -479,8 +562,10 @@ body
     color: #5a6c7d;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    font-weight: 400;
 }
+
 
 .team-content p:last-of-type { margin-bottom: 2.5rem; }
 
@@ -530,8 +615,9 @@ body
 
 .projects-header h2 
 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
 }
 
 .see-more-projects 
@@ -628,17 +714,19 @@ body
 
 .project-info h3 
 {
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
     margin-bottom: 1rem;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
 .project-info p 
 {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
 }
 
 /* Carousel Arrows */
@@ -749,16 +837,19 @@ body
 
 .footer-brand h3
 {
-    font-size: 1.5rem;
+    font-size: clamp(1.35rem, 1.6vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
     color: white;
     margin-bottom: 1.5rem;
 }
 
 .footer-address
 {
-    color: #CED3DC;
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .footer-phone a
@@ -784,10 +875,11 @@ body
 
 .footer-nav h4
 {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 1.15vw, 1.1rem);
     color: white;
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .footer-nav ul
@@ -801,10 +893,11 @@ body
 
 .footer-nav a
 {
-    color: #CED3DC;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transition: color 0.3s;
-    font-size: 1rem;
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: clamp(0.95rem, 1.05vw, 1rem);
+    font-weight: 400;
 }
 
 .footer-nav a:hover { color: #367BBF; }
@@ -866,8 +959,9 @@ body
 
 .footer-bottom p
 {
-    color: #CED3DC;
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(0.85rem, 0.95vw, 0.9rem);
+    font-weight: 400;
 }
 
 
@@ -1650,6 +1744,8 @@ body
         background-size: cover !important;
     }
 }
+
+.dropdown > a.active { color: #367BBF; }
 
 .nav-links a.active { color: #367BBF; }
 

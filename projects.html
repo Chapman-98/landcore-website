@@ -21,8 +21,15 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Our Team</a></li>
-                <li><a href="projects.html">Our Projects</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html" class="active">Our Projects</a></li>
+                <li class="dropdown">
+                    <a>Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="site_work.html">Site Work & Infrastructure</a></li>
+                        <li><a href="building_construction.html">Building Construction</a></li>
+                        <li><a href="land_development.html">Land Development</a></li>
+                    </ul>
+                </li>
                 <li><a href="careers.html">Careers</a></li>
                 <li class="mobile-only"><a href="contact.html" class="contact-btn">Contact Us</a></li>
             </ul>
@@ -37,7 +44,7 @@
 
         <div class="nav-right">
             <a href="tel:+13043904077" class="phone-number">(304) 390 4077</a>
-            <a href="contact.html" class="contact-btn">Contact</a></li>
+            <a href="contact.html" class="contact-btn">Contact</a>
         </div>
     </nav>
 
@@ -64,38 +71,245 @@
             <div class="container">
                 <div class="project-grid">
                     
-                    <!-- CARD 1: EXCAVATION PROJECT -->
-                    <!-- The data-service attribute is crucial for filtering -->
-                    <a href="project-1.html" class="project-card" data-service="site-work">
+                    <!-- Milton Elementary -->
+                    <a href="project-detail.html?project=milton-elementary" class="project-card" data-service="building">
                         <div class="project-image-box">
-                            <img src="images/project-placeholder-1.jpg" alt="Mass Excavation Site">
+                            <img src="images/milton_elementary.jpg" alt="Milton Elementary">
                             <div class="project-overlay">
-                                <h3 class="project-title">Westover Hills Site Prep</h3>
+                                <h3 class="project-title">Milton Elementary</h3>
                             </div>
                         </div>
                     </a>
 
-                    <!-- CARD 2: UTILITIES PROJECT -->
-                    <a href="project-2.html" class="project-card" data-service="building">
+                    <!-- Beech Fork Equalization Tank -->
+                    <a href="project-detail.html?project=beech-fork" class="project-card" data-service="site-work">
                         <div class="project-image-box">
-                            <img src="images/project-placeholder-2.jpg" alt="Utility Pipe Installation">
+                            <img src="images/projects/beech-fork.jpg" alt="Beech Fork Equalization Tank">
                             <div class="project-overlay">
-                                <h3 class="project-title">Downtown Utility Upgrade</h3>
+                                <h3 class="project-title">Beech Fork Equalization Tank</h3>
                             </div>
                         </div>
                     </a>
                     
-                    <!-- CARD 3: DEMOLITION PROJECT -->
-                    <a href="project-3.html" class="project-card" data-service="land-development">
+                    <!-- Valley Pointe -->
+                    <a href="project-detail.html?project=valley-pointe" class="project-card" data-service="land-development">
                         <div class="project-image-box">
-                            <img src="images/project-placeholder-3.jpg" alt="Building Demolition">
+                            <img src="images/projects/valley-pointe.jpg" alt="Valley Pointe">
                             <div class="project-overlay">
-                                <h3 class="project-title">Old Mill Site Cleanup</h3>
+                                <h3 class="project-title">Valley Pointe</h3>
                             </div> 
                         </div>
                     </a>
                     
-                    <!-- MORE CARDS TO ADD -->
+                    <!-- Sugar Maple Phase 3 -->
+                    <a href="project-detail.html?project=sugar-maple" class="project-card" data-service="land-development">
+                        <div class="project-image-box">
+                            <img src="images/projects/sugar-maple.jpg" alt="Sugar Maple Phase 3">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Sugar Maple Phase 3</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Putnam County Bank -->
+                    <a href="project-detail.html?project=putnam-county-bank" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/pcb_hero.jpg" alt="Putnam County Bank">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Putnam County Bank</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Greene County Transfer -->
+                    <a href="project-detail.html?project=greene-county" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/greene-county.jpg" alt="Greene County Transfer">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Greene County Transfer</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Halstead Street Heavy Highway -->
+                    <a href="project-detail.html?project=halstead-street" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/halstead-street.jpg" alt="Halstead Street Heavy Highway">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Halstead Street Heavy Highway</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- WV Army National Guard -->
+                    <a href="project-detail.html?project=wv-national-guard" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/wv-national-guard.jpg" alt="WV Army National Guard">
+                            <div class="project-overlay">
+                                <h3 class="project-title">WV Army National Guard</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- AEP Central Machine Shop -->
+                    <a href="project-detail.html?project=aep-machine-shop" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/aep-machine-shop.jpg" alt="AEP Central Machine Shop">
+                            <div class="project-overlay">
+                                <h3 class="project-title">AEP Central Machine Shop</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Mineral Wells Weigh Station -->
+                    <a href="project-detail.html?project=mineral-wells" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/mineral-wells.jpg" alt="Mineral Wells Weigh Station">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Mineral Wells Weigh Station</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Harris Skatepark -->
+                    <a href="project-detail.html?project=harris-skatepark" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/harris-skatepark.jpg" alt="Harris Skatepark">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Harris Skatepark</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Core Industrial Group -->
+                    <a href="project-detail.html?project=core-industrial" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/core-industrial.jpg" alt="Core Industrial Group">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Core Industrial Group</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Charleston Sanitary Board -->
+                    <a href="project-detail.html?project=charleston-sanitary" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/charleston-sanitary.jpg" alt="Charleston Sanitary Board">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Charleston Sanitary Board</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Big Sandy Arena -->
+                    <a href="project-detail.html?project=big-sandy-arena" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/big-sandy-arena.jpg" alt="Big Sandy Arena">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Big Sandy Arena</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Huntington Physical Therapy -->
+                    <a href="project-detail.html?project=huntington-pt" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/huntington-pt.jpg" alt="Huntington Physical Therapy">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Huntington Physical Therapy</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Marco Pizza and Paradise Donuts -->
+                    <a href="project-detail.html?project=marco-paradise" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/marco-paradise.jpg" alt="Marco Pizza and Paradise Donuts">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Marco Pizza & Paradise Donuts</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Cenergy -->
+                    <a href="project-detail.html?project=cenergy" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/cenergy.jpg" alt="Cenergy">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Cenergy</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Unlimited Possibilities -->
+                    <a href="project-detail.html?project=unlimited-possibilities" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/unlimited-possibilities.jpg" alt="Unlimited Possibilities">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Unlimited Possibilities</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Guyan River Public Library -->
+                    <a href="project-detail.html?project=guyan-library" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/guyan-library.jpg" alt="Guyan River Public Library">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Guyan River Public Library</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Bower OBGYN -->
+                    <a href="project-detail.html?project=bower-obgyn" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/bower-obgyn.jpg" alt="Bower OBGYN">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Bower OBGYN</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Snap Fitness -->
+                    <a href="project-detail.html?project=snap-fitness" class="project-card" data-service="building">
+                        <div class="project-image-box">
+                            <img src="images/projects/snap-fitness.jpg" alt="Snap Fitness">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Snap Fitness</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Yeager -->
+                    <a href="project-detail.html?project=yeager" class="project-card" data-service="site-work">
+                        <div class="project-image-box">
+                            <img src="images/projects/yeager.jpg" alt="Yeager">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Yeager</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Sophia -->
+                    <a href="project-detail.html?project=sophia" class="project-card" data-service="land-development">
+                        <div class="project-image-box">
+                            <img src="images/projects/sophia.jpg" alt="Sophia">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Sophia</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- West Hamlin -->
+                    <a href="project-detail.html?project=west-hamlin" class="project-card" data-service="land-development">
+                        <div class="project-image-box">
+                            <img src="images/projects/west-hamlin.jpg" alt="West Hamlin">
+                            <div class="project-overlay">
+                                <h3 class="project-title">West Hamlin</h3>
+                            </div>
+                        </div>
+                    </a>
                     
                 </div>
             </div>
@@ -105,7 +319,6 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Left: Logo and Company Info -->
             <div class="footer-brand">
                 <img src="images/LC-logo-no-logo.tiff" alt="Landcore Builders" class="footer-logo">
                 <h3>Landcore Builders</h3>
@@ -118,7 +331,6 @@
                 </p>
             </div>
 
-            <!-- Center: Navigation Links -->
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
@@ -130,7 +342,6 @@
                 </ul>
             </div>
 
-            <!-- Right: Map and CTA Button -->
             <div class="footer-right">
                 <div class="footer-buttons">
                     <a href="contact.html" class="footer-cta-btn">Get In Touch</a>
@@ -155,8 +366,6 @@
         </div>
     </footer>
 
-    <div id="viewport-indicator"></div>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

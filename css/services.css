@@ -1,219 +1,447 @@
 /* =========================================
-   SERVICES PAGE STYLES
+   SERVICES PAGE - MODERN MINIMAL
    ========================================= */
 
-/* Service Detail Section */
-.service-detail { margin-bottom: 4rem; }
+.service-page { background: #fff; }
 
-/* Service Hero */
-.service-hero 
-{
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-}
-
-.service-hero img 
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.service-hero-overlay 
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    padding: 3rem 4rem;
-    text-align: center;
-}
-
-.service-hero-overlay h2 
-{
-    color: white;
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-/* Service Content */
-.service-content 
-{
-    padding: 4rem 0;
-    background-color: #f9f9f9;
-}
-
-.service-content .container 
+.service-page .container 
 {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
 }
 
-/* Service Overview */
-.service-overview 
+/* =========================================
+   HERO
+   ========================================= */
+
+.service-hero 
 {
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-    text-align: center;
+    position: relative;
+    height: 45vh;
+    min-height: 300px;
+    max-height: 450px;
 }
 
-.service-overview p 
-{
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.8;
-}
-
-/* Work Includes */
-.service-includes { margin-bottom: 4rem; }
-
-.service-includes h3 
-{
-    text-align: center;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
-}
-
-.includes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.includes-grid li {
-    background-color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #34495e;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-
-/* Related Projects */
-.service-projects { margin-bottom: 3rem; }
-
-.service-projects h3 
-{
-    text-align: center;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
-}
-
-.service-projects-grid 
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.service-project-card 
-{
-    text-decoration: none;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
-
-.service-project-card:hover 
-{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.service-project-image 
-{
-    height: 200px;
-    overflow: hidden;
-}
-
-.service-project-image img 
+.service-hero > img 
 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-.service-project-card:hover .service-project-image img { transform: scale(1.05); }
-
-.service-project-card h4 
+.service-hero-content 
 {
-    padding: 1.25rem;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.service-hero-content h1 
+{
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
     margin: 0;
-    color: #2c3e50;
-    font-size: 1.1rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.1;
+}
+
+/* =========================================
+   OVERVIEW
+   ========================================= */
+
+.service-overview 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.overview-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.overview-content 
+{
+    width: 75%;
+    margin-left: auto;
+}
+
+.overview-content p 
+{
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    line-height: 1.9;
+    color: #5a6c7d;
+    margin: 0 0 1.5rem 0;
+    font-weight: 400;
+}
+
+.overview-content p:last-child { margin-bottom: 0; }
+
+.overview-image { overflow: hidden; }
+
+.overview-image img 
+{
+    width: 75%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================================
+   DIFFERENTIATORS
+   ========================================= */
+
+.service-differentiators 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background: #f8f9fa;
+}
+
+.service-differentiators h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    line-height: 1.1;
+}
+
+.differentiators-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.differentiator h3 
+{
+    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin: 0 0 0.5rem 0;
+}
+
+.differentiator p 
+{
+    font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+    line-height: 1.8;
+    color: #5a6c7d;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* =========================================
+   SUB-SERVICES / CAPABILITIES
+   ========================================= */
+
+.service-capabilities 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background: #1a252f;
+}
+
+.service-capabilities h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    line-height: 1.1;
+}
+
+.capabilities-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+.capability 
+{
+    background: #1a252f;
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.capability h4 
+{
+    font-size: clamp(1rem, 1.15vw, 1.1rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.capability p 
+{
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* =========================================
+   FEATURED PROJECTS
+   ========================================= */
+
+.service-projects .container 
+{
+    max-width: none;
+    padding: 0 clamp(2rem, 5vw, 4rem);
+}
+
+.service-projects { padding: clamp(4rem, 8vw, 6rem) 0; }
+
+.service-projects h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    line-height: 1.1;
+}
+
+.projects-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    width: 100%;
+}
+
+.project-card 
+{
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 0;
+}
+
+.project-card:hover 
+{
+    border-color: transparent;
+    box-shadow: 0 12px 60px rgba(54, 123, 191, 0.12);
+    transform: translateY(-4px);
+}
+
+.project-image 
+{
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.project-image img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-image img 
+{
+    transform: scale(1.03);
+}
+
+.project-info 
+{
+    padding: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.project-tag 
+{
+    display: inline-block;
+    font-size: clamp(0.7rem, 0.8vw, 0.75rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #367BBF;
+    margin-bottom: 0.5rem;
+}
+
+.project-info h3 
+{
+    font-size: clamp(1.1rem, 1.25vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin: 0 0 0.5rem 0;
+}
+
+.project-info p 
+{
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    line-height: 1.7;
+    color: #5a6c7d;
+    margin: 0;
+    font-weight: 400;
+}
+
+.projects-link 
+{
+    margin-top: clamp(2rem, 3vw, 2.5rem);
     text-align: center;
 }
 
-/* Service CTA */
+.projects-link a 
+{
+    color: #367BBF;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.projects-link a:hover 
+{
+    color: #2c6aa8;
+}
+
+/* =========================================
+   CTA
+   ========================================= */
+
 .service-cta 
 {
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background: #367BBF;
     text-align: center;
-    padding-top: 2rem;
+}
+
+.service-cta h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.1;
 }
 
 .service-cta p 
 {
-    font-size: 1.3rem;
-    color: #555;
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: rgba(255,255,255,0.9);
+    margin: 0 0 clamp(2rem, 3vw, 2.5rem) 0;
+    font-weight: 400;
 }
 
-.service-cta a 
+.btn-cta 
 {
+    display: inline-block;
+    background: #fff;
     color: #367BBF;
-    font-weight: 700;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: clamp(1rem, 1.3vw, 1.25rem) clamp(2rem, 3vw, 2.5rem);
+    border-radius: 2rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.service-cta a:hover 
+.btn-cta:hover 
 {
-    color: #2c5f99;
-    text-decoration: underline;
+    background: #1a252f;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================================
-   RESPONSIVE - SERVICES
+   RESPONSIVE
    ========================================= */
+
+@media (max-width: 1024px) 
+{
+    .capabilities-grid 
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 900px) 
 {
-    .service-projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .overview-grid 
+    {
+        grid-template-columns: 1fr;
+    }
     
-    .service-hero { height: 300px; }
+    .overview-content 
+    {
+        width: 100%;
+        margin-left: 0;
+    }
     
-    .service-hero-overlay h2 { font-size: 2rem; }
+    .overview-image 
+    {
+        order: -1;
+    }
+    
+    .overview-image img 
+    {
+        width: 100%;
+    }
+    
+    .differentiators-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid 
+    {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) 
 {
-    .service-projects-grid { grid-template-columns: 1fr; }
-    
-    .service-hero { height: 250px; }
-    
-    .service-hero-overlay { padding: 2rem; }
-    
-    .service-hero-overlay h2 { font-size: 1.75rem; }
-    
-    .service-overview p { font-size: 1.1rem; }
-    
-    .service-includes h3,
-    .service-projects h3 
+    .service-hero 
     {
-        font-size: 1.5rem;
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .service-hero-content h1 
+    {
+        font-size: 2.25rem;
+    }
+    
+    .capabilities-grid 
+    {
+        grid-template-columns: 1fr;
+        gap: 0;
+        background: transparent;
+    }
+    
+    .capability 
+    {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .capability:last-child 
+    {
+        border-bottom: none;
     }
 }

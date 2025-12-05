@@ -1,0 +1,409 @@
+/* =========================================
+   CAREERS PAGE - MODERN MINIMAL
+   ========================================= */
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.careers-hero {
+    position: relative;
+    height: clamp(450px, 55vh, 650px);
+    overflow: hidden;
+}
+
+.careers-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.careers-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 37, 47, 0.85) 0%,
+        rgba(54, 123, 191, 0.7) 100%
+    );
+    display: flex;
+    align-items: center;
+    padding: clamp(2rem, 5vw, 5rem);
+}
+
+.careers-hero-overlay .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.careers-hero-overlay h1 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    margin: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
+    line-height: 1.1;
+}
+
+.careers-hero-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    max-width: 550px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Section Label */
+.section-label {
+    display: inline-block;
+    color: #5a9bd4;
+    font-weight: 600;
+    font-size: clamp(0.7rem, 0.85vw, 0.8rem);
+    letter-spacing: 0.2em;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    text-transform: uppercase;
+}
+
+.careers-hero-overlay .section-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   WHY LANDCORE SECTION
+   ========================================= */
+
+.why-landcore-section {
+    padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+    background: #ffffff;
+}
+
+.why-landcore-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 5rem);
+    align-items: start;
+}
+
+.why-content h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.1;
+}
+
+.why-content p {
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: #5a6c7d;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.why-content .section-label {
+    color: #367BBF;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.benefit-card {
+    background: #f8f9fa;
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+    border-radius: 4px;
+    border-top: 3px solid #367BBF;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(54, 123, 191, 0.12);
+}
+
+.benefit-card h3 {
+    font-size: clamp(1.1rem, 1.25vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin: 0 0 0.5rem 0;
+}
+
+.benefit-card p {
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    color: #5a6c7d;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* =========================================
+   OPENINGS SECTION
+   ========================================= */
+
+.openings-section {
+    padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+    background: #f8f9fa;
+}
+
+.openings-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.openings-section h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.1;
+}
+
+.openings-section .section-label {
+    color: #367BBF;
+}
+
+.openings-intro {
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: #5a6c7d;
+    line-height: 1.8;
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: clamp(3rem, 5vw, 4rem);
+}
+
+.openings-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Opening Card */
+.opening-card {
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.opening-card:hover {
+    border-color: transparent;
+    box-shadow: 0 12px 60px rgba(54, 123, 191, 0.12);
+}
+
+.opening-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+    border-bottom: 1px solid #e2e8f0;
+    gap: 1.5rem;
+}
+
+.opening-title h3 {
+    font-size: clamp(1.25rem, 1.5vw, 1.4rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin: 0 0 0.75rem 0;
+}
+
+.opening-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    background: #f0f4f8;
+    color: #5a6c7d;
+    font-size: clamp(0.7rem, 0.8vw, 0.75rem);
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.opening-content {
+    padding: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.opening-summary {
+    font-size: clamp(1rem, 1.1vw, 1.05rem);
+    color: #5a6c7d;
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 0 0 clamp(1.5rem, 2.5vw, 2rem) 0;
+}
+
+.opening-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.detail-section h4 {
+    font-size: clamp(0.8rem, 0.9vw, 0.85rem);
+    font-weight: 600;
+    color: #367BBF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 1rem 0;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-section li {
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    color: #5a6c7d;
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+.detail-section li:last-child {
+    border-bottom: none;
+}
+
+.detail-section li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 5px;
+    height: 5px;
+    background-color: #367BBF;
+    border-radius: 50%;
+}
+
+/* Apply Buttons */
+.apply-btn 
+{
+    display: inline-block;
+    color: #367BBF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.85rem, 0.95vw, 0.9rem);
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.apply-btn:hover { text-decoration: underline; }
+
+.apply-btn-bottom { margin-top: 0.5rem; }
+
+.apply-btn-large 
+{
+    background: white;
+    color: #367BBF;
+    padding: clamp(1rem, 1.3vw, 1.25rem) clamp(2.5rem, 3.5vw, 3.5rem);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    border-radius: 2rem;
+}
+
+.apply-btn-large:hover 
+{
+    background: #f0f4f8;
+    text-decoration: none;
+}
+
+/* =========================================
+   GENERAL APPLICATION CTA
+   ========================================= */
+
+.general-application-section {
+    padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+    background: #367BBF;
+    text-align: center;
+}
+
+.general-application-section .container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.general-application-section h2 {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.1;
+}
+
+.general-application-section p {
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: clamp(2rem, 3vw, 2.5rem);
+}
+
+.apply-btn-large {
+    padding: clamp(1rem, 1.3vw, 1.25rem) clamp(2.5rem, 3.5vw, 3.5rem);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    
+    .opening-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .opening-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .opening-header .apply-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .careers-hero-overlay h1 {
+        font-size: 2.25rem;
+    }
+    
+    .apply-btn-bottom {
+        width: 100%;
+        text-align: center;
+    }
+}

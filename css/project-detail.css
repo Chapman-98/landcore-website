@@ -1,0 +1,426 @@
+/* =========================================
+   PROJECT DETAIL PAGE - MODERN MINIMAL
+   ========================================= */
+
+.container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Project Hero */
+.project-hero 
+{
+    position: relative;
+    height: clamp(400px, 50vh, 600px);
+    overflow: hidden;
+}
+
+.project-hero img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-hero-overlay 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(26, 37, 47, 0.9), rgba(26, 37, 47, 0.3));
+    padding: clamp(2rem, 4vw, 4rem) 0;
+    text-align: center;
+}
+
+.project-hero-overlay h1 
+{
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.1;
+}
+
+.project-meta 
+{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+/* Project Overview Section */
+.project-overview-section 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background-color: #ffffff;
+}
+
+.overview-grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Stats */
+.project-stats 
+{
+    background-color: #f8f9fa;
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    border-radius: 4px;
+    border-left: 3px solid #367BBF;
+}
+
+.project-stats h3 
+{
+    font-size: clamp(1.35rem, 1.8vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.stat-item 
+{
+    margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-label 
+{
+    font-weight: 600;
+    color: #367BBF;
+    font-size: clamp(0.75rem, 0.85vw, 0.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.stat-value 
+{
+    color: #5a6c7d;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    font-weight: 400;
+}
+
+/* Project Description */
+.project-description h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.1;
+}
+
+.project-description p 
+{
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    color: #5a6c7d;
+    line-height: 1.9;
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 400;
+}
+
+/* Challenge & Solution Section */
+.challenge-solution-section 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background-color: #f8f9fa;
+}
+
+.challenge-solution-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.challenge-box,
+.solution-box 
+{
+    background-color: #ffffff;
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.challenge-box 
+{ 
+    border-left-color: #e74c3c; 
+}
+
+.solution-box 
+{ 
+    border-left-color: #27ae60; 
+}
+
+.challenge-box:hover,
+.solution-box:hover 
+{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 60px rgba(54, 123, 191, 0.12);
+    border-color: transparent;
+    border-left-width: 3px;
+}
+
+.challenge-box:hover 
+{
+    border-left-color: #e74c3c;
+}
+
+.solution-box:hover 
+{
+    border-left-color: #27ae60;
+}
+
+.challenge-box h3,
+.solution-box h3 
+{
+    font-size: clamp(1.25rem, 1.6vw, 1.4rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #1a252f;
+    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.challenge-box p,
+.solution-box p 
+{
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    color: #5a6c7d;
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Scope Section */
+.scope-section 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background-color: #ffffff;
+}
+
+.scope-section h2 
+{
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.scope-list 
+{
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.scope-list li 
+{
+    background-color: #f8f9fa;
+    padding: clamp(1rem, 1.5vw, 1.25rem) clamp(1.25rem, 2vw, 2rem);
+    padding-left: clamp(2.5rem, 3.5vw, 3.5rem);
+    margin-bottom: clamp(0.75rem, 1vw, 1rem);
+    border-radius: 4px;
+    border-left: 3px solid #367BBF;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    color: #5a6c7d;
+    position: relative;
+    font-weight: 400;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scope-list li:hover 
+{
+    transform: translateX(4px);
+    background-color: #f0f4f8;
+}
+
+.scope-list li::before 
+{
+    content: "✓";
+    position: absolute;
+    left: clamp(1rem, 1.5vw, 1.25rem);
+    color: #367BBF;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+}
+
+/* Project Gallery Section */
+.project-gallery-section 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background-color: #f8f9fa;
+}
+
+.project-gallery-section h2 
+{
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #1a252f;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.gallery-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2vw, 2rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item 
+{
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.gallery-item:hover 
+{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 60px rgba(54, 123, 191, 0.15);
+}
+
+.gallery-item img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover img 
+{ 
+    transform: scale(1.03); 
+}
+
+/* Project CTA Section */
+.project-cta-section 
+{
+    padding: clamp(4rem, 8vw, 6rem) 0;
+    background-color: #367BBF;
+    text-align: center;
+    color: white;
+}
+
+.project-cta-section h2 
+{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: 1.1;
+}
+
+.project-cta-section p 
+{
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+    margin-bottom: clamp(2rem, 3vw, 2.5rem);
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.project-cta-section .consultation-btn 
+{
+    display: inline-block;
+    background: #ffffff;
+    color: #367BBF;
+    padding: clamp(1rem, 1.3vw, 1.25rem) clamp(2.5rem, 3.5vw, 3.5rem);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-bottom: clamp(1.5rem, 2vw, 2rem);
+}
+
+.project-cta-section .consultation-btn:hover 
+{
+    background: #1a252f;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.back-link 
+{ 
+    margin-top: clamp(1.5rem, 2vw, 2rem); 
+}
+
+.back-link a 
+{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    font-weight: 400;
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back-link a:hover 
+{ 
+    color: white; 
+}
+
+/* =========================================
+   RESPONSIVE - PROJECT DETAIL
+   ========================================= */
+
+@media (max-width: 900px) 
+{
+    .overview-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .challenge-solution-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid 
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) 
+{
+    .gallery-grid 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-hero-overlay h1 
+    {
+        font-size: 2.25rem;
+    }
+}

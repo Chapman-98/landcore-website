@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Landcore</title>
-    <link rel="stylesheet" href="css/main.css"> 
+    <title>About Us - Landcore Builders</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
-    <!-- Navbar - separate and always accessible -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo"> 
                 <a href="index.html">
-                    <img src="images/LC-logo-no-logo.tiff" alt="Company Name">
+                    <img src="images/LC-logo-no-logo.tiff" alt="Landcore">
                 </a>
             </div>
-
             <ul class="nav-links" id="navLinks">
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="projects.html">Our Projects</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a>Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="site_work.html">Site Work & Infrastructure</a></li>
+                        <li><a href="building_construction.html">Building Construction</a></li>
+                        <li><a href="land_development.html">Land Development</a></li>
+                    </ul>
+                </li>
                 <li><a href="careers.html">Careers</a></li>
                 <li class="mobile-only"><a href="contact.html" class="contact-btn">Contact Us</a></li>
             </ul>
         </div>
 
-        <!-- Hamburger Menu Button (only shows on mobile) -->
         <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -36,22 +41,276 @@
 
         <div class="nav-right">
             <a href="tel:+13043904077" class="phone-number">(304) 390 4077</a>
-            <a href="contact.html" class="contact-btn">Contact</a></li>
+            <a href="contact.html" class="contact-btn">Contact</a>
         </div>
     </nav>
-    <main class="coming-soon-content">
-        <section style="padding: 100px 20px; text-align: center;">
-            <h1 style="font-size: 2.5rem; color: #34495e; margin-bottom: 20px;">About Us</h1>
-            <p style="font-size: 1.2rem; color: #5a6c7d;">
-                This content is coming soon! Check back later for our company history, core values, and safety certifications.
-            </p>
-        </section>
-    </main>
+
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+        <img src="images/about_hero.jpg" alt="Landcore Builders">
+        <div class="about-hero-overlay">
+            <div class="container">
+                <h1>Building the Foundation for West Virginia's Growth</h1>
+                <p>33+ years of quality craftsmanship and community service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="our-story-section">
+        <div class="container">
+            <span class="section-label">OUR STORY</span>
+            <h2>How It All Started</h2>
+            <div class="story-grid">
+                <div class="story-text">
+                    <p>Founded in the early 1990s, Landcore began with a simple vision: to deliver exceptional construction projects through quality craftsmanship, professionalism, and genuine care for our clients and community.</p>
+                    <p>From our humble beginnings to becoming a trusted name across West Virginia, Ohio, and North Carolina, we've never lost sight of what matters most—the people behind every project and the communities we serve.</p>
+                    <p>Today, with 33+ years of experience and over 1,500 units developed, we continue to stay ahead of the curve by incorporating cutting-edge technology like GPS grading systems and investing in the personal development of our team members.</p>
+                </div>
+                <div class="story-image">
+                    <img src="images/about_started.jpg" alt="Landcore through the years">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <h2>What Drives Us</h2>
+                <p class="mission-statement">"We don't just move dirt; we build the foundation for West Virginia's future."</p>
+                <p>Every road we pave, every building we construct, and every site we develop becomes part of the infrastructure that connects families, businesses, and communities. Our work touches the daily lives of thousands—from the morning commute to school, to the businesses that drive our local economy.</p>
+                <p>We take pride in knowing that our projects will serve generations to come, and we approach each one with unwavering attention to detail, creativity, and innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="numbers-section">
+        <div class="container">
+            <h2>By The Numbers</h2>
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="number">33+</div>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="number-card">
+                    <div class="number">1500+</div>
+                    <p>Units Developed</p>
+                </div>
+                <div class="number-card">
+                    <div class="number">15+</div>
+                    <p>Major Developments</p>
+                </div>
+                <div class="number-card">
+                    <div class="number">0</div>
+                    <p>Unfinished Projects</p>
+                </div>
+                <div class="number-card">
+                    <div class="number">3</div>
+                    <p>States Served</p>
+                </div>
+                <div class="number-card">
+                    <div class="number">60%</div>
+                    <p>Self-Performed Work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="what-we-do-section">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="services-grid">
+                
+                <div class="service-block">
+                    <h3>General Contracting</h3>
+                    <p>Our extensive experience allows us to offer comprehensive solutions including utility and zoning requirements, design, site development, and building construction. We take a detail-oriented approach to construction, ensuring that every aspect of the project is executed with the highest level of quality and safety.</p>
+                </div>
+
+                <div class="service-block">
+                    <h3>Custom Metal Buildings</h3>
+                    <p>Proud Authorized Builder for Nucor Building Systems with over 25 years of expertise in custom engineered metal building systems. We self-perform approximately 60% of all our Nucor building projects, allowing us to control quality and deliver exceptional results with energy-efficient, sustainable solutions.</p>
+                </div>
+
+                <div class="service-block">
+                    <h3>Comprehensive Development Services</h3>
+                    <p>From land acquisition to build-ready status, we provide a seamless process that includes site selection, land acquisition, planning, and preparing land for construction. Our end-to-end project management ensures timely completion and community integration.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT SETS US APART -->
+    <section class="differentiators-section">
+        <div class="container">
+            <h2>What Sets Us Apart</h2>
+            <div class="differentiators-grid">
+                
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Proven Track Record</h3>
+                    <p>Zero unfinished developments and 1,500+ completed units demonstrate our unwavering commitment to seeing every project through to completion.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Personal Service</h3>
+                    <p>You have a direct line to our leadership team. We're large enough to handle complex projects but personal enough to care about the details that matter to you.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Modern Equipment</h3>
+                    <p>GPS-guided grading systems, state-of-the-art machinery, and continuous investment in the latest construction technology ensure precision and efficiency.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Self-Performance</h3>
+                    <p>We self-perform 60% of our metal building work, giving us direct control over quality, timelines, and project outcomes.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Regional Expertise</h3>
+                    <p>33+ years serving West Virginia, Ohio, and North Carolina means we understand local regulations, terrain challenges, and community needs.</p>
+                </div>
+
+                <div class="diff-card">
+                    <div class="diff-icon">✓</div>
+                    <h3>Team Culture</h3>
+                    <p>Our people are passionate, dedicated professionals who take pride in their work and treat every project like it's their own.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY & QUALITY -->
+    <section class="safety-quality-section">
+        <div class="container">
+            <div class="safety-quality-grid">
+                
+                <div class="safety-box">
+                    <span class="section-label">SAFETY FIRST</span>
+                    <h2>Safety is Our Foundation</h2>
+                    <p>Without a strong safety culture, nothing else matters. We're committed to ensuring that every team member returns home safely to their families at the end of each day.</p>
+                    <ul class="safety-list">
+                        <li>Daily safety briefings and job hazard analysis</li>
+                        <li>Certified safety training for all personnel</li>
+                        <li>Modern equipment with the latest safety features</li>
+                        <li>Continuous safety improvement initiatives</li>
+                    </ul>
+                </div>
+
+                <div class="quality-box">
+                    <span class="section-label">QUALITY COMMITMENT</span>
+                    <h2>Precision in Every Detail</h2>
+                    <p>Quality isn't just a goal—it's embedded in every process, from initial planning through final inspection.</p>
+                    <ul class="quality-list">
+                        <li>GPS-guided equipment for precision grading</li>
+                        <li>Rigorous quality control at every project stage</li>
+                        <li>Detail-oriented approach to all work</li>
+                        <li>Long-term relationships with trusted subcontractors</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERSHIPS & CERTIFICATIONS -->
+    <section class="partnerships-section">
+        <div class="container">
+            <h2>Partnerships & Certifications</h2>
+            
+            <!-- Nucor Partnership -->
+            <div class="partnership-highlight">
+                <div class="partnership-text">
+                    <span class="section-label">AUTHORIZED BUILDER</span>
+                    <h3>Nucor Building Systems</h3>
+                    <p>We're proud to partner with Nucor Building Systems as an Authorized Builder. With over 25 years of expertise in custom engineered metal building systems, Nucor is renowned for innovative solutions that meet unique project needs.</p>
+                    <ul class="partnership-benefits">
+                        <li>Custom engineered for optimal performance</li>
+                        <li>Energy efficient and environmentally friendly</li>
+                        <li>25+ years of proven excellence</li>
+                        <li>Commitment to sustainability and innovation</li>
+                    </ul>
+                </div>
+                <div class="partnership-logo">
+                    <img src="images/nucor-authorized-builder-no-background.png" alt="Nucor Building Systems">
+                </div>
+            </div>
+
+            <!-- Certifications (add as needed) -->
+            <div class="certifications-grid">
+                <div class="cert-item">
+                    <h4>Licensed & Bonded</h4>
+                    <p>Fully licensed general contractor in WV, OH, and NC</p>
+                </div>
+                <div class="cert-item">
+                    <h4>Insured</h4>
+                    <p>Comprehensive liability and workers' compensation coverage</p>
+                </div>
+                <div class="cert-item">
+                    <h4>Industry Affiliations</h4>
+                    <p>Active member of regional and national construction associations</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Optional - add if you have them) -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Landcore's communication throughout the project was outstanding. They kept us informed every step of the way and delivered exactly what they promised, on time and on budget."</p>
+                    <div class="testimonial-author">
+                        <strong>John Smith</strong>
+                        <span>Project Manager, ABC Development</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Their attention to detail and commitment to quality is unmatched. We've worked with many contractors over the years, and Landcore consistently exceeds our expectations."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Director of Operations, XYZ Corporation</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"From the first meeting to project completion, the Landcore team was professional, responsive, and dedicated to our success. I wouldn't hesitate to work with them again."</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Davis</strong>
+                        <span>Owner, Davis Properties</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="about-cta-section">
+        <div class="container">
+            <h2>Ready to Work With Us?</h2>
+            <p>Let's discuss how Landcore can bring your vision to life.</p>
+            <a href="contact.html" class="consultation-btn">Get In Touch</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Left: Logo and Company Info -->
             <div class="footer-brand">
                 <img src="images/LC-logo-no-logo.tiff" alt="Landcore Builders" class="footer-logo">
                 <h3>Landcore Builders</h3>
@@ -64,7 +323,6 @@
                 </p>
             </div>
 
-            <!-- Center: Navigation Links -->
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
@@ -76,7 +334,6 @@
                 </ul>
             </div>
 
-            <!-- Right: Map and CTA Button -->
             <div class="footer-right">
                 <div class="footer-buttons">
                     <a href="contact.html" class="footer-cta-btn">Get In Touch</a>
@@ -103,6 +360,6 @@
 
     <div id="viewport-indicator"></div>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
