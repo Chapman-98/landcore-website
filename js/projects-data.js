@@ -3,24 +3,29 @@ const projectsData = {
         title: "Milton Elementary",
         location: "Milton, WV",
         year: "2023",
-        client: "Cabell County Schools",
+        client: "Cabell County Board of Education",
         timeline: "8 Months",
         type: "Educational Facility",
-        services: "Site Work, Grading, Utilities",
+        services: "Site Work, Demolition, Utilities",
         heroImage: "images/milton_elementary.jpg",
         overview: [
-            "Complete site development for a new elementary school facility in Milton, West Virginia. Landcore handled all site preparation including mass excavation, storm drainage, utility installation, and parking lot construction.",
+            "Complete site development for a new elementary school facility in Milton, West Virginia. Landcore handled all site preparation including building demolition, mass excavation, storm drainage, utility installation, and base stone placement.",
             "This project required coordination with the school district's timeline to ensure minimal disruption to adjacent school operations."
         ],
         challenge: "The project site was adjacent to an active school campus, requiring careful traffic management and noise mitigation during school hours.",
         solution: "Landcore developed a phased construction schedule that concentrated heavy equipment work during off-hours and summer break, while maintaining safe pedestrian routes throughout the project.",
         scope: [
-            "Mass excavation and earthwork",
-            "Storm drainage system installation",
-            "Sanitary sewer and water line installation",
-            "Parking lot construction and paving",
-            "Sidewalk and ADA accessibility improvements",
-            "Athletic field grading and preparation"
+            "Building demolition",
+            "Clearing and grubbing",
+            "Stripping over 15,000 cubic yards of topsoil",
+            "70,000 cubic yards of excavation",
+            "Building pad and retention pond with riser",
+            "2,000 linear feet of HDPE storm sewer",
+            "2,100 linear feet of sanitary sewer with pump station",
+            "2,200 linear feet of water line",
+            "3,300 linear feet of electrical conduit",
+            "18 light pole foundations",
+            "6,500 tons of base stone"
         ],
         gallery: [
             "images/projects/milton-elementary-1.jpg",
@@ -33,26 +38,30 @@ const projectsData = {
     },
     "beech-fork": {
         title: "Beech Fork Equalization Tank",
-        location: "Wayne County, WV",
+        location: "Beech Fork State Park, WV",
         year: "2022",
-        client: "Wayne County PSD",
-        timeline: "4 Months",
+        client: "West Virginia Division of Natural Resources",
+        timeline: "3 Months",
         type: "Municipal Infrastructure",
-        services: "Site Work, Excavation, Utilities",
+        services: "Tank Fabrication, Utilities, Demolition",
         heroImage: "images/projects/beech-fork-hero.jpg",
         overview: [
-            "Installation of a new equalization tank for the Beech Fork wastewater system. This critical infrastructure project improved capacity and reliability for the surrounding community.",
-            "Landcore performed all site work and excavation for the tank installation, working closely with the equipment manufacturer and county officials."
+            "Fabrication and installation of a new 20,000 gallon equalization tank for the Beech Fork State Park wastewater system. This critical infrastructure project improved capacity and reliability for the park.",
+            "Landcore performed all tank fabrication, foundation work, and utility connections, completing the shutdown and tie-in in less than three hours."
         ],
-        challenge: "The site had limited access and required work within an active wastewater facility while maintaining continuous operations.",
-        solution: "We developed a detailed logistics plan that staged materials efficiently and scheduled critical tie-ins during low-flow periods to minimize service disruptions.",
+        challenge: "The site required work within an active wastewater facility while maintaining continuous operations, with the critical tie-in needing to be completed in under three hours.",
+        solution: "We developed a detailed logistics plan that pre-staged all materials and coordinated the critical tie-in to minimize service disruption to less than three hours.",
         scope: [
-            "Site clearing and access road construction",
-            "Deep excavation for tank installation",
-            "Structural backfill and compaction",
-            "Utility connections and piping",
-            "Site restoration and grading",
-            "Erosion control measures"
+            "Fabrication of new 20,000 gallon equalization tank",
+            "12\" concrete foundation",
+            "8\" intake piping",
+            "2\" discharge system",
+            "2\" air system",
+            "FRP grating",
+            "New control panel",
+            "Three 2\" pumps",
+            "Demolition of existing tank",
+            "Shutdown and tie-in in less than three hours"
         ],
         gallery: [
             "images/projects/beech-fork-1.jpg",
@@ -64,24 +73,29 @@ const projectsData = {
         title: "Valley Pointe",
         location: "Putnam County, WV",
         year: "2024",
-        client: "Valley Pointe Development",
+        client: "AB Contracting",
         timeline: "12 Months",
-        type: "Residential Development",
+        type: "Commercial Development",
         services: "Land Development, Site Work, Utilities",
         heroImage: "images/projects/valley-pointe-hero.jpg",
         overview: [
-            "Large-scale residential development featuring over 100 building lots in Putnam County. Landcore provided complete land development services from raw land through build-ready status.",
-            "This phased development showcases our ability to manage complex, long-term projects while maintaining quality and schedule."
+            "Large-scale commercial site development in Putnam County. Landcore provided complete land development services including clearing, excavation, storm and sanitary sewer installation, and site lighting.",
+            "This project showcases our ability to manage complex infrastructure projects with extensive utility work."
         ],
-        challenge: "The property featured significant topographical challenges with multiple drainage basins requiring careful stormwater management design.",
-        solution: "Landcore worked with engineers to optimize the grading plan, reducing earthwork quantities while creating an efficient lot layout that maximized the developable area.",
+        challenge: "The property required removal and reclamation of existing concrete pavement sections and coordination of multiple utility systems across the site.",
+        solution: "Landcore coordinated all utility installations efficiently, managing storm, sanitary, water, and electrical systems to maximize productivity and minimize rework.",
         scope: [
-            "Land clearing and grubbing (50+ acres)",
-            "Mass grading and earthwork",
-            "Road construction and paving",
-            "Storm drainage and detention facilities",
-            "Water and sewer infrastructure",
-            "Lot grading and preparation"
+            "Clearing and grubbing of 6 acres",
+            "Removal and reclaim of existing concrete pavement",
+            "Erosion and sediment controls",
+            "Excavation of 34,000 cubic yards of material",
+            "6,400 linear feet of HDPE storm sewer",
+            "1,600 linear feet of sanitary sewer",
+            "1,500 linear feet of water line",
+            "10,000 linear feet of electrical conduits and site lighting",
+            "4,000 linear feet of curb",
+            "122,000 square feet of concrete stabilization",
+            "6,000 tons of base aggregate"
         ],
         gallery: [
             "images/projects/valley-pointe-1.jpg",
@@ -91,27 +105,28 @@ const projectsData = {
         ]
     },
     "sugar-maple": {
-        title: "Sugar Maple Phase 3",
-        location: "Barboursville, WV",
+        title: "Sugar Maple Phase II & III",
+        location: "Morgantown, WV",
         year: "2023",
-        client: "Sugar Maple LLC",
-        timeline: "6 Months",
+        client: "WB Development",
+        timeline: "10 Months",
         type: "Residential Development",
         services: "Land Development, Site Work, Utilities",
         heroImage: "images/projects/sugar-maple-hero.jpg",
         overview: [
-            "Third phase of an established residential community in Barboursville. Landcore continued our long-standing relationship with the developer to add 45 new building lots.",
-            "This phase required seamless integration with existing infrastructure while meeting increased stormwater requirements."
+            "Phases II and III of the Sugar Maple Ridge residential community in Morgantown. Landcore provided complete land development services including extensive earthwork, storm drainage, and road construction.",
+            "When Phase III was discovered to be short approximately 15,000 yards of material, Landcore surveyed the site and found the necessary yardage while creating seven additional house seats for the developer."
         ],
-        challenge: "Connecting to existing utilities and roads while maintaining access for current residents throughout construction.",
-        solution: "Phased construction approach with temporary access routes and careful scheduling of utility tie-ins during off-peak hours.",
+        challenge: "Phase III was short approximately 15,000 yards of fill material, and additional grading was required in near-zero temperatures without causing delays to utility companies already on site.",
+        solution: "Landcore surveyed the site to locate the needed material and created seven additional house seats. To meet the schedule in freezing conditions, crews worked 24 hours a day in two shifts, moving nearly 7,000 yards in just four days without failing a single compaction test.",
         scope: [
-            "Site grading for 45 lots",
-            "Road extension and paving",
-            "Utility extensions (water, sewer, electric)",
-            "Stormwater management facilities",
-            "Erosion control implementation",
-            "Final lot grading"
+            "Erosion and sediment controls for 40 acres",
+            "Combined excavation of over 90,000 cubic yards",
+            "3,000+ feet of HDPE storm sewer piping",
+            "9,000 linear feet of conduits",
+            "6,000 linear feet of concrete curbing",
+            "Cement stabilization of road base",
+            "Base aggregate installation"
         ],
         gallery: [
             "images/projects/sugar-maple-1.jpg",
@@ -176,27 +191,28 @@ const projectsData = {
         ]
     },
     "greene-county": {
-        title: "Greene County Transfer",
-        location: "Greene County, PA",
-        year: "2023",
-        client: "Greene County",
-        timeline: "3 Months",
-        type: "Municipal Infrastructure",
-        services: "Site Work, Utilities",
+        title: "Greene County Transfer Station",
+        location: "Mt. Morris, PA",
+        year: "2021",
+        client: "Mountain State Waste",
+        timeline: "90 Days",
+        type: "Industrial / Waste Management",
+        services: "Design-Build, Building Construction, Site Work",
         heroImage: "images/greene_county_transfer.png",
         overview: [
-            "Site improvements for a county transfer station facility in Greene County, Pennsylvania. Landcore expanded the facility's capacity with new access roads and staging areas.",
-            "This project demonstrated our ability to work across state lines while maintaining our quality standards."
+            "Conversion of an existing warehouse facility into a combination facility housing Mountain State Waste's Mt. Morris operations including administrative offices, maintenance shop, and the Greene County Transfer Station.",
+            "Landcore engineers worked with various design firms and local permitting offices to design and build the $1.7 million facility, completing it in just over 90 days while the facility remained operational."
         ],
-        challenge: "Work had to be completed while the transfer station remained operational, requiring careful coordination with facility staff.",
-        solution: "Night and weekend shifts for critical work phases, combined with temporary traffic routing to maintain facility operations.",
+        challenge: "The entire project was constructed while the facility served as a hub for MSW's northern operations, requiring careful coordination to maintain continuous business operations.",
+        solution: "Landcore stationed an onsite engineer to facilitate design changes throughout construction, allowing for real-time adjustments that ultimately accelerated the project schedule.",
         scope: [
-            "Access road construction",
-            "Staging area expansion",
-            "Drainage improvements",
-            "Retaining wall construction",
-            "Paving and surfacing",
-            "Site restoration"
+            "Warehouse conversion and renovation",
+            "Administrative office buildout",
+            "Maintenance shop construction",
+            "Transfer station facilities",
+            "In-house steel fabrication",
+            "Multiple trade self-performance",
+            "Coordination with active operations"
         ],
         gallery: [
             "images/projects/greene-county-1.jpg",
@@ -207,25 +223,27 @@ const projectsData = {
     "halstead-street": {
         title: "Halstead Street Heavy Highway",
         location: "Charleston, WV",
-        year: "2024",
+        year: "2020",
         client: "WV Division of Highways",
         timeline: "10 Months",
         type: "Heavy Highway",
-        services: "Site Work, Road Construction",
+        services: "Road Construction, Storm Drainage, Earthwork",
         heroImage: "images/halstread_hero.png",
         overview: [
-            "Major highway improvement project on Halstead Street in Charleston. Landcore performed earthwork, drainage, and road base construction for this WVDOH project.",
-            "The project improved safety and capacity on this critical urban corridor."
+            "Major highway widening and reconstruction project on Halstead Street in Charleston. Landcore performed complete road reconstruction including new storm water drainage improvements with a new MS4 retention pond.",
+            "The existing roadway was completely removed to subgrade and over 2,000 linear feet was widened, with crews maintaining daily access to 40+ homes throughout construction."
         ],
-        challenge: "High traffic volumes and limited detour options required maintaining traffic flow throughout construction.",
-        solution: "Phased construction with lane closures only during off-peak hours, plus weekend shutdowns for major operations with advance public notification.",
+        challenge: "Work required coordination with over 40 homeowners living along the road while maintaining daily access throughout construction. Crews also encountered unsuitable soil conditions in numerous areas.",
+        solution: "Landcore engineers worked with WVDOH personnel to develop solutions for overcoming unstable soils while keeping the project on schedule and within budget, all while maintaining homeowner access.",
         scope: [
-            "Earthwork and grading",
-            "Storm drainage installation",
-            "Road base construction",
-            "Retaining wall installation",
-            "Traffic control management",
-            "Erosion and sediment control"
+            "Complete roadway removal to subgrade",
+            "Over 2,000 linear feet of road widening",
+            "1,700+ linear feet of storm piping",
+            "New MS4 retention pond",
+            "3,400+ linear feet of combination curb and gutter",
+            "New asphalt pavement",
+            "Guardrail installation",
+            "Striping"
         ],
         gallery: [
             "images/projects/halstead-street-1.jpg",
@@ -236,26 +254,28 @@ const projectsData = {
     },
     "wv-national-guard": {
         title: "WV Army National Guard",
-        location: "Eleanor, WV",
-        year: "2022",
+        location: "Poca, WV",
+        year: "2020",
         client: "WV Army National Guard",
-        timeline: "7 Months",
+        timeline: "60 Days",
         type: "Government Facility",
-        services: "Site Work, Building Construction",
-        heroImage: "images/national_guard_hero.png" ,
+        services: "Renovation, Concrete, Structural Steel, Masonry",
+        heroImage: "images/national_guard_hero.png",
         overview: [
-            "Facility improvements for a West Virginia Army National Guard installation. Landcore provided site work and building construction to support military readiness.",
-            "This project required compliance with federal construction standards and security protocols."
+            "Facility modifications at the former Rite Aid warehouse in Poca to allow troop transports inside the secured facility. Working with ZMM Architects & Engineers, Landcore removed an existing truck ramp, canopy, and two garage doors to make room for new 20' x 20' access doors.",
+            "The project required building a larger reinforced concrete ramp in January and maintaining facility security by sealing openings at the end of each workday."
         ],
-        challenge: "Strict security requirements and federal compliance standards required additional planning and documentation.",
-        solution: "Dedicated project team familiar with government contracting requirements, ensuring all documentation and security protocols were maintained throughout.",
+        challenge: "The secured facility required openings to be sealed and reopened every workday to maintain security. Additionally, the reinforced concrete ramp had to be constructed in January weather conditions.",
+        solution: "Landcore self-performed all demolition, concrete work, structural steel erection, and masonry infills. Our sister company, Core Industrial Group, provided coating expertise for various structural elements.",
         scope: [
-            "Site preparation and grading",
-            "Building construction",
-            "Utility installation",
-            "Parking area construction",
-            "Perimeter improvements",
-            "Site security features"
+            "Removal of existing truck ramp and canopy",
+            "Demolition of two garage doors",
+            "New 20' x 20' access door openings",
+            "Reinforced concrete ramp construction",
+            "Structural steel erection",
+            "Masonry infills",
+            "Protective coatings",
+            "Daily security seal coordination"
         ],
         gallery: [
             "images/projects/wv-national-guard-1.jpg",
@@ -266,25 +286,25 @@ const projectsData = {
     "aep-machine-shop": {
         title: "AEP Central Machine Shop",
         location: "New Haven, WV",
-        year: "2023",
+        year: "2019",
         client: "American Electric Power",
         timeline: "6 Months",
         type: "Industrial Facility",
-        services: "Site Work, Building Construction",
+        services: "Interior Renovation, Security Upgrades",
         heroImage: "images/aep_shop.png",
         overview: [
-            "New machine shop facility for American Electric Power's central operations. Landcore constructed the pre-engineered metal building and completed all site work.",
-            "The facility supports AEP's maintenance operations for the region."
+            "Multi-phase renovation of offices, labs, and meeting rooms at AEP's Central Machine Shop. Landcore completed the work in phases to minimize disruption to AEP personnel.",
+            "After successful completion of the first three phases, AEP awarded two additional phases plus contracts for security upgrades and various other construction projects within the facility."
         ],
-        challenge: "The project required coordination with active power generation facilities and adherence to utility safety standards.",
-        solution: "Close coordination with AEP safety personnel and scheduling work around plant operations to ensure zero safety incidents.",
+        challenge: "Work for American Electric Power requires ISNetworld membership and rigorous audits of safety programs, insurance requirements, and experience modification ratings. Work had to minimize disruption to ongoing operations.",
+        solution: "Landcore's phased approach allowed AEP personnel to continue operations throughout construction. Our commitment to safety and quality led to additional project awards.",
         scope: [
-            "Site grading and preparation",
-            "Foundation construction",
-            "Pre-engineered metal building erection",
-            "Utility connections",
-            "Concrete flatwork",
-            "Paving and site finishing"
+            "Office renovations",
+            "Laboratory renovations",
+            "Meeting room upgrades",
+            "Security system upgrades",
+            "Phased construction approach",
+            "ISNetworld compliance"
         ],
         gallery: [
             "images/projects/aep-machine-shop-1.jpg",
@@ -295,25 +315,25 @@ const projectsData = {
     "mineral-wells": {
         title: "Mineral Wells Weigh Station",
         location: "Mineral Wells, WV",
-        year: "2022",
+        year: "2019",
         client: "WV Division of Highways",
-        timeline: "4 Months",
+        timeline: "6 Months",
         type: "Transportation Infrastructure",
-        services: "Site Work, Concrete",
+        services: "Building Construction, Concrete, Utilities",
         heroImage: "images/weigh_station_hero.png",
         overview: [
-            "Construction of a new commercial vehicle weigh station on I-77. Landcore provided site work and concrete construction for this WVDOH facility.",
-            "The station improves commercial vehicle enforcement capabilities on this major interstate corridor."
+            "Construction of two new commercial vehicle weigh stations along Interstate 77 in Mineral Wells. The project included new facility construction, existing building demolition, and extensive concrete pavement repairs.",
+            "Landcore also installed new weigh bridges, measuring software, and completed numerous utility and signage upgrades along the interstate."
         ],
-        challenge: "Interstate-adjacent construction required strict traffic control and safety measures.",
-        solution: "Comprehensive traffic control plan developed with WVDOH, including concrete barriers and dedicated work zone access.",
+        challenge: "Interstate-adjacent construction required strict traffic control and safety measures while coordinating work at two separate locations.",
+        solution: "Comprehensive traffic control plan developed with WVDOH, including concrete barriers and dedicated work zone access at both locations.",
         scope: [
-            "Site excavation and grading",
-            "Scale foundation construction",
-            "Building pad preparation",
-            "Approach ramp construction",
-            "Drainage installation",
-            "Paving and striping"
+            "Construction of two new weigh station facilities",
+            "Existing building demolition",
+            "Partial and full depth concrete pavement repairs",
+            "New weigh bridges and measuring software",
+            "Utility upgrades",
+            "Signage upgrades along interstate"
         ],
         gallery: [
             "images/projects/mineral-wells-1.jpg",
@@ -347,25 +367,26 @@ const projectsData = {
     "core-industrial": {
         title: "Core Industrial Group",
         location: "Milton, WV",
-        year: "2024",
+        year: "2018",
         client: "Core Industrial Group",
-        timeline: "5 Months",
+        timeline: "7 Months",
         type: "Industrial Facility",
-        services: "Site Work, Building Construction",
+        services: "Design-Build, Site Development, Building Construction",
         heroImage: "images/projects/core-industrial-hero.jpg",
         overview: [
-            "New manufacturing facility for Core Industrial Group in Milton. Landcore provided complete site development and metal building construction.",
-            "This project supports local manufacturing jobs and economic development in Cabell County."
+            "Site development and building construction of a 22,000 square foot, $3.2 million industrial facility for Core Industrial Group. Landcore handled all design work and self-performed approximately 60% of the overall project.",
+            "Site development included construction of 1,000 linear feet of roadway, utility installation, and building pad construction, moving nearly 14,000 cubic yards of material."
         ],
-        challenge: "Fast-track schedule required to meet tenant occupancy requirements.",
-        solution: "Concurrent site work and building construction with extended work hours to compress the schedule without sacrificing quality.",
+        challenge: "Several large-scale pieces of equipment within the facility required detailed concrete and steel work to accommodate specific load and operational requirements.",
+        solution: "Landcore's in-house design capabilities and self-performance of multiple trades allowed for efficient coordination of the specialized concrete and steel work.",
         scope: [
-            "Site clearing and grading",
-            "Foundation construction",
-            "Metal building erection",
+            "Complete design services",
+            "1,000 linear feet of roadway construction",
             "Utility installation",
-            "Parking lot construction",
-            "Site finishing"
+            "Building pad construction",
+            "Nearly 14,000 cubic yards of earthwork",
+            "22,000 sq ft building construction",
+            "Specialized concrete and steel work for equipment"
         ],
         gallery: [
             "images/projects/core-industrial-1.jpg",
@@ -376,25 +397,23 @@ const projectsData = {
     "charleston-sanitary": {
         title: "Charleston Sanitary Board",
         location: "Charleston, WV",
-        year: "2023",
+        year: "2019",
         client: "Charleston Sanitary Board",
-        timeline: "6 Months",
+        timeline: "60 Days",
         type: "Municipal Infrastructure",
-        services: "Site Work, Utilities",
+        services: "Metal Building Construction, Foundation Design",
         heroImage: "images/charleston_sanitary.png",
         overview: [
-            "Sewer system improvements for the Charleston Sanitary Board. Landcore performed excavation and pipe installation for this critical infrastructure upgrade.",
-            "The project improved system capacity and reduced infiltration issues in the service area."
+            "Construction of a warehouse addition for the Charleston Sanitary Board. The project involved construction of a Parkline metal building with foundation design.",
+            "Despite a 90-day construction period requirement, Landcore worked with Parkline to condense lead times and delivered the building in just 60 days."
         ],
-        challenge: "Urban environment with heavy traffic, underground utilities, and limited work space.",
-        solution: "Detailed utility locating, trenchless installation methods where possible, and careful traffic management to minimize community impact.",
+        challenge: "Charleston Sanitary Board required the additional space quickly, imposing a 90-day construction period to manufacture and construct the building.",
+        solution: "Landcore representatives worked with Parkline to condense manufacturing lead times, ultimately delivering the completed building 30 days ahead of schedule.",
         scope: [
-            "Sanitary sewer installation",
-            "Manhole construction",
-            "Service lateral connections",
-            "Pavement restoration",
-            "Traffic control",
-            "System testing and commissioning"
+            "Parkline metal building construction",
+            "Foundation design and construction",
+            "Utility connections",
+            "Site finishing"
         ],
         gallery: [
             "images/projects/charleston-sanitary-1.jpg",
@@ -403,27 +422,26 @@ const projectsData = {
         ]
     },
     "big-sandy-arena": {
-        title: "Big Sandy Arena",
+        title: "Big Sandy Superstore Arena",
         location: "Huntington, WV",
-        year: "2022",
-        client: "Big Sandy Superstore",
-        timeline: "8 Months",
+        year: "2018",
+        client: "Big Sandy Superstore Arena",
+        timeline: "4 Months",
         type: "Commercial/Entertainment",
-        services: "Site Work, Building Construction",
+        services: "Site Work, Concrete, Lighting",
         heroImage: "images/big_sandy_hero.png",
         overview: [
-            "Site improvements and facility upgrades for the Big Sandy Superstore Arena in Huntington. Landcore performed site work and building modifications to enhance the venue.",
-            "These improvements support the arena's role as a regional entertainment destination."
+            "Beautification project around the Big Sandy Superstore Arena in Huntington. The project involved removing and replacing existing sidewalks, adding street lighting, and creating 14 new parking spaces with a new staff parking area.",
+            "Crews worked around numerous arena events including concerts bringing 8,000-9,000 people to the venue, maintaining public access to all sidewalks throughout construction."
         ],
-        challenge: "Work had to be scheduled around arena events and concerts, requiring flexible scheduling.",
-        solution: "Close coordination with arena management to schedule major work during dark periods, with minimal impact on scheduled events.",
+        challenge: "Work had to be scheduled around numerous arena events and concerts, with all sidewalks remaining open to the public during events with up to 9,000 attendees.",
+        solution: "Flexible scheduling and careful coordination with arena management allowed crews to work around events while maintaining safe public access throughout.",
         scope: [
-            "Parking lot expansion",
-            "Site drainage improvements",
-            "Building modifications",
-            "Utility upgrades",
-            "Concrete work",
-            "Paving and striping"
+            "Sidewalk removal and replacement",
+            "Street lighting improvements",
+            "14 new parking spaces",
+            "New staff parking area construction",
+            "Event coordination"
         ],
         gallery: [
             "images/projects/big-sandy-arena-1.jpg",
@@ -433,26 +451,26 @@ const projectsData = {
     },
     "huntington-pt": {
         title: "Huntington Physical Therapy",
-        location: "Huntington, WV",
-        year: "2023",
+        location: "Milton, WV",
+        year: "2018",
         client: "Huntington Physical Therapy",
         timeline: "4 Months",
         type: "Medical Office",
-        services: "Site Work, Building Construction",
+        services: "Design-Build, Building Construction",
         heroImage: "images/hpt_hero.png",
         overview: [
-            "New physical therapy clinic in Huntington. Landcore provided complete site development and building construction for this healthcare facility.",
-            "The modern facility improves access to physical therapy services for the Huntington community."
+            "Design and construction of a new 4,500 square foot multi-tenant building in Milton. Landcore facilitated the design and site layout, working through several iterations to meet the client's budget and needs.",
+            "The building serves Huntington Physical Therapy as well as custom buildouts for a national investment firm and a national insurance agency."
         ],
-        challenge: "Small urban site with limited staging area and adjacent business operations.",
-        solution: "Efficient site logistics and phased material deliveries to maximize productivity on the constrained site.",
+        challenge: "Several designs had to be created and value engineered to arrive at a design meeting both the client's budget and functional requirements.",
+        solution: "Landcore's design-build approach allowed for collaborative value engineering throughout the design phase, optimizing the building for budget and functionality.",
         scope: [
-            "Site preparation",
-            "Foundation construction",
-            "Building construction",
-            "ADA-compliant parking lot",
+            "Building design facilitation",
+            "Site layout design",
+            "4,500 sq ft building construction",
+            "Custom tenant buildouts",
             "Utility connections",
-            "Landscaping"
+            "Site finishing"
         ],
         gallery: [
             "images/projects/huntington-pt-1.jpg",
@@ -461,27 +479,27 @@ const projectsData = {
         ]
     },
     "marco-paradise": {
-        title: "Marco Pizza & Paradise Donuts",
+        title: "Marco's Pizza & Paradise Donuts",
         location: "Barboursville, WV",
-        year: "2024",
-        client: "Marco's Pizza / Paradise Donuts",
+        year: "2017",
+        client: "R & J Development",
         timeline: "3 Months",
         type: "Commercial Retail",
-        services: "Site Work, Building Construction",
+        services: "Demolition, Building Construction, Interior Buildout",
         heroImage: "images/marco_paradise_hero.png",
         overview: [
-            "Dual-tenant retail building featuring Marco's Pizza and Paradise Donuts in Barboursville. Landcore constructed the building and completed all site improvements.",
-            "This project added popular dining options to the growing Barboursville commercial corridor."
+            "Construction of a new dual-tenant retail building for Marco's Pizza and Paradise Donuts. Before construction could begin, Landcore demolished the existing carwash and relocated several utilities.",
+            "A relationship formed during shell construction led to Landcore completing the interior buildout as well, meeting the compressed schedule and coming in under budget."
         ],
-        challenge: "Fast-track delivery required to meet franchise opening deadlines.",
-        solution: "Aggressive scheduling with extended hours and weekend work to meet the compressed timeline.",
+        challenge: "Site required demolition of existing carwash and relocation of utilities before construction could begin, all within a compressed schedule.",
+        solution: "Efficient sequencing of demolition, utility relocation, and construction allowed Landcore to meet the aggressive timeline while staying under budget.",
         scope: [
-            "Site grading",
-            "Building construction",
-            "Drive-through lanes",
-            "Parking lot construction",
-            "Utility connections",
-            "Signage foundations"
+            "Existing carwash demolition",
+            "Utility relocation",
+            "Building shell construction",
+            "Complete interior buildout",
+            "Drive-through facilities",
+            "Site finishing"
         ],
         gallery: [
             "images/projects/marco-paradise-1.jpg",
@@ -491,26 +509,25 @@ const projectsData = {
     },
     "cenergy": {
         title: "Cenergy",
-        location: "Scott Depot, WV",
-        year: "2022",
-        client: "Cenergy",
-        timeline: "5 Months",
+        location: "Milton, WV",
+        year: "2010",
+        client: "Cenergy LLC",
+        timeline: "4 Months",
         type: "Industrial/Office",
-        services: "Site Work, Building Construction",
+        services: "Design-Build, Building Construction",
         heroImage: "images/cenergy_hero.png",
         overview: [
-            "New facility for Cenergy in Scott Depot. Landcore provided site development and building construction for this energy services company.",
-            "The facility consolidates operations and supports the company's growth in the region."
+            "Design and construction of a new office building for Cenergy LLC, a leader in natural gas metering and regulation stations. Landcore broke ground on the original 3,000 square foot space in December 2010.",
+            "Despite winter weather conditions, crews completed the building on time and under budget. Since then, two additions have expanded the total office space to 5,000 square feet."
         ],
-        challenge: "Site required significant earthwork to create a level building pad on sloping terrain.",
-        solution: "Engineered retaining walls and optimized grading plan to minimize material import while creating a functional site layout.",
+        challenge: "Construction began in December with winter weather conditions affecting the schedule.",
+        solution: "Landcore's experienced crews maintained productivity through winter conditions, delivering the project on time and under budget.",
         scope: [
-            "Mass grading",
-            "Retaining wall construction",
-            "Building construction",
-            "Equipment yard preparation",
-            "Utility installation",
-            "Paving and fencing"
+            "Building design",
+            "Original 3,000 sq ft construction",
+            "Two subsequent additions (2,000 sq ft total)",
+            "Ongoing maintenance projects",
+            "Building renovations across four locations"
         ],
         gallery: [
             "images/projects/cenergy-1.jpg",
@@ -519,27 +536,27 @@ const projectsData = {
         ]
     },
     "unlimited-possibilities": {
-        title: "Unlimited Possibilities",
-        location: "Huntington, WV",
-        year: "2023",
-        client: "Unlimited Possibilities",
-        timeline: "4 Months",
+        title: "Unlimited PossAbilities",
+        location: "Milton, WV",
+        year: "2016",
+        client: "Unlimited PossAbilities",
+        timeline: "6 Months",
         type: "Community Facility",
-        services: "Site Work, Building Construction",
+        services: "Design-Build, Building Construction, Site Work",
         heroImage: "images/unlimited_possibilities_hero.png",
         overview: [
-            "New facility for Unlimited Possibilities, a nonprofit serving individuals with disabilities. Landcore was proud to support this important community organization.",
-            "The facility provides expanded program space and improved accessibility for clients and staff."
+            "Design and construction of a new 10,000 square foot office complex for Unlimited PossAbilities, a nonprofit serving individuals with disabilities. The design called for two separate buildings — a main office and a primary activity building.",
+            "The main office building includes custom buildouts for a national legal firm and national orthopedic firm. Landcore previously built their original office in 2011."
         ],
-        challenge: "Budget constraints required value engineering throughout the project.",
-        solution: "Collaborative approach with the owner to identify cost-effective solutions without compromising functionality or quality.",
+        challenge: "The activity building required meeting numerous ADA guidelines due to the unique occupancy. Existing structures had to be removed and multiple utilities relocated before construction.",
+        solution: "Landcore's experience with ADA requirements and utility coordination allowed for efficient project execution while meeting all accessibility guidelines.",
         scope: [
-            "Site preparation",
-            "Building construction",
-            "ADA-compliant access",
-            "Parking lot construction",
-            "Landscaping",
-            "Site finishing"
+            "Demolition of existing structures",
+            "Utility relocation",
+            "Main office building construction",
+            "Activity building construction",
+            "ADA-compliant design throughout",
+            "Custom tenant buildouts"
         ],
         gallery: [
             "images/projects/unlimited-possibilities-1.jpg",
@@ -550,25 +567,23 @@ const projectsData = {
     "guyan-library": {
         title: "Guyan River Public Library",
         location: "Branchland, WV",
-        year: "2022",
-        client: "Cabell County Library",
-        timeline: "6 Months",
+        year: "2016",
+        client: "West Virginia Library Commission",
+        timeline: "100 Days",
         type: "Public Library",
-        services: "Site Work, Building Construction",
-        heroImage: "images/guyan_public_library.png" ,
+        services: "Building Construction, Utility Coordination",
+        heroImage: "images/guyan_public_library.png",
         overview: [
-            "New branch library for the Cabell County Library system. Landcore provided complete site development and building construction for this community resource.",
-            "The library serves the Branchland area with modern facilities and expanded services."
+            "Construction of a new 2,000 square foot library in Branchland for the West Virginia Library Commission.",
+            "Landcore team members worked with the local public service district and landowners to relocate numerous underground utilities throughout the site, completing construction ahead of schedule."
         ],
-        challenge: "Rural site required extended utility runs and careful stormwater management.",
-        solution: "Coordinated early with utility providers and designed efficient drainage solutions appropriate for the rural setting.",
+        challenge: "Rural site required coordination with the public service district and local landowners to relocate numerous underground utilities.",
+        solution: "Early coordination with utility providers and landowners allowed for efficient relocation work, enabling the project to be completed ahead of the 100-day schedule.",
         scope: [
-            "Site clearing and grading",
-            "Building construction",
-            "Utility extensions",
-            "Parking lot construction",
-            "Stormwater management",
-            "Landscaping and site finishing"
+            "2,000 sq ft library construction",
+            "Underground utility relocation",
+            "Coordination with public service district",
+            "Site finishing"
         ],
         gallery: [
             "images/projects/guyan-library-1.jpg",
@@ -578,26 +593,26 @@ const projectsData = {
     },
     "bower-obgyn": {
         title: "Bower OBGYN",
-        location: "Huntington, WV",
-        year: "2023",
-        client: "Bower OBGYN",
+        location: "Barboursville, WV",
+        year: "2016",
+        client: "Dr. Brian Bower / Cabell Huntington Hospital Women's Health",
         timeline: "5 Months",
         type: "Medical Office",
-        services: "Site Work, Building Construction",
+        services: "Building Construction, Utility Coordination",
         heroImage: "images/bower_hero.png",
         overview: [
-            "New medical office building for Bower OBGYN in Huntington. Landcore delivered a modern healthcare facility with complete site improvements.",
-            "The new facility provides an improved patient experience with convenient access and parking."
+            "Construction of a 4,000 square foot medical office building for Dr. Brian Bower with Cabell Huntington Hospital Women's Health Barboursville. The two-story building was designed to mirror the Cabell Family Medical Center in the same business park.",
+            "Since the project was built on undeveloped land, it required working with local utility boards to orchestrate mainline extension agreements."
         ],
-        challenge: "Medical facility required specific building systems and code compliance.",
-        solution: "Close coordination with medical equipment vendors and inspectors to ensure all healthcare requirements were met.",
+        challenge: "Undeveloped land required coordination with local utility boards to establish mainline extension agreements for multiple utilities.",
+        solution: "Landcore coordinated with multiple utility boards to secure necessary extensions, enabling construction on the previously undeveloped site.",
         scope: [
-            "Site grading",
-            "Building construction",
-            "Medical gas systems",
-            "ADA-compliant design",
-            "Parking lot construction",
-            "Landscaping"
+            "4,000 sq ft two-story building construction",
+            "Exam rooms",
+            "Laboratory space",
+            "Office space",
+            "Utility mainline extension coordination",
+            "Site development"
         ],
         gallery: [
             "images/projects/bower-obgyn-1.jpg",
@@ -606,7 +621,7 @@ const projectsData = {
         ]
     },
     "snap-fitness": {
-        title: "Snap Fitness 24-7",
+        title: "Snap Fitness / Generations Physical Therapy",
         location: "Huntington, WV",
         year: "2014",
         client: "Snap Fitness",
@@ -630,14 +645,14 @@ const projectsData = {
         ],
     },
     "yeager": {
-        title: "Yeager",
+        title: "Yeager Airport",
         location: "Charleston, WV",
         year: "2023",
         client: "Yeager Airport",
         timeline: "4 Months",
         type: "Airport Infrastructure",
         services: "Site Work, Paving",
-        heroImage: "images/projects/yeager-hero.jpg",
+        heroImage: "images/yeager_apron.png",
         overview: [
             "Airfield improvements at Yeager Airport in Charleston. Landcore performed site work and paving for this critical aviation infrastructure project.",
             "The project improved safety and operational efficiency at West Virginia's busiest airport."
@@ -666,7 +681,7 @@ const projectsData = {
         timeline: "8 Months",
         type: "Residential Development",
         services: "Land Development, Site Work",
-        heroImage: "images/projects/sophia-hero.jpg",
+        heroImage: "images/sophia_overhead.jpg",
         overview: [
             "Residential development in Sophia, West Virginia. Landcore provided complete land development services to create build-ready lots in this Raleigh County community.",
             "The project brought new housing opportunities to the southern West Virginia region."
@@ -695,7 +710,7 @@ const projectsData = {
         timeline: "10 Months",
         type: "Residential Development",
         services: "Land Development, Site Work, Utilities",
-        heroImage: "images/projects/west-hamlin-hero.jpg",
+        heroImage: "images/west_hamlin_overhead.png",
         overview: [
             "New residential development in West Hamlin, Lincoln County. Landcore is providing complete land development services for this growing community.",
             "The project addresses housing needs in Lincoln County with quality, affordable home sites."
@@ -715,5 +730,5 @@ const projectsData = {
             "images/projects/west-hamlin-2.jpg",
             "images/projects/west-hamlin-3.jpg"
         ]
-    }
+    },
 };
