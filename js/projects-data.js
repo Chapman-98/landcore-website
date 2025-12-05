@@ -122,30 +122,57 @@ const projectsData = {
     "putnam-county-bank": {
         title: "Putnam County Bank",
         location: "Hurricane, WV",
-        year: "2022",
+        year: "2020",
         client: "Putnam County Bank",
         timeline: "5 Months",
         type: "Commercial Building",
-        services: "Site Work, Building Construction",
-        heroImage: "images/projects/putnam-county-bank-hero.jpg",
+        services: "General Contracting, Building Addition, Interior Renovation",
+        heroImage: "images/pcb_hero.png",
         overview: [
-            "New branch location for Putnam County Bank in Hurricane, West Virginia. Landcore provided complete site development and building construction services.",
-            "The project included a drive-through facility, parking lot, and landscaping to create an inviting customer experience."
+            "Complete renovation and expansion of Putnam County Bank's Interstate branch in Hurricane, WV. Landcore was involved from the early design phase through final construction, delivering both new construction and interior remodeling.",
+            "The project included a new 5,000 square foot single-story building addition and full renovation of both floors of the existing branch, creating approximately 10,000 square feet of modern office space for the bank's expanding loan department."
         ],
-        challenge: "Tight urban site with limited laydown area and strict schedule requirements to meet the bank's opening date.",
-        solution: "Just-in-time material delivery and efficient crew scheduling allowed us to maximize productivity on the constrained site while meeting all milestones.",
+        challenge: "The project required careful coordination to expand and renovate an active bank branch while maintaining operations and security throughout construction.",
+        solution: "Landcore developed a phased construction approach that allowed the bank to continue serving customers during the renovation. Close collaboration during the design phase ensured the final layout met the bank's operational needs.",
         scope: [
-            "Site preparation and grading",
-            "Foundation construction",
-            "Building construction",
-            "Drive-through lane installation",
-            "Parking lot paving and striping",
-            "Landscaping and site finishing"
+            "Removal of existing drive-thru service counters",
+            "New 5,000 square foot building addition",
+            "Two-story interior renovation",
+            "New green space development",
+            "Finish carpentry and interior buildout",
+            "Site improvements and landscaping"
         ],
         gallery: [
             "images/projects/putnam-county-bank-1.jpg",
             "images/projects/putnam-county-bank-2.jpg",
             "images/projects/putnam-county-bank-3.jpg"
+        ]
+    },
+    "hurricane-fire-rescue": {
+        title: "Hurricane Fire & Rescue",
+        location: "Hurricane, WV",
+        year: "2024",
+        client: "City of Hurricane",
+        timeline: "3 Months",
+        type: "Municipal / Emergency Services",
+        services: "Site Development, Mass Excavation, Earthwork",
+        heroImage: "images/hurricane_fire_hero.png",
+        overview: [
+            "Site development for the new Hurricane Fire & Rescue station. Landcore performed complete site preparation including erosion control installation, mass excavation for the access road and building pad, and substantial earthwork operations.",
+            "The project involved importing nearly 10,000 cubic yards of material from a nearby borrow site to establish proper grades for the facility."
+        ],
+        challenge: "The site required significant fill material to achieve the necessary elevation for the building pad and access road, requiring efficient coordination of material hauling from an off-site borrow location.",
+        solution: "Landcore coordinated a steady flow of trucks between the borrow site and project location, maintaining production schedules while minimizing impact on local traffic. Proper erosion and sediment controls were established early to ensure environmental compliance throughout the earthwork operations.",
+        scope: [
+            "Erosion and sediment control installation",
+            "Mass excavation for building pad",
+            "Access road construction",
+            "Import and placement of nearly 10,000 cubic yards of fill material",
+            "Site grading and compaction",
+            "Coordination with borrow site operations"
+        ],
+        gallery: [
+            "images/projects/greene-county-1.jpg"
         ]
     },
     "greene-county": {
@@ -156,7 +183,7 @@ const projectsData = {
         timeline: "3 Months",
         type: "Municipal Infrastructure",
         services: "Site Work, Utilities",
-        heroImage: "images/projects/greene-county-hero.jpg",
+        heroImage: "images/greene_county_transfer.png",
         overview: [
             "Site improvements for a county transfer station facility in Greene County, Pennsylvania. Landcore expanded the facility's capacity with new access roads and staging areas.",
             "This project demonstrated our ability to work across state lines while maintaining our quality standards."
@@ -185,7 +212,7 @@ const projectsData = {
         timeline: "10 Months",
         type: "Heavy Highway",
         services: "Site Work, Road Construction",
-        heroImage: "images/projects/halstead-street-hero.jpg",
+        heroImage: "images/halstread_hero.png",
         overview: [
             "Major highway improvement project on Halstead Street in Charleston. Landcore performed earthwork, drainage, and road base construction for this WVDOH project.",
             "The project improved safety and capacity on this critical urban corridor."
@@ -215,7 +242,7 @@ const projectsData = {
         timeline: "7 Months",
         type: "Government Facility",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/wv-national-guard-hero.jpg",
+        heroImage: "images/national_guard_hero.png" ,
         overview: [
             "Facility improvements for a West Virginia Army National Guard installation. Landcore provided site work and building construction to support military readiness.",
             "This project required compliance with federal construction standards and security protocols."
@@ -244,7 +271,7 @@ const projectsData = {
         timeline: "6 Months",
         type: "Industrial Facility",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/aep-machine-shop-hero.jpg",
+        heroImage: "images/aep_shop.png",
         overview: [
             "New machine shop facility for American Electric Power's central operations. Landcore constructed the pre-engineered metal building and completed all site work.",
             "The facility supports AEP's maintenance operations for the region."
@@ -273,7 +300,7 @@ const projectsData = {
         timeline: "4 Months",
         type: "Transportation Infrastructure",
         services: "Site Work, Concrete",
-        heroImage: "images/projects/mineral-wells-hero.jpg",
+        heroImage: "images/weigh_station_hero.png",
         overview: [
             "Construction of a new commercial vehicle weigh station on I-77. Landcore provided site work and concrete construction for this WVDOH facility.",
             "The station improves commercial vehicle enforcement capabilities on this major interstate corridor."
@@ -295,33 +322,27 @@ const projectsData = {
         ]
     },
     "harris-skatepark": {
-        title: "Harris Skatepark",
+        title: "Harris Riverfront Park Skate Park",
         location: "Huntington, WV",
-        year: "2023",
+        year: "2019",
         client: "City of Huntington",
-        timeline: "3 Months",
-        type: "Recreational Facility",
-        services: "Site Work, Concrete",
-        heroImage: "images/projects/harris-skatepark-hero.jpg",
+        timeline: "5 Weeks",
+        type: "Municipal / Recreation",
+        services: "Site Development, Concrete Construction, Drainage Design",
+        heroImage: "images/skate_park_ramp.png",
         overview: [
-            "New skatepark facility for the City of Huntington, providing recreational opportunities for the community. Landcore completed all site work and concrete construction.",
-            "This project reflects our commitment to building facilities that benefit local communities."
+            "Phase II expansion of the Huntington skate park at David H. Harris Riverfront Park. Landcore delivered a complete concrete skate park featuring ramps, rails, and custom features.",
+            "The project was completed in just five weeks, including a mid-project redesign to address drainage challenges discovered during construction."
         ],
-        challenge: "Complex concrete forms and specialized finishing required for skatepark features.",
-        solution: "Partnered with experienced skatepark concrete specialists while Landcore handled all site preparation and supporting infrastructure.",
+        challenge: "During early construction, the team discovered that the planned elevations would create drainage problems for both the new phase and the existing skate park.",
+        solution: "Landcore worked directly with Edward Tucker Architects to develop a new design that eliminated the drainage issues while staying within the City's budget. Crews continued work on other park elements during the redesign, keeping the project on schedule.",
         scope: [
-            "Site clearing and grading",
-            "Drainage installation",
-            "Concrete skatepark construction",
-            "Lighting installation",
-            "Fencing and safety features",
-            "Landscaping and site finishing"
+            "Concrete skate park construction",
+            "Ramps, rails, and custom skate features",
+            "Drainage system redesign and installation",
+            "Site grading and earthwork",
+            "Coordination with existing park facilities"
         ],
-        gallery: [
-            "images/projects/harris-skatepark-1.jpg",
-            "images/projects/harris-skatepark-2.jpg",
-            "images/projects/harris-skatepark-3.jpg"
-        ]
     },
     "core-industrial": {
         title: "Core Industrial Group",
@@ -360,7 +381,7 @@ const projectsData = {
         timeline: "6 Months",
         type: "Municipal Infrastructure",
         services: "Site Work, Utilities",
-        heroImage: "images/projects/charleston-sanitary-hero.jpg",
+        heroImage: "images/charleston_sanitary.png",
         overview: [
             "Sewer system improvements for the Charleston Sanitary Board. Landcore performed excavation and pipe installation for this critical infrastructure upgrade.",
             "The project improved system capacity and reduced infiltration issues in the service area."
@@ -389,7 +410,7 @@ const projectsData = {
         timeline: "8 Months",
         type: "Commercial/Entertainment",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/big-sandy-arena-hero.jpg",
+        heroImage: "images/big_sandy_hero.png",
         overview: [
             "Site improvements and facility upgrades for the Big Sandy Superstore Arena in Huntington. Landcore performed site work and building modifications to enhance the venue.",
             "These improvements support the arena's role as a regional entertainment destination."
@@ -418,7 +439,7 @@ const projectsData = {
         timeline: "4 Months",
         type: "Medical Office",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/huntington-pt-hero.jpg",
+        heroImage: "images/hpt_hero.png",
         overview: [
             "New physical therapy clinic in Huntington. Landcore provided complete site development and building construction for this healthcare facility.",
             "The modern facility improves access to physical therapy services for the Huntington community."
@@ -447,7 +468,7 @@ const projectsData = {
         timeline: "3 Months",
         type: "Commercial Retail",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/marco-paradise-hero.jpg",
+        heroImage: "images/marco_paradise_hero.png",
         overview: [
             "Dual-tenant retail building featuring Marco's Pizza and Paradise Donuts in Barboursville. Landcore constructed the building and completed all site improvements.",
             "This project added popular dining options to the growing Barboursville commercial corridor."
@@ -476,7 +497,7 @@ const projectsData = {
         timeline: "5 Months",
         type: "Industrial/Office",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/cenergy-hero.jpg",
+        heroImage: "images/cenergy_hero.png",
         overview: [
             "New facility for Cenergy in Scott Depot. Landcore provided site development and building construction for this energy services company.",
             "The facility consolidates operations and supports the company's growth in the region."
@@ -505,7 +526,7 @@ const projectsData = {
         timeline: "4 Months",
         type: "Community Facility",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/unlimited-possibilities-hero.jpg",
+        heroImage: "images/unlimited_possibilities_hero.png",
         overview: [
             "New facility for Unlimited Possibilities, a nonprofit serving individuals with disabilities. Landcore was proud to support this important community organization.",
             "The facility provides expanded program space and improved accessibility for clients and staff."
@@ -534,7 +555,7 @@ const projectsData = {
         timeline: "6 Months",
         type: "Public Library",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/guyan-library-hero.jpg",
+        heroImage: "images/guyan_public_library.png" ,
         overview: [
             "New branch library for the Cabell County Library system. Landcore provided complete site development and building construction for this community resource.",
             "The library serves the Branchland area with modern facilities and expanded services."
@@ -563,7 +584,7 @@ const projectsData = {
         timeline: "5 Months",
         type: "Medical Office",
         services: "Site Work, Building Construction",
-        heroImage: "images/projects/bower-obgyn-hero.jpg",
+        heroImage: "images/bower_hero.png",
         overview: [
             "New medical office building for Bower OBGYN in Huntington. Landcore delivered a modern healthcare facility with complete site improvements.",
             "The new facility provides an improved patient experience with convenient access and parking."
@@ -585,33 +606,28 @@ const projectsData = {
         ]
     },
     "snap-fitness": {
-        title: "Snap Fitness",
-        location: "Hurricane, WV",
-        year: "2024",
+        title: "Snap Fitness 24-7",
+        location: "Huntington, WV",
+        year: "2014",
         client: "Snap Fitness",
-        timeline: "3 Months",
-        type: "Commercial Fitness",
-        services: "Site Work, Building Construction",
-        heroImage: "images/projects/snap-fitness-hero.jpg",
+        timeline: "78 Days",
+        type: "Commercial / Fitness",
+        services: "Interior Renovation, Exterior Renovation, Value Engineering",
+        heroImage: "images/snap_fitness_front.png",
         overview: [
-            "New Snap Fitness location in Hurricane, West Virginia. Landcore provided tenant improvements and site work for this fitness franchise.",
-            "The facility offers 24/7 fitness access to the Hurricane community."
+            "Complete interior and exterior renovation of a 7,500 square foot commercial space, transforming it into a modern 24-hour fitness facility with an integrated physical therapy practice.",
+            "Landcore worked closely with the owner throughout the project to value engineer the design, resulting in significant cost savings while maintaining quality and functionality."
         ],
-        challenge: "Tenant improvement in existing retail center required work during business hours.",
-        solution: "Coordinated with center management to minimize disruption to neighboring tenants during construction.",
+        challenge: "The project required a full gut renovation — removing interior walls and all mechanical systems — while delivering a completely updated exterior, all within a tight timeline.",
+        solution: "Landcore's team completed the full transformation in just 78 days, coordinating interior demolition, mechanical replacement, and exterior improvements simultaneously to meet the aggressive schedule.",
         scope: [
-            "Interior demolition",
-            "Building modifications",
-            "MEP systems",
-            "Flooring installation",
-            "Storefront modifications",
-            "Site work and signage"
+            "Complete interior demolition and renovation",
+            "Removal and replacement of all mechanical systems",
+            "New storefront window installation",
+            "New roof installation",
+            "Full exterior facade renovation",
+            "Value engineering and cost optimization"
         ],
-        gallery: [
-            "images/projects/snap-fitness-1.jpg",
-            "images/projects/snap-fitness-2.jpg",
-            "images/projects/snap-fitness-3.jpg"
-        ]
     },
     "yeager": {
         title: "Yeager",
