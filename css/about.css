@@ -914,3 +914,61 @@
         width: 1.5rem;
     }
 }
+
+
+
+/* TEMPORARY - Highlight for review */
+.about-hero,
+.our-story-section,
+.mission-section,
+.numbers-section,
+.what-we-do-section,
+.differentiators-section,
+.safety-quality-section,
+.partnerships-section,
+.testimonials-section,
+.about-cta-section {
+    position: relative;
+}
+
+/* TEMPORARY - Highlight text for review */
+.about-hero h1,
+.about-hero p,
+.our-story-section h2,
+.our-story-section p,
+.our-story-section .section-label,
+.mission-section h2,
+.mission-section p,
+.mission-statement,
+.numbers-section h2,
+.number,
+.number-card p,
+.what-we-do-section h2,
+.service-block h3,
+.service-block p,
+.differentiators-section h2,
+.diff-card h3,
+.diff-card p,
+.safety-box h2,
+.safety-box p,
+.safety-box .section-label,
+.safety-list li,
+.quality-box h2,
+.quality-box p,
+.quality-box .section-label,
+.quality-list li,
+.partnerships-section h2,
+.partnership-text h3,
+.partnership-text p,
+.partnership-text .section-label,
+.partnership-benefits li,
+.cert-item h4,
+.cert-item p,
+.testimonials-section h2,
+.testimonial-text,
+.testimonial-author strong,
+.testimonial-author span,
+.about-cta-section h2,
+.about-cta-section p {
+    background-color: #A5D6A7;
+}

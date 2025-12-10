@@ -1765,3 +1765,25 @@ body
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+
+/* TEMPORARY - Highlight text for review */
+.hero h1,
+.hero p,
+.stat h3,
+.stat p,
+.intro-main,
+.intro-sub,
+.services-intro h2,
+.services-intro p,
+.service-title h3,
+.service-overlay h3,
+.service-overlay p,
+.team-label,
+.team-content h2,
+.team-content p,
+.projects-header h2,
+.see-more-projects,
+.project-info h3,
+.project-info p {
+    background-color: #A5D6A7;
+}

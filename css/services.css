@@ -445,3 +445,23 @@
         border-bottom: none;
     }
 }
+
+
+/* TEMPORARY - Highlight text for review */
+.service-hero-content h1,
+.overview-content p,
+.service-differentiators h2,
+.differentiator h3,
+.differentiator p,
+.service-capabilities h2,
+.capability h4,
+.capability p,
+.service-projects h2,
+.project-tag,
+.project-info h3,
+.project-info p,
+.projects-link a,
+.service-cta h2,
+.service-cta p {
+    background-color: #A5D6A7;
+}

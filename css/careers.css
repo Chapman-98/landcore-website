@@ -407,3 +407,26 @@
         text-align: center;
     }
 }
+
+/* TEMPORARY - Highlight text for review */
+.careers-hero-overlay h1,
+.careers-hero-overlay p,
+.careers-hero-overlay .section-label,
+.why-content h2,
+.why-content p,
+.why-content .section-label,
+.benefit-card h3,
+.benefit-card p,
+.openings-section h2,
+.openings-section .section-label,
+.openings-intro,
+.opening-title h3,
+.tag,
+.opening-summary,
+.detail-section h4,
+.detail-section li,
+.apply-btn,
+.general-application-section h2,
+.general-application-section p {
+    background-color: #A5D6A7;
+}

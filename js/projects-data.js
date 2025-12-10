@@ -44,7 +44,7 @@ const projectsData = {
         timeline: "3 Months",
         type: "Municipal Infrastructure",
         services: "Tank Fabrication, Utilities, Demolition",
-        heroImage: "images/projects/beech-fork-hero.jpg",
+        heroImage: "images/beech_fork_hero.jpg",
         overview: [
             "Fabrication and installation of a new 20,000 gallon equalization tank for the Beech Fork State Park wastewater system. This critical infrastructure project improved capacity and reliability for the park.",
             "Landcore performed all tank fabrication, foundation work, and utility connections, completing the shutdown and tie-in in less than three hours."
@@ -77,7 +77,7 @@ const projectsData = {
         timeline: "12 Months",
         type: "Commercial Development",
         services: "Land Development, Site Work, Utilities",
-        heroImage: "images/projects/valley-pointe-hero.jpg",
+        heroImage: "images/valley_pointe_hero.jpg",
         overview: [
             "Large-scale commercial site development in Putnam County. Landcore provided complete land development services including clearing, excavation, storm and sanitary sewer installation, and site lighting.",
             "This project showcases our ability to manage complex infrastructure projects with extensive utility work."
@@ -105,14 +105,14 @@ const projectsData = {
         ]
     },
     "sugar-maple": {
-        title: "Sugar Maple Phase II & III",
+        title: "Sugar Maple",
         location: "Morgantown, WV",
         year: "2023",
         client: "WB Development",
         timeline: "10 Months",
         type: "Residential Development",
         services: "Land Development, Site Work, Utilities",
-        heroImage: "images/projects/sugar-maple-hero.jpg",
+        heroImage: "images/sugar_maple_houses_with_excavator.jpg" ,
         overview: [
             "Phases II and III of the Sugar Maple Ridge residential community in Morgantown. Landcore provided complete land development services including extensive earthwork, storm drainage, and road construction.",
             "When Phase III was discovered to be short approximately 15,000 yards of material, Landcore surveyed the site and found the necessary yardage while creating seven additional house seats for the developer."
@@ -171,7 +171,7 @@ const projectsData = {
         timeline: "3 Months",
         type: "Municipal / Emergency Services",
         services: "Site Development, Mass Excavation, Earthwork",
-        heroImage: "images/hurricane_fire_hero.png",
+        heroImage: "images/hurricane_fire_excavation_trucks.jpg",
         overview: [
             "Site development for the new Hurricane Fire & Rescue station. Landcore performed complete site preparation including erosion control installation, mass excavation for the access road and building pad, and substantial earthwork operations.",
             "The project involved importing nearly 10,000 cubic yards of material from a nearby borrow site to establish proper grades for the facility."
@@ -372,7 +372,7 @@ const projectsData = {
         timeline: "7 Months",
         type: "Industrial Facility",
         services: "Design-Build, Site Development, Building Construction",
-        heroImage: "images/projects/core-industrial-hero.jpg",
+        heroImage: "images/metal_building.png",
         overview: [
             "Site development and building construction of a 22,000 square foot, $3.2 million industrial facility for Core Industrial Group. Landcore handled all design work and self-performed approximately 60% of the overall project.",
             "Site development included construction of 1,000 linear feet of roadway, utility installation, and building pad construction, moving nearly 14,000 cubic yards of material."
@@ -674,7 +674,7 @@ const projectsData = {
         ]
     },
     "sophia": {
-        title: "Sophia",
+        title: "Sophia Wastewater Treatment Plant",
         location: "Sophia, WV",
         year: "2022",
         client: "Private Developer",
@@ -703,7 +703,7 @@ const projectsData = {
         ]
     },
     "west-hamlin": {
-        title: "West Hamlin",
+        title: "West Hamlin Presedmentation Basin",
         location: "West Hamlin, WV",
         year: "2024",
         client: "Lincoln County Development",
@@ -729,6 +729,96 @@ const projectsData = {
             "images/projects/west-hamlin-1.jpg",
             "images/projects/west-hamlin-2.jpg",
             "images/projects/west-hamlin-3.jpg"
+        ]
+    },
+    "nh-dental": 
+    {
+        title: "N&H Dental",
+        location: "West Hamlin, WV",
+        year: "2024",
+        client: "N&H Dental",
+        timeline: "5 Months",
+        type: "Medical / Dental Office",
+        services: "Site Development, Building Construction",
+        heroImage: "images/nh_dental_hero.jpg",
+        overview: [
+            "New dental office facility in West Hamlin, West Virginia. Landcore provided complete site development and building construction for this healthcare facility.",
+            "The project brings modern dental services to the Lincoln County community."
+        ],
+        challenge: "The project required coordination of site development and building construction to meet the client's opening timeline.",
+        solution: "Landcore's integrated approach to site work and building construction allowed for efficient project delivery, keeping the schedule on track.",
+        scope: [
+            "Site grading and preparation",
+            "Building construction",
+            "Parking lot construction",
+            "Utility connections",
+            "ADA-compliant access",
+            "Site finishing and landscaping"
+        ],
+        gallery: [
+            "images/projects/nh-dental-1.jpg",
+            "images/projects/nh-dental-2.jpg",
+            "images/projects/nh-dental-3.jpg"
+        ]
+    },
+    "lincoln-primary-care": 
+    {
+        title: "Lincoln County Primary Care",
+        location: "West Hamlin, WV",
+        year: "2024",
+        client: "Lincoln County Primary Care",
+        timeline: "8 Months",
+        type: "Medical Office",
+        services: "Site Development, Building Construction",
+        heroImage: "images/guyan_valley_card.jpg",
+        overview: [
+            "New primary care medical facility in West Hamlin, West Virginia. Landcore provided complete site development and building construction for this healthcare center serving the Lincoln County community.",
+            "The project included a new concrete parking lot and full site improvements to support the modern medical facility."
+        ],
+        challenge: "The project required coordinating site development and building construction to deliver a fully functional medical facility on schedule.",
+        solution: "Landcore's ability to self-perform site work and building construction allowed for seamless coordination between trades, keeping the project on track for the client's opening date.",
+        scope: [
+            "Site clearing and grading",
+            "Building construction",
+            "Concrete parking lot installation",
+            "Utility connections",
+            "ADA-compliant access and parking",
+            "Site finishing and landscaping"
+        ],
+        gallery: [
+            "images/projects/lincoln-primary-care-1.jpg",
+            "images/projects/lincoln-primary-care-2.jpg",
+            "images/projects/lincoln-primary-care-3.jpg"
+        ]
+    },
+    "meadow-view": 
+    {
+        title: "Meadow View",
+        location: "Putnam County, WV",
+        year: "2024",
+        client: "Private Developer",
+        timeline: "10 Months",
+        type: "Residential Development",
+        services: "Land Development, Site Work, Utilities",
+        heroImage: "images/meadow_view_card.jpg",
+        overview: [
+            "Residential land development project creating new building lots in Putnam County. Landcore provided complete land development services including road construction, curb installation, grading, and utility infrastructure.",
+            "The development adds quality home sites to meet growing housing demand in the area."
+        ],
+        challenge: "The rolling terrain required careful grading design to create functional building lots while managing stormwater runoff across the site.",
+        solution: "Landcore worked with engineers to optimize the grading plan, balancing cut and fill to minimize material import while creating attractive, buildable lots with proper drainage.",
+        scope: [
+            "Site clearing and mass grading",
+            "Road construction with curb and gutter",
+            "Cul-de-sac construction",
+            "Storm drainage installation",
+            "Water and sewer infrastructure",
+            "Lot grading and preparation"
+        ],
+        gallery: [
+            "images/projects/meadow-view-1.jpg",
+            "images/projects/meadow-view-2.jpg",
+            "images/projects/meadow-view-3.jpg"
         ]
     },
 };

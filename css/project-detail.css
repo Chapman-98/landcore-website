@@ -424,3 +424,24 @@
         font-size: 2.25rem;
     }
 }
+
+/* TEMPORARY - Highlight text for review */
+.project-hero-overlay h1,
+.project-meta,
+.project-stats h3,
+.stat-label,
+.stat-value,
+.project-description h2,
+.project-description p,
+.challenge-box h3,
+.challenge-box p,
+.solution-box h3,
+.solution-box p,
+.scope-section h2,
+.scope-list li,
+.project-gallery-section h2,
+.project-cta-section h2,
+.project-cta-section p,
+.back-link a {
+    background-color: #A5D6A7;
+}

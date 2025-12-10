@@ -443,3 +443,18 @@
         font-size: 1.05rem;
     }
 }
+
+
+/* TEMPORARY - Highlight text for review */
+.collage-label,
+.collage-center h1,
+.president-name,
+.collage-quote-box p,
+.collage-quote-box span,
+.leadership-header h2,
+.leadership-header p,
+
+.leader-info p,
+.leader-contact {
+    background-color: #A5D6A7;
+}
