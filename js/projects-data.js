@@ -28,12 +28,10 @@ const projectsData = {
             "6,500 tons of base stone"
         ],
         gallery: [
-            "images/projects/milton-elementary-1.jpg",
-            "images/projects/milton-elementary-2.jpg",
-            "images/projects/milton-elementary-3.jpg",
-            "images/projects/milton-elementary-4.jpg",
-            "images/projects/milton-elementary-5.jpg",
-            "images/projects/milton-elementary-6.jpg"
+            "images/milton_hillside.jpg",
+            "images/milton_2.jpg",
+            "images/milton_roller.jpg",
+            "images/milton_workers.jpg"
         ]
     },
     "beech-fork": {
@@ -64,9 +62,9 @@ const projectsData = {
             "Shutdown and tie-in in less than three hours"
         ],
         gallery: [
-            "images/projects/beech-fork-1.jpg",
-            "images/projects/beech-fork-2.jpg",
-            "images/projects/beech-fork-3.jpg"
+            "images/beech_fork_yellow.jpg",
+            "images/beech_fork_pipe.jpg",
+            "images/beech_fork_container.jpg"
         ]
     },
     "valley-pointe": {
@@ -98,10 +96,9 @@ const projectsData = {
             "6,000 tons of base aggregate"
         ],
         gallery: [
-            "images/projects/valley-pointe-1.jpg",
-            "images/projects/valley-pointe-2.jpg",
-            "images/projects/valley-pointe-3.jpg",
-            "images/projects/valley-pointe-4.jpg"
+            "images/valley_pointe_excavator.jpg",
+            "images/valley_pointe_worker.jpg",
+            "images/valley_pointe_east_finished.jpg",
         ]
     },
     "sugar-maple": {
@@ -129,9 +126,9 @@ const projectsData = {
             "Base aggregate installation"
         ],
         gallery: [
-            "images/projects/sugar-maple-1.jpg",
-            "images/projects/sugar-maple-2.jpg",
-            "images/projects/sugar-maple-3.jpg"
+            "images/sugar_maple_green_spray.jpg",
+            "images/sugar_maple_truck.jpg",
+            "images/sugar_maple_pipe.jpg"
         ]
     },
     "putnam-county-bank": {
@@ -158,9 +155,9 @@ const projectsData = {
             "Site improvements and landscaping"
         ],
         gallery: [
-            "images/projects/putnam-county-bank-1.jpg",
-            "images/projects/putnam-county-bank-2.jpg",
-            "images/projects/putnam-county-bank-3.jpg"
+            "images/pcb_outside.jpg",
+            "images/pcb_outside_2.jpg",
+            "images/pcb_pipe.jpg"
         ]
     },
     "hurricane-fire-rescue": {
@@ -187,7 +184,9 @@ const projectsData = {
             "Coordination with borrow site operations"
         ],
         gallery: [
-            "images/projects/greene-county-1.jpg"
+            "images/hurricane_grading.jpg",
+            "images/hurricane_bulldozer.jpg",
+            "images/hurricane_before_work.jpg"
         ]
     },
     "greene-county": {
@@ -215,9 +214,9 @@ const projectsData = {
             "Coordination with active operations"
         ],
         gallery: [
-            "images/projects/greene-county-1.jpg",
-            "images/projects/greene-county-2.jpg",
-            "images/projects/greene-county-3.jpg"
+            "images/greene_county_side_open.jpg",
+            "images/greene_county_inside.jpg",
+            "images/greene_county_metal_work.jpg"
         ]
     },
     "halstead-street": {
@@ -246,10 +245,9 @@ const projectsData = {
             "Striping"
         ],
         gallery: [
-            "images/projects/halstead-street-1.jpg",
-            "images/projects/halstead-street-2.jpg",
-            "images/projects/halstead-street-3.jpg",
-            "images/projects/halstead-street-4.jpg"
+            "images/halstead_workers.jpg",
+            "images/halstead_workers_in_road.jpg",
+            "images/halstead_bulldozers.jpg"
         ]
     },
     "wv-national-guard": {
@@ -278,9 +276,9 @@ const projectsData = {
             "Daily security seal coordination"
         ],
         gallery: [
-            "images/projects/wv-national-guard-1.jpg",
-            "images/projects/wv-national-guard-2.jpg",
-            "images/projects/wv-national-guard-3.jpg"
+            "images/wvng_ramp_work.jpg",
+            "images/wvng_ramp_rebar.jpg",
+            "images/wvng_ramp_worker.jpg"
         ]
     },
     "aep-machine-shop": {
@@ -307,9 +305,7 @@ const projectsData = {
             "ISNetworld compliance"
         ],
         gallery: [
-            "images/projects/aep-machine-shop-1.jpg",
-            "images/projects/aep-machine-shop-2.jpg",
-            "images/projects/aep-machine-shop-3.jpg"
+            "images/aep_front_desk_not_finished.jpg"
         ]
     },
     "mineral-wells": {
@@ -336,9 +332,9 @@ const projectsData = {
             "Signage upgrades along interstate"
         ],
         gallery: [
-            "images/projects/mineral-wells-1.jpg",
-            "images/projects/mineral-wells-2.jpg",
-            "images/projects/mineral-wells-3.jpg"
+            "images/weigh_station_excavator.jpg",
+            "images/weigh_station_asphalt.jpg",
+            "images/weigh_station_scale.jpg"
         ]
     },
     "harris-skatepark": {
@@ -819,6 +815,72 @@ const projectsData = {
             "images/projects/meadow-view-1.jpg",
             "images/projects/meadow-view-2.jpg",
             "images/projects/meadow-view-3.jpg"
+        ]
+    },
+    "coleman-crossing": 
+    {
+        title: "Coleman Crossing",
+        location: "Ohio",
+        year: "2024",
+        client: "Private Developer",
+        timeline: "3 Months",
+        type: "Commercial Site Work",
+        services: "Site Work, Concrete, Grading",
+        heroImage: "images/coleman_crossing_hero.jpg",
+        overview: [
+            "New commercial entrance construction at Coleman Crossing shopping center. Landcore provided complete site work including mass grading, curb and gutter installation, and concrete entrance construction.",
+            "The project improved access and traffic flow for this busy retail destination."
+        ],
+        challenge: "Work had to be completed while the shopping center remained open, requiring careful coordination to maintain traffic flow and customer access throughout construction.",
+        solution: "Landcore phased the work to minimize disruption, completing grading and infrastructure in sections while keeping the site accessible. Close coordination with the property manager ensured businesses could operate without interruption.",
+        scope: [
+            "Mass grading and earthwork",
+            "Subgrade preparation",
+            "Curb and gutter installation",
+            "Concrete entrance and apron construction",
+            "Stormwater drainage",
+            "Site restoration"
+        ],
+        gallery: [
+            "images/projects/coleman-crossing-1.jpg",
+            "images/projects/coleman-crossing-2.jpg",
+            "images/projects/coleman-crossing-3.jpg",
+            "images/projects/coleman-crossing-4.jpg"
+        ]
+    },
+    "the-bend": 
+    {
+        title: "The Bend at Meadow Valley",
+        location: "Putnam County, WV",
+        year: "2024",
+        client: "General Contractor",
+        timeline: "8 Months",
+        type: "Residential Development",
+        services: "Land Development, Site Work, Utilities",
+        heroImage: "images/bend_roller_road.jpg",
+        overview: [
+            "Residential land development project at The Bend at Meadow Valley, an upscale subdivision expansion. Landcore provided comprehensive site development services including mass grading, road construction, and complete utility infrastructure.",
+            "The project adds new building lots to this established neighborhood, with infrastructure designed to match the quality of the existing development."
+        ],
+        challenge: "Working adjacent to an occupied subdivision required careful coordination to minimize disruption to existing residents while maintaining access throughout construction.",
+        solution: "Landcore phased the earthwork and utility installation to keep dust and noise impacts minimal. Close communication with the general contractor and HOA ensured residents were informed of progress and any temporary access changes.",
+        scope: [
+            "Mass grading and earthwork",
+            "Road base construction",
+            "Storm drainage installation",
+            "Sanitary sewer installation",
+            "Water main installation",
+            "Concrete road construction",
+            "Lot grading and preparation",
+            "Erosion control and site stabilization"
+        ],
+        gallery: [
+            "images/projects/the-bend-1.jpg",
+            "images/projects/the-bend-2.jpg",
+            "images/projects/the-bend-3.jpg",
+            "images/projects/the-bend-4.jpg",
+            "images/projects/the-bend-5.jpg",
+            "images/projects/the-bend-6.jpg"
         ]
     },
 };

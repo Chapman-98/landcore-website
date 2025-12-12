@@ -6,7 +6,7 @@
     <title>Contact Us - Landcore</title>
     <link rel="stylesheet" href="css/main.css"> 
     <link rel="stylesheet" href="css/contact.css"> 
-    </head>
+</head>
 <body>
 
     <nav class="navbar">
@@ -45,8 +45,6 @@
         </div>
     </nav>
 
-    
-    
     <main class="contact-page">
         <section class="contact-hero">
             <h1>Get Started on Your Project.</h1>
@@ -56,7 +54,7 @@
         <div class="contact-split">
             
             <div class="contact-form-container">
-                <form action="submit_form.php" method="POST" class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <h3>Request A Consultation</h3>
                     
                     <div class="form-group">
@@ -81,12 +79,12 @@
                     
                     <div class="form-group">
                         <label for="project-type">Project Type (e.g., Commercial, Residential)</label>
-                        <select id="project-type" name="project-type">
+                        <select id="project-type" name="project-type" required>
                             <option value="" disabled selected>Select a Project Type</option>
-                            <option value="commercial">Commercial Site Prep</option>
-                            <option value="residential">Residential Development</option>
-                            <option value="public">Municipal / Public Bid</option>
-                            <option value="other">Other</option>
+                            <option value="Commercial Site Prep">Commercial Site Prep</option>
+                            <option value="Residential Development">Residential Development</option>
+                            <option value="Municipal / Public Bid">Municipal / Public Bid</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
 
@@ -99,6 +97,7 @@
                         <button type="submit" class="consultation-btn">Submit Request</button>
                     </div>
                     
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </div>
@@ -108,7 +107,6 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Left: Logo and Company Info -->
             <div class="footer-brand">
                 <img src="images/LC-logo-no-logo.tiff" alt="Landcore Builders" class="footer-logo">
                 <h3>Landcore Builders</h3>
@@ -121,7 +119,6 @@
                 </p>
             </div>
 
-            <!-- Center: Navigation Links -->
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
@@ -133,7 +130,6 @@
                 </ul>
             </div>
 
-            <!-- Right: Map and CTA Button -->
             <div class="footer-right">
                 <div class="footer-buttons">
                     <a href="contact.html" class="footer-cta-btn">Get In Touch</a>
@@ -158,8 +154,66 @@
         </div>
     </footer>
 
-    <div id="viewport-indicator"></div>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
 
-<script src="js/main.js"></script>
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const formStatus = document.getElementById('form-status');
+                
+                // Disable button and show loading state
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+                formStatus.textContent = '';
+                formStatus.className = 'form-status';
+                
+                // Gather form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    company: document.getElementById('company').value,
+                    projectType: document.getElementById('project-type').value,
+                    details: document.getElementById('details').value
+                };
+                
+                try {
+                    // Replace with your actual Google Apps Script Web App URL
+                    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzFHaHr0ejS5QotHgCTM7UlAUIhiwKBsl0ySqedyiyuWZ1tJXoP1RwAkWoj3-ujfAG8qQ/exec";
+                    
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    // Show success message
+                    formStatus.textContent = 'Thank you! Your request has been submitted. We\'ll be in touch shortly.';
+                    formStatus.className = 'form-status success';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                } catch (error) {
+                    // Show error message
+                    formStatus.textContent = 'There was an error submitting your request. Please call us at (304) 390-4077.';
+                    formStatus.className = 'form-status error';
+                    console.error('Form submission error:', error);
+                }
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Request';
+            });
+        }
+    </script>
 </body>
 </html>
