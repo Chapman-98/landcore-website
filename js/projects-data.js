@@ -289,7 +289,7 @@ const projectsData = {
         timeline: "6 Months",
         type: "Industrial Facility",
         services: "Interior Renovation, Security Upgrades",
-        heroImage: "images/aep_shop.png",
+        heroImage: "images/aep_shop.jpg",
         overview: [
             "Multi-phase renovation of offices, labs, and meeting rooms at AEP's Central Machine Shop. Landcore completed the work in phases to minimize disruption to AEP personnel.",
             "After successful completion of the first three phases, AEP awarded two additional phases plus contracts for security upgrades and various other construction projects within the facility."
@@ -359,6 +359,11 @@ const projectsData = {
             "Site grading and earthwork",
             "Coordination with existing park facilities"
         ],
+        gallery: [
+            "images/skatepark_build_outline.jpg",
+            "images/skatepark_dig.jpg",
+            "images/skatepark_pour.jpg",
+        ]
     },
     "core-industrial": {
         title: "Core Industrial Group",
@@ -390,7 +395,8 @@ const projectsData = {
             "images/projects/core-industrial-3.jpg"
         ]
     },
-    "charleston-sanitary": {
+    "charleston-sanitary": 
+    {
         title: "Charleston Sanitary Board",
         location: "Charleston, WV",
         year: "2019",
@@ -398,7 +404,7 @@ const projectsData = {
         timeline: "60 Days",
         type: "Municipal Infrastructure",
         services: "Metal Building Construction, Foundation Design",
-        heroImage: "images/charleston_sanitary.png",
+        heroImage: "images/charleston_sanitary.jpg",
         overview: [
             "Construction of a warehouse addition for the Charleston Sanitary Board. The project involved construction of a Parkline metal building with foundation design.",
             "Despite a 90-day construction period requirement, Landcore worked with Parkline to condense lead times and delivered the building in just 60 days."
@@ -412,9 +418,9 @@ const projectsData = {
             "Site finishing"
         ],
         gallery: [
-            "images/projects/charleston-sanitary-1.jpg",
-            "images/projects/charleston-sanitary-2.jpg",
-            "images/projects/charleston-sanitary-3.jpg"
+            "images/charleston_outline.jpg",
+            "images/charleston_concrete_work.jpg",
+            "images/charleston_lift.jpg"
         ]
     },
     "big-sandy-arena": {
@@ -425,7 +431,7 @@ const projectsData = {
         timeline: "4 Months",
         type: "Commercial/Entertainment",
         services: "Site Work, Concrete, Lighting",
-        heroImage: "images/big_sandy_hero.png",
+        heroImage: "images/big_sandy_hero.jpg",
         overview: [
             "Beautification project around the Big Sandy Superstore Arena in Huntington. The project involved removing and replacing existing sidewalks, adding street lighting, and creating 14 new parking spaces with a new staff parking area.",
             "Crews worked around numerous arena events including concerts bringing 8,000-9,000 people to the venue, maintaining public access to all sidewalks throughout construction."
@@ -498,9 +504,9 @@ const projectsData = {
             "Site finishing"
         ],
         gallery: [
-            "images/projects/marco-paradise-1.jpg",
-            "images/projects/marco-paradise-2.jpg",
-            "images/projects/marco-paradise-3.jpg"
+            "images/marco_eating_area.jpg",
+            "images/marco_pad_layout.jpg",
+            "images/marco_order_desk.jpg"
         ]
     },
     "cenergy": {
@@ -511,7 +517,7 @@ const projectsData = {
         timeline: "4 Months",
         type: "Industrial/Office",
         services: "Design-Build, Building Construction",
-        heroImage: "images/cenergy_hero.png",
+        heroImage: "images/cenergy_hero.jpg",
         overview: [
             "Design and construction of a new office building for Cenergy LLC, a leader in natural gas metering and regulation stations. Landcore broke ground on the original 3,000 square foot space in December 2010.",
             "Despite winter weather conditions, crews completed the building on time and under budget. Since then, two additions have expanded the total office space to 5,000 square feet."
@@ -555,9 +561,7 @@ const projectsData = {
             "Custom tenant buildouts"
         ],
         gallery: [
-            "images/projects/unlimited-possibilities-1.jpg",
-            "images/projects/unlimited-possibilities-2.jpg",
-            "images/projects/unlimited-possibilities-3.jpg"
+            
         ]
     },
     "guyan-library": {
@@ -582,9 +586,7 @@ const projectsData = {
             "Site finishing"
         ],
         gallery: [
-            "images/projects/guyan-library-1.jpg",
-            "images/projects/guyan-library-2.jpg",
-            "images/projects/guyan-library-3.jpg"
+            
         ]
     },
     "bower-obgyn": {
@@ -595,7 +597,7 @@ const projectsData = {
         timeline: "5 Months",
         type: "Medical Office",
         services: "Building Construction, Utility Coordination",
-        heroImage: "images/bower_hero.png",
+        heroImage: "images/bower_hero.jpg",
         overview: [
             "Construction of a 4,000 square foot medical office building for Dr. Brian Bower with Cabell Huntington Hospital Women's Health Barboursville. The two-story building was designed to mirror the Cabell Family Medical Center in the same business park.",
             "Since the project was built on undeveloped land, it required working with local utility boards to orchestrate mainline extension agreements."
@@ -664,9 +666,12 @@ const projectsData = {
             "FAA compliance documentation"
         ],
         gallery: [
-            "images/projects/yeager-1.jpg",
-            "images/projects/yeager-2.jpg",
-            "images/projects/yeager-3.jpg"
+            "images/yeager_roller_apron.jpg",
+            "images/yeager_dirt_moving.jpg",
+            "images/yeager_pipes_with_gps.jpg",
+            "images/yeager_pipes.jpg",
+            "images/yeager_excavator_on_rocks.jpg",
+            "images/yeager_B_circle.jpg"
         ]
     },
     "sophia": {
@@ -693,9 +698,12 @@ const projectsData = {
             "Lot preparation"
         ],
         gallery: [
-            "images/projects/sophia-1.jpg",
-            "images/projects/sophia-2.jpg",
-            "images/projects/sophia-3.jpg"
+            "images/sophia_rebar_wide_shot.jpg",
+            "images/sophia_crane_walls.jpg",
+            "images/sophia_above_work.jpg",
+            "images/sophia_inside_square.jpg",
+            "images/sophia_night_work.jpg",
+            "images/sophia_concrete_scrape.jpg"
         ]
     },
     "west-hamlin": {
@@ -722,9 +730,12 @@ const projectsData = {
             "Lot grading and finishing"
         ],
         gallery: [
-            "images/projects/west-hamlin-1.jpg",
-            "images/projects/west-hamlin-2.jpg",
-            "images/projects/west-hamlin-3.jpg"
+            "images/west_hamlin_work_sign.jpg",
+            "images/west_hamlin_swirl.jpg",
+            "images/west_hamlin_inside_concrete_work.jpg",
+            "images/west_hamlin_rebar_foundation.jpg",
+            "images/west_hamlin_overhead.jpg",
+            "images/west_hamlin_foundation_poured.jpg"
         ]
     },
     "nh-dental": 
@@ -796,7 +807,7 @@ const projectsData = {
         timeline: "10 Months",
         type: "Residential Development",
         services: "Land Development, Site Work, Utilities",
-        heroImage: "images/meadow_view_card.jpg",
+        heroImage: "images/meadow_view_new_hero.jpg",
         overview: [
             "Residential land development project creating new building lots in Putnam County. Landcore provided complete land development services including road construction, curb installation, grading, and utility infrastructure.",
             "The development adds quality home sites to meet growing housing demand in the area."
@@ -812,7 +823,7 @@ const projectsData = {
             "Lot grading and preparation"
         ],
         gallery: [
-            "images/projects/meadow-view-1.jpg",
+            "images/meadow_view_card.jpg",
             "images/projects/meadow-view-2.jpg",
             "images/projects/meadow-view-3.jpg"
         ]

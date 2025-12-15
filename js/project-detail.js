@@ -47,15 +47,26 @@ document.addEventListener('DOMContentLoaded', function() {
         scopeList.appendChild(li);
     });
     
-    // Populate gallery
+    // Populate gallery (only if images exist)
+    const gallerySection = document.getElementById('gallery-section');
     const galleryGrid = document.getElementById('project-gallery');
-    project.gallery.forEach((image, index) => {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-        const img = document.createElement('img');
-        img.src = image;
-        img.alt = `${project.title} - Image ${index + 1}`;
-        div.appendChild(img);
-        galleryGrid.appendChild(div);
-    });
+    
+    if (project.gallery && project.gallery.length > 0) 
+    {
+        project.gallery.forEach((image, index) => 
+        {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            const img = document.createElement('img');
+            img.src = image;
+            img.alt = `${project.title} - Image ${index + 1}`;
+            div.appendChild(img);
+            galleryGrid.appendChild(div);
+        });
+    } 
+    else 
+    {
+        // Hide gallery section if no images
+        gallerySection.style.display = 'none';
+    }
 });

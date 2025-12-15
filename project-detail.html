@@ -113,7 +113,7 @@
     </section>
 
     <!-- PROJECT GALLERY -->
-    <section class="project-gallery-section">
+    <section class="project-gallery-section" id="gallery-section">
         <div class="container">
             <h2>Project Gallery</h2>
             <div class="gallery-grid" id="project-gallery"></div>
@@ -178,8 +178,84 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+        <img src="" alt="Gallery Image" class="lightbox-image">
+    </div>
+
     <script src="js/projects-data.js"></script>
     <script src="js/project-detail.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = lightbox.querySelector('.lightbox-image');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+        const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+        const lightboxNext = lightbox.querySelector('.lightbox-next');
+
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        // Get all gallery images
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            
+            galleryItems.forEach((img, index) => {
+                galleryImages.push(img.src);
+                
+                img.addEventListener('click', function() {
+                    currentIndex = index;
+                    openLightbox(img.src);
+                });
+            });
+        });
+
+        function openLightbox(src) {
+            lightboxImage.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImage.src = galleryImages[currentIndex];
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            lightboxImage.src = galleryImages[currentIndex];
+        }
+
+        // Event listeners
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrev);
+        lightboxNext.addEventListener('click', showNext);
+
+        // Close on background click
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+        });
+    </script>
 </body>
 </html>
